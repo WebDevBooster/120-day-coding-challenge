@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
+@import url('https://fonts.googleapis.com/css?family=Short+Stack');
+
+body{
+    background-color:#E6EEF6;
+}
+#wrapper {
+    width: 450px;
+    margin: 0 auto;
+}
+
+#clip {
+    position: absolute;
+    left: 339px;
+    top: 75px;
+    z-index: 3;
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    transform: rotate(2deg);
+}
+.paperclip {
+    box-sizing: border-box;
+    display: block;
+    top: 50%; 
+    left: 50%;
+    margin-top: -40px;
+    margin-left: -19px;
+    height: 60px;
+    width: 30px;
+    border: 3px groove #DDD;
+    border-radius: 0 0 90px 90px;
+    border-top: none;
+    position: relative;
+    transform: rotate(7deg);
+    -webkit-transform: rotate(7deg);
+    -webkit-backface-visibility: hidden;
+}
+.paperclip::before {
+    content:'';
+    position: absolute;
+    border: 3px groove #DDD;
+    left: 2px;
+    height: 21px;
+    width: 15px;
+/*    border-radius: 0 0 90px 90px;*/
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+}
+.paperclip::after {
+    content:'';
+    position: absolute;
+    border: 3px groove #DDD;
+    top: -15px;
+    left: -3px;
+    height: 32px;
+    width: 20px;
+    border-radius: 90px 90px 0 0;
+    border-bottom: none;
+}
+
+
+.first {
+    top: 400px;
+    position:absolute;
+    transform: rotate(3deg);
+}
+.box{
+    width:300px;
+    height:300px;
+    float:left;
+/*    background-color:white; */
+    margin:55px 85px;
+    border-radius:0px 0px 0px 5px;
+}
+.box h3{
+    font-family: 'Gochi Hand', cursive;
+    font-weight:normal;
+    font-size: 33px;
+    text-align:left;
+    padding: 0px 30px;
+    color:#009;
+    transform: rotate(3deg);
+}
+.note1{
+    background-color: #DB9EEC;
+}
+.shadow1 {
+    position:relative;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
+}
+
+.shadow1:before{
+    position:absolute;
+    content:"0000000";
+    top:135px;left:-85px;bottom:150px;
+    left: -85px;
+    top: auto;
+    width:80%;
+    z-index:-1;
+    -webkit-transform: rotate(97deg);
+    -moz-transform: rotate(97deg);
+    transform: rotate(97deg);
+    box-shadow:10px 10px 30px 15px #984D8F;
+}
+/* End note1 */
+
+.second {
+    top: 50px;
+    position: relative;
+}
+.note2 {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    padding: 25px;
+    box-shadow: 2px 8px 15px 5px rgba(0,0,0,0.25);
+    font-family: 'Short Stack', cursive;
+    font-size: 28px;
+    color: #009;
+}
+.note2 .author {
+    display: block;
+    margin: 30px 0 0 0;
+    text-align: right;
+    font-family: Arial, sans-serif;
+    transform: rotate(1deg);
+}
+
+.yellow {
+    background: #FDEB63;
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+}
+
+.pin {
+    background-color: #aaa;
+    display: block;
+    height: 32px;
+    width: 2px;
+    position: absolute;
+    left: 50%;
+    top: -16px;
+    z-index: 1;
+}
+
+.pin:after {
+    background-color: #A31;
+    background-image: radial-gradient(25% 25%, circle, hsla(0,0%,100%,.3), hsla(0,0%,0%,.3));
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.1),
+        inset 3px 3px 3px hsla(0,0%,100%,.2),
+        inset -3px -3px 3px hsla(0,0%,0%,.2),
+        23px 20px 3px hsla(0,0%,0%,.15);
+    content: '';
+    height: 12px;
+    left: -5px;
+    position: absolute;
+    top: -10px;
+    width: 12px;
+}
+
+.pin:before {
+    background-color: hsla(0,0%,0%,0.1);
+    box-shadow: 0 0 .25em hsla(0,0%,0%,.1);
+    content: '';
+    height: 24px;
+    width: 2px;
+    left: 0;
+    position: absolute;
+    top: 8px;
+    transform: rotate(57.5deg);
+    -moz-transform: rotate(57.5deg);
+    -webkit-transform: rotate(57.5deg);
+    -o-transform: rotate(57.5deg);
+    -ms-transform: rotate(57.5deg);
+    transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+}
+
