@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC');
+
+/*basic styles*/
+
+html,
+body {
+    margin: 0;
+    margin-top: 2em;
+}
+html {
+    background: #636d7d;
+}
+body {
+    font: 100% Lato, Helvetica, sans-serif;
+    background: white;
+    margin: 2em auto;
+    width: 80%;
+    padding: 1em;
+}
+article,
+aside,
+section,
+nav,
+figure,
+header,
+footer {
+    display: block;
+}
+h1,
+h3 {
+    font-size: 2.4em;
+    font-weight: normal;
+    font-family: LatoLight, Helvetica, sans-serif;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+    color: #575451;
+    margin: 0;
+    line-height: 1;
+}
+h1 {
+    font-size: 1.6em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    background: rgba(240, 240, 240, .8);
+    line-height: 2;
+}
+body {
+    background: none;
+    margin-top: 0;
+}
+section.refract {
+    width: 1080px;
+    height: 460px;
+    background: url(../_images/lake-surfing.jpg)no-repeat;
+    padding: 1px;
+    margin: 0 auto;
+}
+div {
+    height: 125px;
+    padding: 0;
+    overflow: hidden;
+}
+.text {
+    height: auto;
+    overflow: visible;
+    margin: 270px auto 0;
+    width: 830px;
+}
+.top:before {
+    content: 'Fun Times';
+    color: rgb(235, 235, 245);
+    font-weight: bold;
+    display: block;
+    text-transform: uppercase;
+    line-height: 120px;
+    font-size: 120px;
+    height: 75px;
+    overflow: hidden;
+    margin: 0;
+    padding-left: 60px;
+    width: 1000px;
+    text-shadow: 1px 1px 0px rgb(185, 185, 195), 2px 2px 0px rgb(185, 185, 195), 3px 3px 0px rgb(185, 185, 195), 4px 4px 0px rgb(185, 185, 195);
+}
+.bottom {
+    position: relative;
+    top: -50px;
+}
+p {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 90px;
+    font-size: 120px;
+    height: 160px;
+    overflow: hidden;
+    margin-top: -54px;
+    padding-left: 60px;
+    width: 100%;
+    color: rgba(245, 245, 245, .1);
+    text-shadow: 5px 0px 20px rgba(255, 255, 255, .2), -5px 0px 10px rgba(255, 255, 255, .4);
+    -webkit-perspective: 80px;
+    -moz-perspective: 80px;
+    perspective: 80px;
+    -webkit-perspective-origin: 50% 100%;
+    -moz-perspective-origin: 50% 100%;
+    perspective-origin: 50% 100%;
+}
+span[class^="char"] {
+    display: inline-block;
+    position: relative;
+    -webkit-transform: rotateX(10deg) rotateY(0deg) rotateZ(0deg);
+    -moz-transform: rotateX(10deg) rotateY(0deg) rotateZ(0deg);
+    -o-transform: rotateX(10deg) rotateY(0deg) rotateZ(0deg);
+    -ms-transform: rotateX(10deg) rotateY(0deg) rotateZ(0deg);
+    transform: rotateX(10deg) rotateY(0deg) rotateZ(0deg);
+}
+.char1 {
+    left: 12px;
+}
+.char2 {
+    left: 8px;
+}
+.char3 {
+    left: 6px;
+}
+.char4 {
+    /*    space */
+}
+.char5 {
+    left: 33px;
+}
+.char6 {
+    left: 31px;
+}
+.char7 {
+    left: 29px;
+}
+.char8 {
+    left: 29px;
+}
+.char9 {
+    left: 29px;
+}
+.reflect {
+    background-color: white;
+    height: 200px;
+}
+h2 {
+    font-size: 99px;
+    font-weight: 800;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+    color: #575451;
+    text-align: center;
+    margin-top: 20px;
+}
+.ring {
+    width: 1080px;
+    height: 310px;
+    background: url(../_images/magic-ring.jpg)no-repeat;
+    padding: 0px;
+    margin: 45px auto;
+}

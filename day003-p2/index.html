@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS text refraction &amp; reflection using 3D transforms</title>
+    <link rel="stylesheet" href="_css/styles.css">
+    <link rel="stylesheet" href="_css/jquery.textreflection.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="_scripts/jquery.lettering.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#refract").lettering();
+        });
+    </script>
+    <script src="_scripts/jquery.textreflection.min.js"></script>
+</head>
+
+<body>
+    <h1>CSS text refraction &amp; reflection using 3D transforms</h1>
+    <section class="refract">
+        <div class="text">
+            <div class="top">
+            </div>
+            <div class="bottom">
+                <p id="refract">Fun Times</p>
+            </div>
+        </div>
+    </section>
+    <section class="reflect">
+        <h2 id="reflect" class="textreflection">Magic Ring</h2>
+        <div class="ring">
+        </div>
+    </section>
+</body>
+
+</html>
