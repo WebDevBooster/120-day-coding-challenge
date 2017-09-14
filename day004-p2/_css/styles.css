@@ -1,0 +1,93 @@
+/*basic styles*/
+
+html,
+body {
+    margin: 0;
+    margin-top: 2em;
+}
+html {
+    background: #636d7d;
+}
+body {
+    font: 100% Lato, Helvetica, sans-serif;
+    background: white;
+    margin: 2em auto;
+    width: 80%;
+    padding: 1em;
+}
+article,
+aside,
+section,
+nav,
+figure,
+header,
+footer {
+    display: block;
+}
+h1,
+h3 {
+    font-size: 2.4em;
+    font-weight: normal;
+    font-family: LatoLight, Helvetica, sans-serif;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+    color: #575451;
+    margin: 0;
+    line-height: 1;
+}
+h1 {
+    font-size: 1.6em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    background: rgba(240, 240, 240, .8);
+    line-height: 2;
+}
+body {
+    background: none;
+    margin-top: 0;
+}
+
+#panzoom {
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    margin: 0 auto;
+    border: 10px #333 solid;
+    overflow: hidden;
+}
+
+#beauty img {
+/*    background: url(../_images/girl1_highres.jpg)no-repeat;*/
+    animation: animate_bg 25s ease-in-out 0s infinite;
+}
+@keyframes animate_bg { 
+    0% { 
+        background-position: 0 0;
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    7% {
+        transform: scale3d(1.4, 1.4, 1.4) translate3d(-30px, -250px, 0px);
+    }
+    20% {
+        transform: scale3d(1.6, 1.6, 1.6) translate3d(-20px, -250px, 0px);
+    }
+    35% {
+        transform: scale3d(1.8, 1.8, 1.8) translate3d(-10px, -115px, 0px);
+    }
+    60% {
+        transform: scale3d(1.85, 1.85, 1.85) translate3d(-30px, -220px, 0px);
+    }
+/*
+    70% {
+        transform: scale3d(1.8, 1.8, 1.8) translate3d(-80px, -220px, 0px);
+    }
+*/
+    90%, 100% {
+        transform: scale3d(0.7, 0.7, 0.7) translate3d(-180px, -180px, 0px);
+    }
+}
