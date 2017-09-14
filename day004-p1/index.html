@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced CSS: text animation</title>
+    <link href="_css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="_scripts/jquery.lettering.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".focus").lettering();
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Advanced CSS: text animation</h1>
+    <div>
+        <p class="business">Business websites<br>
+        need to</p>
+        <p id="focus" class="focus">focus on</p>
+        <p class="conversion">conversion!</p>
+    </div>
+</body>
+
+</html>
