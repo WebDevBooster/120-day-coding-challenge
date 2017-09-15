@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<paintings>
+  <painting>
+    <title>Fantasy Island</title>
+    <artist>Stefan Keller</artist>
+    <image>pic1_1920.jpg</image>
+    <price>850</price>
+  </painting>
+  <painting>
+    <title>Fantasy Beach</title>
+    <artist>Stefan Keller</artist>
+    <image>pic2_1920.jpg</image>
+    <price>650</price>
+  </painting>
+  <painting>
+    <title>Mystical Wheel</title>
+    <artist>Stefan Keller</artist>
+    <image>pic3_1920.jpg</image>
+    <price>490</price>
+  </painting>
+  <painting>
+    <title>Sundial and Moon Sky</title>
+    <artist>Stefan Keller</artist>
+    <image>pic4_1920.jpg</image>
+    <price>950</price>
+  </painting>
+</paintings>
