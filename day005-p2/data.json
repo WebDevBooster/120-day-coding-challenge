@@ -1,0 +1,30 @@
+{
+	"paintings": {
+	  "painting": [
+		{
+		"title": "Blue Feathers",
+		"artist": "Sue Rickhuss",
+		"image": "pic1_1920.jpg",
+		"price": 950
+		},
+		{
+		"title": "Daisy Flower",
+		"artist": "Sue Rickhuss",
+		"image": "pic2_1920.jpg",
+		"price": 550
+		},
+		{
+		"title": "Purple Yellow",
+		"artist": "Sue Rickhuss",
+		"image": "pic3_1920.jpg",
+		"price": 990
+		},
+		{
+		"title": "Blue Stones",
+		"artist": "Sue Rickhuss",
+		"image": "pic4_1920.jpg",
+		"price": 750
+		}
+	  ]
+	} 
+}
