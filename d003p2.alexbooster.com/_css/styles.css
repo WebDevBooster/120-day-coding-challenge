@@ -145,7 +145,8 @@ span[class^="char"] {
 }
 .reflect {
     background-color: white;
-    height: 200px;
+    min-width: 1080px;
+    height: 480px;
 }
 h2 {
     font-size: 99px;

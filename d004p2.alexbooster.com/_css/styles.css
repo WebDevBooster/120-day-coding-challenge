@@ -48,7 +48,6 @@ body {
     background: none;
     margin-top: 0;
 }
-
 #panzoom {
     background-color: white;
     width: 400px;
@@ -57,13 +56,12 @@ body {
     border: 10px #333 solid;
     overflow: hidden;
 }
-
 #beauty img {
-/*    background: url(../_images/girl1_highres.jpg)no-repeat;*/
+    /*    background: url(../_images/girl1_highres.jpg)no-repeat;*/
     animation: animate_bg 25s ease-in-out 0s infinite;
 }
-@keyframes animate_bg { 
-    0% { 
+@keyframes animate_bg {
+    0% {
         background-position: 0 0;
         opacity: 0;
     }
@@ -82,12 +80,13 @@ body {
     60% {
         transform: scale3d(1.85, 1.85, 1.85) translate3d(-30px, -220px, 0px);
     }
-/*
+    /*
     70% {
         transform: scale3d(1.8, 1.8, 1.8) translate3d(-80px, -220px, 0px);
     }
 */
-    90%, 100% {
+    90%,
+    100% {
         transform: scale3d(0.7, 0.7, 0.7) translate3d(-180px, -180px, 0px);
     }
 }

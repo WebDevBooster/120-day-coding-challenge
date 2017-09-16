@@ -52,15 +52,13 @@ body {
     margin: 0 auto;
     background-color: white;
     padding: 10px 0;
-    text-align: center; 
+    text-align: center;
     min-height: 500px;
 }
-
 button {
     margin: 10px;
     padding: 5px;
 }
-
 div.painting {
     float: left;
     margin-left: 90px;
@@ -70,18 +68,14 @@ div.painting p {
     text-align: center;
 }
 div.lastOne {
-    margin-right: 0;	
+    margin-right: 0;
 }
-
 #container {
     margin: 20px auto;
-    
 }
 .loader {
     display: none;
 }
-
 #clear {
     clear: both;
 }
-

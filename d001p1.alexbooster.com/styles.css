@@ -1,14 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Gochi+Hand');
 @import url('https://fonts.googleapis.com/css?family=Short+Stack');
-
-body{
-    background-color:#E6EEF6;
+body {
+    margin: 2em auto;
+    width: 80%;
+    padding: 1em;
+    background-color: #E6EEF6;
 }
 #wrapper {
     width: 450px;
     margin: 0 auto;
 }
-
+h1 {
+    font-family: LatoLight, Helvetica, sans-serif;
+    font-weight: normal;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+    color: #575451;
+    margin: 0;
+    font-size: 1.6em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    background: rgba(240, 240, 240, .8);
+    line-height: 2;
+}
 #clip {
     position: absolute;
     left: 339px;
@@ -21,7 +37,7 @@ body{
 .paperclip {
     box-sizing: border-box;
     display: block;
-    top: 50%; 
+    top: 50%;
     left: 50%;
     margin-top: -40px;
     margin-left: -19px;
@@ -36,19 +52,19 @@ body{
     -webkit-backface-visibility: hidden;
 }
 .paperclip::before {
-    content:'';
+    content: '';
     position: absolute;
     border: 3px groove #DDD;
     left: 2px;
     height: 21px;
     width: 15px;
-/*    border-radius: 0 0 90px 90px;*/
+    /*    border-radius: 0 0 90px 90px;*/
     border-top: none;
     border-right: none;
     border-bottom: none;
 }
 .paperclip::after {
-    content:'';
+    content: '';
     position: absolute;
     border: 3px groove #DDD;
     top: -15px;
@@ -58,51 +74,51 @@ body{
     border-radius: 90px 90px 0 0;
     border-bottom: none;
 }
-
-
 .first {
-    top: 400px;
-    position:absolute;
+    top: 420px;
+    position: absolute;
     transform: rotate(3deg);
 }
-.box{
-    width:300px;
-    height:300px;
-    float:left;
-/*    background-color:white; */
-    margin:55px 85px;
-    border-radius:0px 0px 0px 5px;
+.box {
+    width: 300px;
+    height: 300px;
+    float: left;
+    /*    background-color:white; */
+    margin: 55px 85px;
+    border-radius: 0px 0px 0px 5px;
 }
-.box h3{
+.box h3 {
     font-family: 'Gochi Hand', cursive;
-    font-weight:normal;
+    font-weight: normal;
     font-size: 33px;
-    text-align:left;
+    text-align: left;
     padding: 0px 30px;
-    color:#009;
+    color: #009;
     transform: rotate(3deg);
 }
-.note1{
+.note1 {
     background-color: #DB9EEC;
 }
 .shadow1 {
-    position:relative;
-    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
+    position: relative;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
 }
-
-.shadow1:before{
-    position:absolute;
-    content:"0000000";
-    top:135px;left:-85px;bottom:150px;
+.shadow1:before {
+    position: absolute;
+    content: "0000000";
+    top: 135px;
+    left: -85px;
+    bottom: 150px;
     left: -85px;
     top: auto;
-    width:80%;
-    z-index:-1;
+    width: 80%;
+    z-index: -1;
     -webkit-transform: rotate(97deg);
     -moz-transform: rotate(97deg);
     transform: rotate(97deg);
-    box-shadow:10px 10px 30px 15px #984D8F;
+    box-shadow: 10px 10px 30px 15px #984D8F;
 }
+
 /* End note1 */
 
 .second {
@@ -114,7 +130,7 @@ body{
     width: 300px;
     margin: 0 auto;
     padding: 25px;
-    box-shadow: 2px 8px 15px 5px rgba(0,0,0,0.25);
+    box-shadow: 2px 8px 15px 5px rgba(0, 0, 0, 0.25);
     font-family: 'Short Stack', cursive;
     font-size: 28px;
     color: #009;
@@ -124,9 +140,8 @@ body{
     margin: 30px 0 0 0;
     text-align: right;
     font-family: Arial, sans-serif;
-    transform: rotate(1deg);
+    transform: rotate(0deg);
 }
-
 .yellow {
     background: #FDEB63;
     -webkit-transform: rotate(-2deg);
@@ -135,7 +150,6 @@ body{
     -ms-transform: rotate(-2deg);
     transform: rotate(-2deg);
 }
-
 .pin {
     background-color: #aaa;
     display: block;
@@ -146,15 +160,11 @@ body{
     top: -16px;
     z-index: 1;
 }
-
 .pin:after {
     background-color: #A31;
-    background-image: radial-gradient(25% 25%, circle, hsla(0,0%,100%,.3), hsla(0,0%,0%,.3));
+    background-image: radial-gradient(25% 25%, circle, hsla(0, 0%, 100%, .3), hsla(0, 0%, 0%, .3));
     border-radius: 50%;
-    box-shadow: inset 0 0 0 1px hsla(0,0%,0%,.1),
-        inset 3px 3px 3px hsla(0,0%,100%,.2),
-        inset -3px -3px 3px hsla(0,0%,0%,.2),
-        23px 20px 3px hsla(0,0%,0%,.15);
+    box-shadow: inset 0 0 0 1px hsla(0, 0%, 0%, .1), inset 3px 3px 3px hsla(0, 0%, 100%, .2), inset -3px -3px 3px hsla(0, 0%, 0%, .2), 23px 20px 3px hsla(0, 0%, 0%, .15);
     content: '';
     height: 12px;
     left: -5px;
@@ -162,10 +172,9 @@ body{
     top: -10px;
     width: 12px;
 }
-
 .pin:before {
-    background-color: hsla(0,0%,0%,0.1);
-    box-shadow: 0 0 .25em hsla(0,0%,0%,.1);
+    background-color: hsla(0, 0%, 0%, 0.1);
+    box-shadow: 0 0 .25em hsla(0, 0%, 0%, .1);
     content: '';
     height: 24px;
     width: 2px;
@@ -183,4 +192,3 @@ body{
     -ms-transform-origin: 50% 100%;
     -o-transform-origin: 50% 100%;
 }
-

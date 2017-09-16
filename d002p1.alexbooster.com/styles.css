@@ -1,58 +1,70 @@
 /*basic styles*/
-html, body {
-	margin: 0;
+
+html,
+body {
+    margin: 0;
     margin-top: 2em;
 }
 html {
-	background: #636d7d;
+    background: #636d7d;
 }
 body {
-	font: 100% Lato, Helvetica, sans-serif;
-	background: white;
+    font: 100% Lato, Helvetica, sans-serif;
+    background: white;
     margin: 2em auto;
     width: 80%;
     padding: 1em;
 }
-article, aside, section, nav, figure, header, footer {
-	display: block;
+article,
+aside,
+section,
+nav,
+figure,
+header,
+footer {
+    display: block;
 }
-h1, h2, h3 {
-	font-size: 2.4em;
-	font-weight: normal;
-	font-family: LatoLight, Helvetica, sans-serif;
-	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
-	color: #575451;
-	margin: 0;
-	line-height: 1;
+h1,
+h2,
+h3 {
+    font-size: 2.4em;
+    font-weight: normal;
+    font-family: LatoLight, Helvetica, sans-serif;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+    color: #575451;
+    margin: 0;
+    line-height: 1;
 }
 h1 {
-	font-size: 1.6em;
+    font-size: 1.6em;
     position: absolute;
-    top:0;
-    left:0;
-    text-align:center;
+    top: 0;
+    left: 0;
+    text-align: center;
     width: 100%;
-    background: rgba(240,240,240,.8);
-    line-height:2;
+    background: rgba(240, 240, 240, .8);
+    line-height: 2;
 }
 h2 {
-	font-size: 2em;
-	margin-top: 2em;
+    font-size: 2em;
+    margin-top: 2em;
 }
 h3 {
-	font-size: 1.8em;
-	text-transform: uppercase;
+    font-size: 1.8em;
+    text-transform: uppercase;
 }
 a {
-	color: #77A0B8;
-	text-decoration: none;
+    color: #77A0B8;
+    text-decoration: none;
 }
 a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
+
 /*cover*/
+
 body {
-    background: rgb(245,245,240);
+    background: rgb(245, 245, 240);
     width: 80%;
     margin: 2em auto 0;
 }
@@ -62,7 +74,7 @@ section {
     margin: 0 auto;
 }
 p {
-    margin:0;
+    margin: 0;
 }
 .cover {
     background: black;
@@ -73,10 +85,10 @@ p {
 }
 .stack {
     font-family: bebas-neue, sans-serif;
-    font-size:18em;
+    font-size: 18em;
     word-wrap: break-word;
-    overflow-wrap:break-word;
-    line-height:0.7em;
+    overflow-wrap: break-word;
+    line-height: 0.7em;
 }
 .got {
     font-family: bebas-neue, sans-serif;

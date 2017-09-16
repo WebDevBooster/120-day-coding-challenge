@@ -1,5 +1,7 @@
 /*basic styles*/
-html, body {
+
+html,
+body {
     margin: 0;
     margin-top: 2em;
 }
@@ -13,10 +15,18 @@ body {
     width: 80%;
     padding: 1em;
 }
-article, aside, section, nav, figure, header, footer {
+article,
+aside,
+section,
+nav,
+figure,
+header,
+footer {
     display: block;
 }
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-size: 2.4em;
     font-weight: normal;
     font-family: LatoLight, Helvetica, sans-serif;
@@ -28,41 +38,39 @@ h1, h2, h3 {
 h1 {
     font-size: 1.6em;
     position: absolute;
-    top:0;
-    left:0;
-    text-align:center;
+    top: 0;
+    left: 0;
+    text-align: center;
     width: 100%;
-    background: rgba(240,240,240,.8);
-    line-height:2;
+    background: rgba(240, 240, 240, .8);
+    line-height: 2;
 }
-
 body {
-    background:url(../_images/road.jpg) no-repeat center top;
+    background: url(../_images/road.jpg) no-repeat center top;
     width: 1200px;
     margin: 2em auto 0;
     height: 500px;
 }
 p {
-    text-align:center;
+    text-align: center;
 }
 .speedy {
     font-family: squada-one, sans-serif;
     text-transform: uppercase;
 }
-
 .speedy span {
     display: inline-block;
     background-color: #F00;
-    background: -moz-linear-gradient(top,  #F00 0%, #630000 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F00), color-stop(100%,#630000));
-    background: -webkit-linear-gradient(top,  #F00 0%,#630000 100%);
-    background: -o-linear-gradient(top,  #F00 0%,#630000 100%);
-    background: -ms-linear-gradient(top,  #F00 0%,#630000 100%);
-    background: linear-gradient(to bottom,  #F00 0%,#630000 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F00', endColorstr='#630000',GradientType=0 );
+    background: -moz-linear-gradient(top, #F00 0%, #630000 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F00), color-stop(100%, #630000));
+    background: -webkit-linear-gradient(top, #F00 0%, #630000 100%);
+    background: -o-linear-gradient(top, #F00 0%, #630000 100%);
+    background: -ms-linear-gradient(top, #F00 0%, #630000 100%);
+    background: linear-gradient(to bottom, #F00 0%, #630000 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#F00', endColorstr='#630000', GradientType=0);
     box-shadow: -2px 7px 9px rgba(0, 0, 0, 0.5);
     color: #fff;
-    text-shadow: -1px -1px 2px rgba(0,0,0,0.6);
+    text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.6);
     width: 120px;
     height: 150px;
     font-weight: 700;
@@ -72,9 +80,9 @@ p {
     text-transform: uppercase;
     border-radius: 10px;
     padding-top: 40px;
-    margin-right:20px;
+    margin-right: 20px;
     -webkit-transform: skewX(-10deg);
     -ms-transform: skewX(-10deg);
     transform: skewX(-10deg);
-    border:4px solid #f00;
+    border: 4px solid #f00;
 }
