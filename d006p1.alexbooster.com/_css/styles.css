@@ -1,0 +1,120 @@
+/*basic styles*/
+
+html,
+body {
+    margin: 0;
+    margin-top: 4.5em;
+}
+html {
+    background: #636d7d;
+}
+body {
+    font: 100% Lato, Helvetica, sans-serif;
+    background: white;
+    margin: 2em auto;
+    width: 80%;
+    padding: 1em;
+}
+article,
+aside,
+section,
+nav,
+figure,
+header,
+footer {
+    display: block;
+}
+h1 {
+    font-family: LatoLight, Helvetica, sans-serif;
+    font-weight: normal;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+    color: #575451;
+    margin: 0;
+    font-size: 1.5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    background: rgba(240, 240, 240, .8);
+    line-height: 1.6em;
+}
+body {
+    background: none;
+    margin-top: 0;
+}
+#wrapper {
+    margin: 0 auto;
+    background-color: white;
+    padding: 10px 0;
+    text-align: center;
+    min-height: 500px;
+}
+#wrapper h1 {
+    font-weight: 100;
+    font-size: 72px;
+    margin: 20px 0;
+}
+#wrapper {
+    width: 580px;
+    text-align: center;
+    margin: 20px auto;
+}
+#wrapper input {
+    width: 300px;
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 24px;
+}
+#wrapper input[type="range"] {
+    width: 265px;
+}
+#wrapper input[type="submit"] {
+    height: 56px;
+    padding: 10px;
+    border: 1px solid #333;
+    background-color: #ccc;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+    width: auto;
+    background: none;
+    margin-top: 15px;
+}
+h3 {
+    font-size: 1.1rem;
+    font-weight: normal;
+    padding: 0px 30px;
+}
+form {
+    margin-top: 2em;
+    text-align: right;
+    margin-right: 80px;
+}
+label.text {
+    display: block;
+}
+input,
+input[type="text"],
+input[type="email"],
+input[type="search"],
+textarea,
+select {
+    border: none;
+    background-color: rgb(249, 228, 130);
+    padding: .5em;
+    font-size: 1em;
+}
+input:focus,
+textarea:focus {
+    border: 2px solid rgb(168, 88, 163);
+}
+input[type="submit"] {
+    border: none;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    margin-top: -10px;
+    vertical-align: bottom;
+}
