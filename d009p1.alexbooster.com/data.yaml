@@ -1,0 +1,21 @@
+---
+paintings:
+  painting:
+  - title: Blue Peak
+    artist: Gisela Merkuur
+    image: pic1_1920.jpg
+    price: 650
+  - title: Space
+    artist: Gisela Merkuur
+    image: pic2_1920.jpg
+    price: 950
+  - title: Bubble Gel
+    artist: Gisela Merkuur
+    image: pic3_1920.jpg
+    price: 750
+  - title: The Tentacle
+    artist: Gisela Merkuur
+    image: pic4_1920.jpg
+    price: 850
+...
+
