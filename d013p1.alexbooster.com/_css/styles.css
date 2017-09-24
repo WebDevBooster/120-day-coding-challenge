@@ -543,3 +543,289 @@ a.te-next:active {
 }
 
 /* 3D image slide carousel END */
+
+
+/* infinity eye */
+
+#wrapper > section > p {
+    position: absolute;
+    left: 30px;
+    top: 80px;
+}
+#wrapper > section:first-of-type > div {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 30px;
+    top: 130px;
+    border-radius: 50%;
+    background-color: lightgrey;
+    background-image: radial-gradient(circle at center, lightgrey 0%, rgba(0, 0, 0, 0.4) 100%);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.9);
+}
+#top {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background-color: blueviolet;
+    left: 40px;
+    top: 10px;
+    cursor: pointer;
+}
+#top::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid red;
+    top: -10px;
+    left: 0px;
+}
+#bottom {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background-color: blueviolet;
+    left: 40px;
+    top: 60px;
+    cursor: pointer;
+}
+#bottom::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid red;
+    top: 30px;
+    left: 0px;
+}
+#left {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background-color: blueviolet;
+    left: 10px;
+    top: 40px;
+    cursor: pointer;
+}
+#left::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid red;
+    top: 0px;
+    left: -10px;
+}
+#right {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background-color: blueviolet;
+    left: 60px;
+    top: 40px;
+    cursor: pointer;
+}
+#right::before {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid red;
+    top: 0px;
+    left: 30px;
+}
+#hub {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: cornflowerblue;
+    background-image: radial-gradient(circle at center, cornflowerblue 20%, rgba(0, 0, 0, 0.4) 100%);
+    border-radius: 50%;
+    top: 35px;
+    left: 35px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8);
+}
+#stage {
+    width: 100px;
+    height: 100px;
+    margin: 0px;
+    display: inline-block;
+    perspective: 600px;
+    perspective-origin: center;
+    /*            transform: scale3d(3, 3, 3);*/
+    transform: translate3d(0px, 0px, 0);
+    position: relative;
+    z-index: 99;
+    /*            left: 0px;*/
+    /*            top: 0px;*/
+}
+#eyeball {
+    position: relative;
+    transform-style: preserve-3d;
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    top: 30px;
+    border-radius: 50%;
+    /*            background-color: aqua;*/
+    background-image: radial-gradient(circle at 50% 40%, #fafafa, #efefef 66%, #bc5252 100%);
+}
+.eyeMouseOver {
+    transform: scale3d(3, 3, 3);
+    transition: transform .2s ease-out;
+}
+.eyeMouseOut {
+    transform: scale3d(1, 1, 1);
+    transition: transform .2s ease-out;
+}
+#eyeball::before {
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) 11%, rgba(255, 255, 255, 0) 25%);
+    transform: translateX(-30px) translateY(-30px) skewX(-20deg);
+}
+#eyeball #shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+    transform: rotateX(80deg) translateX(-42px) translateZ(-50px);
+    z-index: -1;
+}
+#iris {
+    position: absolute;
+    transform-style: preserve-3d;
+    width: 34%;
+    height: 34%;
+    /*            margin: 30%;*/
+    border-radius: 50%;
+    background-image: radial-gradient(circle at 50% 50%, #218ab4 0%, #6abfff 28%, #4681b2 75%);
+    transform: translateX(-17px) translateY(33px) skewX(0deg) skewY(-0deg);
+}
+.irisMove {
+    /*            initial state */
+    transform: translateX(-17px) translateY(33px) skewX(0deg) skewY(-0deg);
+    /* step 1 */
+    /*            transform: translateX(3px) translateY(50px) skewX(-22deg) skewY(6deg) scale(0.95);*/
+    /* step 2 */
+    /*            transform: translateX(-33px) translateY(50px) skewX(19deg) skewY(-6deg) scale(1.05);*/
+    /* step 3 */
+    /*            transform: translateX(3px) translateY(50px) skewX(-20deg) skewY(9deg) scale(0.95);*/
+    /* step 4 */
+    /*            transform: translateX(-33px) translateY(10px) skewX(-20deg) skewY(6deg);*/
+    /* step 5 */
+    /*            transform: translateX(3px) translateY(10px) skewX(9deg) skewY(0deg);*/
+    animation: move-eye 12s ease-out 2s infinite;
+}
+.eyeMouseOver #iris {
+    /*          iris position on MouseOver */
+    transform: translateX(-17px) translateY(33px) skewX(0deg) skewY(-0deg);
+}
+.eyeMouseOut #iris {
+    /*          default iris position on MouseOut */
+    transform: translateX(-17px) translateY(33px) skewX(0deg) skewY(-0deg);
+}
+@keyframes move-eye {
+    0%,
+    5% {
+        transform: translateX(-17px) translateY(33px) skewX(0deg) skewY(-0deg);
+    }
+    7%,
+    18% {
+        transform: translateX(3px) translateY(10px) skewX(9deg) skewY(0deg);
+    }
+    20%,
+    32% {
+        transform: translateX(3px) translateY(50px) skewX(-22deg) skewY(6deg) scale(0.95);
+    }
+    35%,
+    47% {
+        transform: translateX(-33px) translateY(50px) skewX(19deg) skewY(-6deg) scale(1.05);
+    }
+    60%,
+    70% {
+        transform: translateX(3px) translateY(50px) skewX(-20deg) skewY(9deg) scale(0.95);
+    }
+    73%,
+    83% {
+        transform: translateX(-33px) translateY(10px) skewX(-20deg) skewY(6deg);
+    }
+    90%,
+    95% {
+        transform: translateX(3px) translateY(10px) skewX(9deg) skewY(0deg);
+    }
+    98%,
+    100% {
+        transform: translateX(-17px) translateY(33px) skewX(0deg) skewY(-0deg);
+    }
+}
+#iris::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 36%;
+    height: 36%;
+    background-color: black;
+    border-radius: 50%;
+    top: 32%;
+    left: 34%;
+}
+#iris::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    background: rgba(244, 244, 244, 0.25);
+    top: 14%;
+    left: 26%;
+}
+#infinity {
+    position: relative;
+    width: 500px;
+    height: 250px;
+    margin: 40px auto 20px;
+    transform: rotate3d(1, 0, 0, 60deg);
+}
+#infinity::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 40px solid blueviolet;
+    border-radius: 50% 0% 50% 50%;
+    transform: rotate(45deg);
+    top: 0;
+    left: 0;
+    box-shadow: inset 0 0 25px #000;
+}
+#infinity::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 40px solid blueviolet;
+    border-radius: 50% 50% 50% 0%;
+    transform: rotate(45deg);
+    top: 0;
+    right: 0;
+    box-shadow: inset 0 0 25px #000;
+}
+
+/* infinity eye END */

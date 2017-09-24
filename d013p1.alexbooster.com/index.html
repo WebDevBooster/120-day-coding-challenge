@@ -5,241 +5,6 @@
     <meta charset="UTF-8">
     <title>Advanced CSS + Basic JavaScript: CSS eyeball on a CSS infinity racetrack</title>
     <link rel="stylesheet" href="_css/styles.css">
-    <style>
-        #wrapper > section > p {
-            position: absolute;
-            left: 30px;
-            top: 80px;
-        }
-        
-        #wrapper > section:first-of-type > div {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            left: 30px;
-            top: 130px;
-            border-radius: 50%;
-            background-color: lightgrey;
-            background-image: radial-gradient(circle at center, lightgrey 0%, rgba(0, 0, 0, 0.4) 100%);
-            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.9);
-        }
-        
-        #top {
-            position: absolute;
-            width: 20px;
-            height: 30px;
-            background-color: blueviolet;
-            left: 40px;
-            top: 10px;
-            cursor: pointer;
-        }
-        
-        #top::before {
-            content: "";
-            position: absolute;
-            width: 0px;
-            height: 0px;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-bottom: 10px solid red;
-            top: -10px;
-            left: 0px;
-        }
-        
-        #bottom {
-            position: absolute;
-            width: 20px;
-            height: 30px;
-            background-color: blueviolet;
-            left: 40px;
-            top: 60px;
-            cursor: pointer;
-        }
-        
-        #bottom::before {
-            content: "";
-            position: absolute;
-            width: 0px;
-            height: 0px;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-top: 10px solid red;
-            top: 30px;
-            left: 0px;
-        }
-        
-        #left {
-            position: absolute;
-            width: 30px;
-            height: 20px;
-            background-color: blueviolet;
-            left: 10px;
-            top: 40px;
-            cursor: pointer;
-        }
-        
-        #left::before {
-            content: "";
-            position: absolute;
-            width: 0px;
-            height: 0px;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            border-right: 10px solid red;
-            top: 0px;
-            left: -10px;
-        }
-        
-        #right {
-            position: absolute;
-            width: 30px;
-            height: 20px;
-            background-color: blueviolet;
-            left: 60px;
-            top: 40px;
-            cursor: pointer;
-        }
-        
-        #right::before {
-            content: "";
-            position: absolute;
-            width: 0px;
-            height: 0px;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            border-left: 10px solid red;
-            top: 0px;
-            left: 30px;
-        }
-        
-        #hub {
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            background-color: cornflowerblue;
-            background-image: radial-gradient(circle at center, cornflowerblue 20%, rgba(0, 0, 0, 0.4) 100%);
-            border-radius: 50%;
-            top: 35px;
-            left: 35px;
-            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8);
-        }
-        
-        #eyeball {
-            position: relative;
-            display: block;
-            width: 100px;
-            height: 100px;
-            margin: 0 auto;
-            top: 30px;
-            border-radius: 50%;
-            /*            background-color: aqua;*/
-            background-image: radial-gradient(circle at 50% 40%, #fafafa, #efefef 66%, #bc5252 100%);
-        }
-        
-        #eyeball::before {
-            content: "";
-            position: absolute;
-            top: 5%;
-            left: 10%;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) 11%, rgba(255, 255, 255, 0) 25%);
-            transform: translateX(-30px) translateY(-30px) skewX(-20deg);
-        }
-        
-        #stage {
-            width: 100px;
-            height: 100px;
-            margin: 0px;
-            display: inline-block;
-            perspective: 600px;
-            perspective-origin: center;
-            /*            transform: scale3d(3, 3, 3);*/
-            transform: translate3d(0px, 0px, 0);
-            position: relative;
-            z-index: 99;
-            /*            left: 0px;*/
-            /*            top: 0px;*/
-        }
-        
-        #eyeball #shadow {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-image: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
-            transform: rotateX(80deg) translateX(-42px) translateZ(-50px);
-            z-index: -1;
-        }
-        
-        #iris {
-            position: absolute;
-            width: 34%;
-            height: 34%;
-            margin: 30%;
-            border-radius: 50%;
-            background-image: radial-gradient(circle at 50% 50%, #218ab4 0%, #6abfff 28%, #4681b2 75%);
-            transform: translateX(-27px) translateY(-20px) skewX(20deg) skewY(-6deg);
-        }
-        
-        #iris::before {
-            content: "";
-            position: absolute;
-            display: block;
-            width: 36%;
-            height: 36%;
-            background-color: black;
-            border-radius: 50%;
-            top: 32%;
-            left: 34%;
-        }
-        
-        #iris::after {
-            content: "";
-            position: absolute;
-            display: block;
-            width: 30%;
-            height: 30%;
-            border-radius: 50%;
-            background: rgba(244, 244, 244, 0.25);
-            top: 14%;
-            left: 26%;
-        }
-        
-        #infinity {
-            position: relative;
-            width: 500px;
-            height: 250px;
-            margin: 70px auto 30px;
-            /*            background-color: aqua;*/
-        }
-        
-        #infinity::before {
-            content: "";
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            border: 40px solid blueviolet;
-            border-radius: 50% 0% 50% 50%;
-            transform: rotate(45deg);
-            top: 0;
-            left: 0;
-            box-shadow: inset 0 0 25px #000;
-        }
-        
-        #infinity::after {
-            content: "";
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            border: 40px solid blueviolet;
-            border-radius: 50% 50% 50% 0%;
-            transform: rotate(45deg);
-            top: 0;
-            right: 0;
-            box-shadow: inset 0 0 25px #000;
-        }
-    </style>
 </head>
 
 <body>
@@ -261,13 +26,14 @@
             </div>
         </section>
         <section id="stage">
-            <figure id="eyeball">
+            <figure id="eyeball" onmouseover="MouseOver(this);" onmouseout="MouseOut(this);">
                 <span id="shadow"></span>
-                <span id="iris"></span>
+                <span id="iris" class="irisMove"></span>
             </figure>
         </section>
 
         <div id="infinity"></div>
+
     </div>
 
     <!-- info icon -->
@@ -374,6 +140,18 @@
         //        var eye = document.querySelector("#stage");
         var eye = document.querySelector("#eyeball");
         //        var nav = document.querySelector("#wrapper > section:first-of-type > div");
+        var iris = document.querySelector("#iris");
+
+        function MouseOver(elem) {
+            iris.className = "";
+            elem.className = "eyeMouseOver";
+        }
+
+        function MouseOut(elem) {
+            elem.className = "eyeMouseOut";
+            iris.className = "irisMove";
+        }
+
 
         var reqID;
         var direction;
@@ -384,13 +162,13 @@
 
         function startAnimation() {
             if (direction === "right") {
-                eye.style.left = (eye.offsetLeft += 1) + "px";
+                eye.style.left = (eye.offsetLeft += 3) + "px";
             } else if (direction === "left") {
-                eye.style.left = (eye.offsetLeft -= 1) + "px";
+                eye.style.left = (eye.offsetLeft -= 3) + "px";
             } else if (direction === "top") {
-                eye.style.top = (eye.offsetTop -= 1) + "px";
+                eye.style.top = (eye.offsetTop -= 3) + "px";
             } else if (direction === "bottom") {
-                eye.style.top = (eye.offsetTop += 1) + "px";
+                eye.style.top = (eye.offsetTop += 3) + "px";
             }
 
             reqID = window.requestAnimationFrame(startAnimation);
@@ -406,13 +184,13 @@
         function whichKey(event) {
             var key = event.which;
             if (key === 39) {
-                eye.style.left = (eye.offsetLeft += 1) + "px";
+                eye.style.left = (eye.offsetLeft += 3) + "px";
             } else if (key === 37) {
-                eye.style.left = (eye.offsetLeft -= 1) + "px";
+                eye.style.left = (eye.offsetLeft -= 3) + "px";
             } else if (key === 38) {
-                eye.style.top = (eye.offsetTop -= 1) + "px";
+                eye.style.top = (eye.offsetTop -= 3) + "px";
             } else if (key === 40) {
-                eye.style.top = (eye.offsetTop += 1) + "px";
+                eye.style.top = (eye.offsetTop += 3) + "px";
             }
 
             reqID = window.requestAnimationFrame(whichKey);
@@ -421,20 +199,6 @@
         document.onkeyup = function stopAnimation() {
             window.cancelAnimationFrame(reqID);
         }
-
-        //        "changeDirection('top'); startAnimation();" onkeyup="stopAnimation();"
-
-
-        //        nav.addEventListener("click", getDirection, false);
-        //        
-        //        function getDirection(e) {
-        //            console.log(e);
-        //            if ((e.target === "span#right") || (e.srcElement === "span#right")) {
-        //                eye.style.left = (eye.offsetLeft += 11) + "px";
-        //                } else {
-        //                
-        //                }
-        //        }
     </script>
 </body>
 
