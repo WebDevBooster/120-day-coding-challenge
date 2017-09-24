@@ -38,12 +38,12 @@ h3 {
     padding: 0px 30px;
 }
 #wrapper {
-    margin: 80px auto;
+    margin: 80px auto 0px;
     position: absolute;
     background-color: white;
     padding: 10px 0;
     text-align: center;
-    min-height: 550px;
+    min-height: 450px;
     width: 80%;
     margin-left: 10%;
 }
@@ -475,9 +475,12 @@ a.te-next:active {
 .artGroup.flip .detail {
     backface-visibility: hidden;
 }
+
 /* 3D card flip END */
 
+
 /* 3D image slide carousel */
+
 #gallery {
     margin-top: 60px;
     background-color: #fff;
@@ -538,4 +541,5 @@ a.te-next:active {
 .no-csstransforms3d #carousel figure.showFig {
     display: block;
 }
+
 /* 3D image slide carousel END */
