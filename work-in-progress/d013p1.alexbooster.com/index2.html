@@ -18,18 +18,6 @@
         <section>
             <p>Navigation Wheel:</p>
             <div>
-<!--
-                The horribly ugly (but working) stuff that I had originally in version 1: 
-                
-                <span id="top" onmousedown="changeDirection('top'); startAnimation();" onmouseup="stopAnimation();"></span>
-                <span id="bottom" onmousedown="changeDirection('bottom'); startAnimation();" onmouseup="stopAnimation();"></span>
-                <span id="left" onmousedown="changeDirection('left'); startAnimation();" onmouseup="stopAnimation();"></span>
-                <span id="right" onmousedown="changeDirection('right'); startAnimation();" onmouseup="stopAnimation();"></span>
-                
-                ugly stuff END
--->
-
-<!--            clean code: -->
                 <span id="top"></span>
                 <span id="bottom"></span>
                 <span id="left"></span>
@@ -38,7 +26,6 @@
             </div>
         </section>
         <section id="stage">
-<!--            <figure id="eyeball" onmouseover="MouseOver(this);" onmouseout="MouseOut(this);">-->
             <figure id="eyeball">
                 <span id="shadow"></span>
                 <span id="iris" class="irisMove"></span>
@@ -151,114 +138,84 @@
     </script>
 
     <script>
-///////////////////////////////////////////////////    
-//     updated code for eye animation and controls 
-        
+        ///////////////////////////////////////////////////    
+        //     updated code for eye animation and controls 
+
         document.addEventListener("DOMContentLoaded", function() {
             // parent div that holds the navigation wheel: 
             var navDiv = document.querySelector("#wrapper > section > div");
             navDiv.addEventListener("mousedown", moveEye, false);
             navDiv.addEventListener("mouseup", stopEye, false);
-            
+
             var eye = document.querySelector("#eyeball"),
                 iris = document.querySelector("#iris"),
-                requestID;
-            
+                reqID;
+
+            // Navigation Wheel Controls: 
+            // The following 16 lines of code are what's known as a "closure" in JavaScript. (totally need to learn more about that!)
             function moveEye(e) {
                 var btnClicked = e.target.id;
-//                alert("Button clicked: " + btnClicked);
-                if (btnClicked === "right") {
+
+                function animate() {
+                    if (btnClicked === "right") {
+                        eye.style.left = (eye.offsetLeft += 3) + "px";
+                    } else if (btnClicked === "left") {
+                        eye.style.left = (eye.offsetLeft -= 3) + "px";
+                    } else if (btnClicked === "top") {
+                        eye.style.top = (eye.offsetTop -= 3) + "px";
+                    } else if (btnClicked === "bottom") {
+                        eye.style.top = (eye.offsetTop += 3) + "px";
+                    }
+                    reqID = requestAnimationFrame(animate);
+                }
+                animate();
+            }
+
+            function stopEye(e) {
+                cancelAnimationFrame(reqID);
+            }
+
+            // Keyboard Controls: 
+            document.addEventListener("keydown", whichKey, false);
+
+            function whichKey(e) {
+                var key = e.which;
+                if (key === 39) {
                     eye.style.left = (eye.offsetLeft += 3) + "px";
-                } else if (btnClicked === "left") {
+                } else if (key === 37) {
                     eye.style.left = (eye.offsetLeft -= 3) + "px";
-                } else if (btnClicked === "top") {
+                } else if (key === 38) {
                     eye.style.top = (eye.offsetTop -= 3) + "px";
-                } else if (btnClicked === "bottom") {
+                } else if (key === 40) {
                     eye.style.top = (eye.offsetTop += 3) + "px";
                 }
 
-                requestID = window.requestAnimationFrame(moveEye);
+                reqID = requestAnimationFrame(whichKey);
             }
-//            reqID = window.requestAnimationFrame(moveEye);
-            
-            function stopEye(e) {
-                cancelAnimationFrame(requestID);
+
+            document.onkeyup = function stopAnimation() {
+                cancelAnimationFrame(reqID);
             }
-            
+
+            // Eyeball mouseover animation (scale up and down)
+
+            eye.addEventListener("mouseover", scaleUp, false);
+            eye.addEventListener("mouseout", scaleDown, false);
+
+            function scaleUp() {
+                iris.className = "";
+                eye.className = "eyeMouseOver";
+            }
+
+            function scaleDown() {
+                eye.className = "eyeMouseOut";
+                iris.className = "irisMove";
+            }
+
         }, false);
 
-/////////////////////////////////////////////////////////////////
+        /////////////////////////////////////////////////////////////////
     </script>
-
-    
-<!--
-    <script>
-        super ugly old code: 
-        
-        //        var eye = document.querySelector("#stage");
-        var eye = document.querySelector("#eyeball");
-        //        var nav = document.querySelector("#wrapper > section:first-of-type > div");
-        var iris = document.querySelector("#iris");
-
-        function MouseOver(elem) {
-            iris.className = "";
-            elem.className = "eyeMouseOver";
-        }
-
-        function MouseOut(elem) {
-            elem.className = "eyeMouseOut";
-            iris.className = "irisMove";
-        }
-
-
-        var reqID;
-        var direction;
-
-        function changeDirection(d) {
-            direction = d;
-        }
-
-        function startAnimation() {
-            if (direction === "right") {
-                eye.style.left = (eye.offsetLeft += 3) + "px";
-            } else if (direction === "left") {
-                eye.style.left = (eye.offsetLeft -= 3) + "px";
-            } else if (direction === "top") {
-                eye.style.top = (eye.offsetTop -= 3) + "px";
-            } else if (direction === "bottom") {
-                eye.style.top = (eye.offsetTop += 3) + "px";
-            }
-
-            reqID = window.requestAnimationFrame(startAnimation);
-        }
-
-        function stopAnimation() {
-            window.cancelAnimationFrame(reqID);
-        }
-
-
-        document.addEventListener("keydown", whichKey, false);
-
-        function whichKey(event) {
-            var key = event.which;
-            if (key === 39) {
-                eye.style.left = (eye.offsetLeft += 3) + "px";
-            } else if (key === 37) {
-                eye.style.left = (eye.offsetLeft -= 3) + "px";
-            } else if (key === 38) {
-                eye.style.top = (eye.offsetTop -= 3) + "px";
-            } else if (key === 40) {
-                eye.style.top = (eye.offsetTop += 3) + "px";
-            }
-
-            reqID = window.requestAnimationFrame(whichKey);
-        }
-
-        document.onkeyup = function stopAnimation() {
-            window.cancelAnimationFrame(reqID);
-        }
-    </script>
--->
 </body>
 
 </html>
