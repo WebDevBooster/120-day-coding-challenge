@@ -248,27 +248,7 @@ https://github.com/tholman/github-corners */
 
 /* Form elements */
 
-#wrapper input {
-    width: 300px;
-    padding: 5px;
-    margin-right: 10px;
-    font-size: 24px;
-}
-#wrapper input[type="range"] {
-    width: 265px;
-}
-#wrapper input[type="submit"] {
-    height: 56px;
-    padding: 10px;
-    border: 1px solid #333;
-    background-color: #ccc;
-    font-size: 24px;
-    cursor: pointer;
-    outline: none;
-    width: auto;
-    background: none;
-    margin-top: 15px;
-}
+
 form {
     /*    margin-top: 2em;*/
     /*    text-align: right;*/
@@ -276,7 +256,7 @@ form {
     /*    margin-right: 80px;*/
 }
 label {
-    display: block;
+/*    display: block;*/
 }
 input,
 input[type="text"],
@@ -287,7 +267,7 @@ select {
     border: none;
     background-color: rgb(249, 228, 130);
     padding: .5em;
-    font-size: 1em;
+/*    font-size: 1em;*/
 }
 input:focus,
 textarea:focus {
@@ -296,7 +276,7 @@ textarea:focus {
 input[type="submit"] {
     border: none;
     cursor: pointer;
-    width: 35px;
+    width: 65px;
     height: 35px;
     padding: 0;
     margin-top: -10px;
@@ -552,6 +532,7 @@ a.te-next:active {
     left: 30px;
     top: 80px;
 }
+/*
 #wrapper > section:first-of-type > div {
     position: absolute;
     width: 100px;
@@ -563,6 +544,7 @@ a.te-next:active {
     background-image: radial-gradient(circle at center, lightgrey 0%, rgba(0, 0, 0, 0.4) 100%);
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.9);
 }
+*/
 #top {
     position: absolute;
     width: 20px;
@@ -829,3 +811,193 @@ a.te-next:active {
 }
 
 /* infinity eye END */
+
+
+/* HTML editing in place */
+#edit {
+    width: 78%;
+    margin: 30px auto;
+    font-size: 22px;
+/*    color: blueviolet;*/
+}
+
+/* HTML editing in place END */
+
+hr {
+    width: 50%;
+    margin: 20px auto;
+}
+
+/*table styles*/
+article table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid white;
+    margin-bottom: 1em;
+}
+article th {
+    background: rgb(65, 62, 61);
+    color: white;
+    padding: .6em 1em .3em;
+    text-align: left;
+    border-bottom: 3px solid white;
+}
+article th:first-child {
+    width: 75%;
+}
+article tr {
+    background: rgb(251, 174, 44);
+    vertical-align: central;
+}
+article tr:nth-child(even) {
+    background: rgb(249, 228, 130);
+}
+article td {
+    border-left: 3px solid white;
+    padding: .4em 1em;
+}
+article td:nth-child(even) {
+    font-weight: bold;
+    text-align: center;
+}
+article form td:nth-child(even) {
+    font-weight: normal;
+    text-align: left;
+}
+
+/*form styles*/
+fieldset {
+    border: none;
+    border-bottom: 1px solid rgb(2, 99, 174);
+    margin-bottom: 1em;
+    width: 486px;
+}
+fieldset:last-child {
+    border: none;
+}
+legend {
+    font-family: Bitter, Georgia, "Times New Roman", Times, serif;
+    font-size: 1.4em;
+    color: rgb(251, 174, 44);
+}
+form {
+    margin-bottom: 1em;
+}
+form#theForm {
+    margin-bottom: auto;	
+}
+form ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+form li {
+    margin: 0;
+    margin-bottom: 1em;
+    padding: 0;
+    font-size: .9em;
+}
+.study li {
+    margin-bottom: 2em;
+}
+li.group {
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: .8em;
+}
+label.text {
+    display: block;
+}
+input[type="text"], input[type="email"], input[type="search"],textarea, select {
+    border: none;
+    background-color: rgb(249, 228, 130);
+    width: 318px;
+    padding: .5em;
+    font-size: 1em;
+}
+textarea {
+    height: 128px;
+}
+input:focus, textarea:focus {
+    border: 2px solid rgb(168, 88, 163);
+}
+input[type="submit"] {
+    background-color: rgb(168, 88, 163);
+/*    color: white;*/
+    padding: .2em .4em;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+select {
+    width: 328px;
+}
+select[multiple]{
+    height: 162px;
+}
+
+.alignLeft {
+    float: left;
+}
+.alignRight {
+    float: right;
+}
+
+#cube table td {
+    font-size: .8em;	
+}
+#cube input[type="text"],
+#cube input[type="range"] {
+    width: 100%;
+}
+input#hoursPracticeValue {
+    text-align: center;	
+}
+#thanks #mainContent {
+    height: 604px;	
+}
+
+article {
+    width: 600px;
+    margin: 10px auto;
+    padding: 20px;
+    background: white;
+}
+#cubeContainer {
+    text-align: left;
+}
+
+p {
+    display: block;
+    margin-bottom: 1em;
+/*    margin: 0;*/
+/*    padding: 0;*/
+    border: 0;
+    vertical-align: baseline;
+    font: inherit;
+}
+
+input[type="radio" i] {
+    margin: 3px 3px 0px 5px;
+    box-sizing: border-box;
+    
+}
+
+input[type="button" i], input[type="submit" i], input[type="reset" i], input[type="file" i]::-webkit-file-upload-button, button {
+    padding: 2px 8px;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    background-color: buttonface;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+}
+
+
+
+
+
+

@@ -1,0 +1,351 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced CSS + HTML5 local storage: 3D Survey Cube</title>
+    <link rel="stylesheet" href="_css/styles.css">
+    <link rel="stylesheet" href="_css/transitions.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="_scripts/modernizr.js"></script>
+    <script src="_scripts/utils.js"></script>
+    <script src="_scripts/custom_survey.js"></script>
+    <script src="_scripts/jquery.columnizer.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".column").columnize({
+                columns: 2
+            }); // number of columns to display in 'column' class div
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="infohead">
+        <h1>Advanced CSS + HTML5 local storage:<br>
+            3D Survey Cube</h1>
+    </div>
+    <div id="wrapper">
+        <p>Description.
+        </p>
+        <article>
+            <div id="cubeContainer">
+                <div id="cube" class="show-front">
+                    <form id="theForm" method="post" action="thanks.html">
+                        <div class="front panel">
+                            <div class="innerContainer">
+                                <h2>Q 1/5</h2>
+                                <p>What programming language(s) are you most familiar with?</p>
+                                <!-- The 'column' class is for the Columnizer jQuery Plugin -->
+                                <!-- Columnizer will automatically layout your content in newspaper column format. -->
+                                <!-- You can specify either column width or a static number of columns. -->
+                                <div class="column">
+                                    <p>
+                                        <label>
+                                            <input name="proglangs_" type="checkbox" class="proglangs" id="proglangs_0" value="JavaScript" /> JavaScript
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input name="proglangs_" type="checkbox" class="proglangs" id="proglangs_1" value="Java" /> Java
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input name="proglangs_" type="checkbox" class="proglangs" id="proglangs_2" value="Python" /> Python
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input name="proglangs_" type="checkbox" class="proglangs" id="proglangs_3" value="PHP" /> PHP
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input name="proglangs_" type="checkbox" class="proglangs" id="proglangs_4" value="Ruby/Rails" /> Ruby/Rails</label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input name="proglangs_" type="checkbox" class="proglangs" id="proglangs_5" value="C++" /> C++
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input name="proglangs_" type="checkbox" class="proglangs" id="proglangs_6" value="C#" /> C#
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input name="proglangs_" type="checkbox" class="proglangs" id="proglangs_7" value="C"> C
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input name="proglangs_" type="checkbox" class="proglangs" id="proglangs_8" value="Objective-C" /> Objective-C
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input name="proglangs_" type="checkbox" class="proglangs" id="proglangs_9" value="Go" /> Go
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input name="proglangs_" type="checkbox" class="proglangs" id="proglangs_10" value="Swift (iOS)" /> Swift (iOS)
+                                        </label>
+                                    </p>
+                                    <p>
+                                        <label>
+                                            <input name="proglangs_" type="checkbox" class="proglangs" id="proglangs_11" value="VB.NET" /> VB.NET
+                                        </label>
+                                    </p>
+                                </div>
+                                <p class="show-buttons">
+                                    <input type="button" class="show-back alignRight" value="Next">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="back cf panel">
+                            <div class="innerContainer">
+                                <h2>Q 2/5</h2>
+                                <p>What language didn't you see listed on the previous page that you wish you did?</p>
+                                <p>
+                                    <input id="addLanguage" type="text" placeholder="Additional language" />
+                                </p>
+                                <p class="show-buttons">
+                                    <input type="button" class="show-front alignLeft" value="Previous">
+                                    <input type="button" class="show-right alignRight" value="Next">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="right cf panel">
+                            <div class="innerContainer">
+                                <h2>Q 3/5</h2>
+                                <p>How long have you been coding?</p>
+                                <p>
+                                    <input type="radio" id="codingLength1" name="codingLength" value="Less than a year" />
+                                    <label>Less than a year.</label>
+                                </p>
+                                <p>
+                                    <input type="radio" id="codingLength2" name="codingLength" value="1-2 years" />
+                                    <label>1-2 years.</label>
+                                </p>
+                                <p>
+                                    <input type="radio" id="codingLength3" name="codingLength" value="3-4 years" />
+                                    <label>3-4 years.</label>
+                                </p>
+                                <p>
+                                    <input type="radio" id="codingLength4" name="codingLength" value="5 years or more" />
+                                    <label>5 years or more.</label>
+                                </p>
+                                <p>
+                                    <input type="radio" id="codingLength5" name="codingLength" value="I don't code" />
+                                    <label>I don't code.</label>
+                                </p>
+                                <p class="show-buttons">
+                                    <input type="button" class="show-back alignLeft" value="Previous">
+                                    <input type="button" class="show-left alignRight" value="Next">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="left cf panel">
+                            <div class="innerContainer">
+                                <h2>Q 4/5</h2>
+                                <p>How many hours a day do you code on average? (move slider)</p>
+                                <p>
+                                    <input id="hoursCoding" type="range" min="0" max="24" value="0" oninput="hoursCodingOutput.value=parseInt(this.value)">
+                                    <output type="text" name="hoursCodingOutput">0</output> hours/day
+                                </p>
+                                <p class="show-buttons">
+                                    <input type="button" class="show-right alignLeft" value="Previous">
+                                    <input type="button" class="show-top alignRight" value="Next">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="top cf panel">
+                            <div class="innerContainer">
+                                <h2>Q 5/5</h2>
+                                <p>What kinds of applications do you prefer to code?</p>
+                                <p>
+                                    <label>
+                                        <input class="applications" type="checkbox" name="applications_" value="websites and web apps" id="applications_0" /> websites and web apps
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="applications" type="checkbox" name="applications_" value="mobile apps" id="applications_0" /> mobile apps
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="applications" type="checkbox" name="applications_" value="desktop apps" id="applications_0" /> desktop apps</label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="applications" type="checkbox" name="applications_" value="backend/database related" id="applications_0" /> backend/database related</label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="applications" type="checkbox" name="applications_" value="machine learning" id="applications_0" /> machine learning</label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input class="applications" type="checkbox" name="applications_" value="industrial systems" id="applications_0" /> industrial systems</label>
+                                </p>
+                                <p class="show-buttons">
+                                    <input type="button" class="show-left alignLeft" value="Previous">
+                                    <input id="review" type="button" class="show-bottom alignRight" value="Next">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bottom cf panel">
+                            <div class="innerContainer">
+                                <h2>Review &amp; Submit</h2>
+                                <p>Please review your answers below. To change click the corresponding 'modify' button. When done, click submit.</p>
+                                <table width="100%">
+                                    <tr>
+                                        <td width="15%">Q1:</td>
+                                        <td id="proglangsResult" width="60%"><strong>Languages: </strong></td>
+                                        <td width="25%" class="show-buttons"><input type="button" class="show-front" value="Modify"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Q2:</td>
+                                        <td id="desiredLanguageResult"><strong>Desired: </strong></td>
+                                        <td class="show-buttons"><input type="button" class="show-back" value="Modify"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Q3</td>
+                                        <td id="codingLengthResult"><strong>Coding: </strong></td>
+                                        <td class="show-buttons"><input type="button" class="show-right" value="Modify"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Q4</td>
+                                        <td id="hoursCodingResult"><strong>Hours/day: </strong></td>
+                                        <td class="show-buttons"><input type="button" class="show-left" value="Modify"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Q5</td>
+                                        <td id="applicationsResult"><strong>Applications: </strong></td>
+                                        <td class="show-buttons"><input type="button" class="show-top" value="Modify"></td>
+                                    </tr>
+                                </table>
+<!--                                <p>Thank you for taking our survey.</p>-->
+                                <p class="show-buttons">
+                                    <input type="button" class="show-top alignLeft" value="Previous">
+                                    <input type="submit" class="alignRight" value="Submit">
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </article>
+
+    </div>
+
+    <!-- info icon -->
+    <a id="infoLink" href="#" title="Click to open info box about this project!">
+        <div id="infoIcon" class="rollInFromLeft">
+            <div id="ding" class="ding">
+                <span id="i">i</span>
+            </div>
+        </div>
+    </a>
+    <!-- info icon END -->
+    <!-- GitHub corner -->
+    <a href="https://github.com/WebDevBooster/120-day-coding-challenge" class="github-corner" aria-label="View source on Github" target="_blank">
+        <span>GitHub</span>
+        <svg width="70" height="70" viewBox="0 0 250 250" style="fill:#808080; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+            <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+            <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+        </svg>
+    </a>
+    <!-- GitHub corner END -->
+
+    <!-- Info Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Visit the blog page with <a href="blog.html" target="_blank">all details of this project here</a> (opens new tab)
+                <br> or watch the 60-second video below to learn about the main features:
+                <br> / / / / / / / / / / / / / / / / / / / / / / / / / / / /
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br> This is a video placeholder.
+                <br> The actual video is coming soon!
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br> / / / / / / / / / / / / / / / / / / / / / / / / / / / /
+                <br> If you'd like to keep the 120-day coding challenge as a source of ideas/inspiration, give it a <a href="https://github.com/WebDevBooster/120-day-coding-challenge" target="_blank">star on GitHub</a>!</p>
+        </div>
+    </div>
+    <!-- Info Modal END -->
+
+    <script>
+        // First we need to remove the class "rollInFromLeft" on hover
+        // because otherwise the icons starts rolling in again.
+        // Then we need to remove the class "ding" on click
+        // because once the user clicks the icon there's no need for it
+        // to keep "dinging".
+        // Lastly, we should grey out the icon after first click because
+        // once the icon has done its job, there's no need for it to "stick out" anymore.
+        var icon = document.getElementById("infoIcon");
+        icon.onmouseover = function() {
+            icon.classList.remove("rollInFromLeft");
+        }
+        var ding = document.getElementById("ding");
+        var i = document.getElementById("i");
+
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        icon.onclick = function() {
+                // display modal
+                modal.style.display = "block";
+                // remove ding
+                ding.classList.remove("ding");
+                // grey out icon
+                icon.style.backgroundColor = "#D4D6D9";
+                icon.style.borderColor = "#808080";
+                i.style.textShadow = "1px 1px 4px rgba(11, 11, 11, .5), -1px -1px 4px rgba(11, 11, 11, .5)";
+            }
+            // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // When the user hits the ESC key (key code 27), close the modal
+        window.onkeydown = function(event) {
+            if (event.keyCode == 27) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+    </script>
+</body>
+
+</html>
