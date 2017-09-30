@@ -36,9 +36,9 @@
             var today = document.getElementById("current-date"),
                 day = d.getDate(),
                 month = d.getMonth(), 
-                weekday = d.getDay() - 1; // to make it zero-based
+                weekday = d.getDay();
             
-            var wkdArray = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+            var wkdArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             
             var mArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
             
