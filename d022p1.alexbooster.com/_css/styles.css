@@ -253,7 +253,7 @@ section {
     max-width: 660px;
     margin: 0 auto;
 }
-.play, .pause, .stop, .prev, .next, .repeat, .rewind, .forward {
+.play, .pause, .stop, .prev, .next, .rewind, .forward, .repeat, .shuffle {
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -267,7 +267,7 @@ section {
     box-shadow: inset 0px 0px 4px 1px rgba(255, 255, 255, 1), 
                 0px 1px 2px 0px rgba(128, 128, 128, 0.75);
 }
-.play:active, .pause:active, .stop:active, .prev:active, .next:active, .repeat:active, .rewind:active, .forward:active {
+.play:active, .pause:active, .stop:active, .prev:active, .next:active, .rewind:active, .forward:active, .repeat:active, .shuffle:active {
     box-shadow: inset 0px 0px 4px 1px rgba(255, 255, 255, 1);
 }
 .play a, .pause a, .stop a, .prev a, .next a, .rewind a, .forward a {
@@ -408,7 +408,7 @@ section {
     background-color: transparent;
     border: 3px solid rgba(112, 115, 117, 0.9);
     border-top-color: transparent;
-    transform: rotateZ(45deg);
+/*    transform: rotateZ(45deg);*/
 }
 .repeat a::after {
     content: "";
@@ -421,6 +421,60 @@ section {
     border-left: 8px solid rgba(112, 115, 117, 1);
     border-bottom: 5px solid transparent;
     transform: rotateZ(-45deg);
+}
+
+.shuffle::before {
+    content: "";
+    display: inherit;
+    position: absolute;
+    width: 15px;
+    height: 0;
+    top: 14px;
+    left: 6px;
+    background-color: transparent;
+    border-bottom: 3px solid rgba(112, 115, 117, 0.9);
+    transform: rotateZ(45deg);
+}
+.shuffle::after {
+    content: "";
+    display: inherit;
+    position: absolute;
+    width: 15px;
+    height: 0px;
+    top: 14px;
+    left: 6px;
+    border-radius: 12px;
+    background-color: transparent;
+    border-bottom: 3px solid rgba(112, 115, 117, 0.9);
+    transform: rotateZ(-45deg);
+}
+.shuffle a {
+    display: inherit;
+    position: absolute;
+}
+.shuffle a::before {
+    content: "";
+    width: 0;
+    height: 0;
+    top: 4px;
+    left: 2px;
+    position: absolute;
+    border-top: 5px solid transparent;
+    border-left: 8px solid rgba(112, 115, 117, 1);
+    border-bottom: 5px solid transparent;
+    transform: rotateZ(-45deg);
+}
+.shuffle a::after {
+    content: "";
+    width: 0;
+    height: 0;
+    top: 17px;
+    left: 2px;
+    position: absolute;
+    border-top: 5px solid transparent;
+    border-left: 8px solid rgba(112, 115, 117, 1);
+    border-bottom: 5px solid transparent;
+    transform: rotateZ(45deg);
 }
 
 
