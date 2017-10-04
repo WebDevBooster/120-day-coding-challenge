@@ -3,45 +3,120 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>JavaScript: Circular Loader (Progress Indicator) on Canvas</title>
+    <title>JavaScript &amp; HTML5 Canvas: Circular Loader (Progress Indicator)</title>
     <link rel="stylesheet" href="_css/styles.css">
 </head>
 
 <body>
     <div id="infohead">
-        <h1>JavaScript:<br>
-            Circular Loader (Progress Indicator) on Canvas</h1>
+        <h1>JavaScript &amp; HTML5 Canvas:<br>
+            Circular Loader (Progress Indicator)</h1>
     </div>
     <div id="wrapper">
-        <h3>This circular loader can be used as a progress indicator for various applications.
+        <h3>This circular loader can be used as a progress indicator for various applications. 
+        <br>The first takes about 6 seconds to complete, the second twice as long and the last 3x longer.
         </h3>
         <section>
-            <canvas id="my_canvas" width="140" height="140"></canvas>
+            <canvas id="canvas1" width="140" height="140"></canvas>
+            <br><br>
+            <canvas id="canvas2" width="140" height="140"></canvas>
+            <br><br>
+            <canvas id="canvas3" width="140" height="140"></canvas>
             <script>
-                var cvas = document.getElementById('my_canvas').getContext('2d');
+                (function() {
+                "use strict";
+                
+                var ctx = document.getElementById('canvas1').getContext('2d');
                 var amountLoaded = 0;
                 var start = 4.7;
-                var cWidth = cvas.canvas.width;
-                var cHeight = cvas.canvas.height; 
+                var cWidth = ctx.canvas.width;
+                var cHeight = ctx.canvas.height; 
                 var diff;
-                function progressSim(){
+                function showProgress(){
                     diff = ((amountLoaded / 100) * Math.PI * 2 * 10).toFixed(2);
-                    cvas.clearRect(0, 0, cWidth, cHeight);
-                    cvas.lineWidth = 15;
-                    cvas.fillStyle = "#09F";
-                    cvas.strokeStyle = "#09F";
-                    cvas.textAlign = "center";
-                    cvas.fillText(amountLoaded + "%", cWidth * .5, cHeight * .5 + 2, cWidth);
-                    cvas.beginPath();
-                    cvas.arc(70, 70, 60, start, diff / 10 + start, false);
-                    cvas.stroke();
+                    ctx.clearRect(0, 0, cWidth, cHeight);
+                    ctx.lineWidth = 20;
+                    ctx.fillStyle = "#09F";
+                    ctx.strokeStyle = "#09F";
+                    ctx.textAlign = "center";
+                    ctx.font = "30px sans-serif";
+                    ctx.textBaseline = "middle";
+                    ctx.fillText(amountLoaded + "%", cWidth * .5, cHeight * .5 + 1, cWidth);
+                    ctx.beginPath();
+                    ctx.arc(70, 70, 60, start, diff / 10 + start, false);
+                    ctx.stroke();
                     if(amountLoaded >= 100){
-                        clearInterval(sim);
+                        clearInterval(show);
                         // other code to run when progress completes
                     }
                     amountLoaded++;
                 }
-                var sim = setInterval(progressSim, 60);
+                var show = setInterval(showProgress, 60);
+                })();
+            </script>
+            <script>
+                (function() {
+                "use strict";
+                
+                var ctx = document.getElementById('canvas2').getContext('2d');
+                var amountLoaded = 0;
+                var start = 4.7;
+                var cWidth = ctx.canvas.width;
+                var cHeight = ctx.canvas.height; 
+                var diff;
+                function showProgress(){
+                    diff = ((amountLoaded / 100) * Math.PI * 2 * 10).toFixed(2);
+                    ctx.clearRect(0, 0, cWidth, cHeight);
+                    ctx.lineWidth = 20;
+                    ctx.fillStyle = "#09F";
+                    ctx.strokeStyle = "#09F";
+                    ctx.textAlign = "center";
+                    ctx.font = "30px sans-serif";
+                    ctx.textBaseline = "middle";
+                    ctx.fillText(amountLoaded + "%", cWidth * .5, cHeight * .5 + 1, cWidth);
+                    ctx.beginPath();
+                    ctx.arc(70, 70, 60, start, diff / 10 + start, false);
+                    ctx.stroke();
+                    if(amountLoaded >= 100){
+                        clearInterval(show);
+                        // other code to run when progress completes
+                    }
+                    amountLoaded++;
+                }
+                var show = setInterval(showProgress, 120);
+                })();
+            </script>
+            <script>
+                (function() {
+                    "use strict";
+
+                    var ctx = document.getElementById('canvas3').getContext('2d');
+                    var amountLoaded = 0;
+                    var start = 4.7;
+                    var cWidth = ctx.canvas.width;
+                    var cHeight = ctx.canvas.height; 
+                    var diff;
+                    function showProgress(){
+                        diff = ((amountLoaded / 100) * Math.PI * 2 * 10).toFixed(2);
+                        ctx.clearRect(0, 0, cWidth, cHeight);
+                        ctx.lineWidth = 20;
+                        ctx.fillStyle = "#09F";
+                        ctx.strokeStyle = "#09F";
+                        ctx.textAlign = "center";
+                        ctx.font = "30px sans-serif";
+                        ctx.textBaseline = "middle";
+                        ctx.fillText(amountLoaded + "%", cWidth * .5, cHeight * .5 + 1, cWidth);
+                        ctx.beginPath();
+                        ctx.arc(70, 70, 60, start, diff / 10 + start, false);
+                        ctx.stroke();
+                        if(amountLoaded >= 100){
+                            clearInterval(show);
+                            // other code to run when progress completes
+                        }
+                        amountLoaded++;
+                    }
+                    var show = setInterval(showProgress, 180);
+                })();
             </script>
         </section>
     </div>
