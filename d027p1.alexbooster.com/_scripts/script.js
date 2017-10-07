@@ -18,6 +18,11 @@
             lightbox.style.top = window.pageYOffset + "px";
             lightbox.style.left = window.pageXOffset + "px";
             
+            // showing a preloader before a large image loads: 
+            var preloader = document.createElement("div");
+            preloader.id = "preloader"
+            lightbox.appendChild(preloader);
+            
             var imgSource = e.target.src;
             var largeImg = document.createElement("img");
             largeImg.id = "largeImg";
@@ -31,7 +36,10 @@
             // before we can resize the large image, 
             // we need to wait until it's been loaded: 
             largeImg.addEventListener("load", function() {
-                // if taller than current window: 
+                // first, remove preloader:
+                preloader.parentNode.removeChild(preloader);
+                
+                // adjust image size if taller than current window: 
                 if (this.height > window.innerHeight) {
                     this.ratio = window.innerHeight / this.height;
                     this.height = this.height * this.ratio;

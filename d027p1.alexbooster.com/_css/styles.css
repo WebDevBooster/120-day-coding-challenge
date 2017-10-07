@@ -275,7 +275,49 @@ https://github.com/tholman/github-corners */
     cursor: pointer;
 }
 
-
+#preloader {
+    width: 150px;
+    height: 150px;
+    border: 20px solid #eee;
+    border-top-color: #ff4400;
+    border-radius: 50%;
+    font-family: "Arial", sans-serif;
+    color: white;
+    font-size: 60px;
+    line-height: 60px;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    animation: rotate 2s linear infinite;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+#preloader::after {
+    content: "\2600";
+    position: absolute;
+    top: 46px;
+    left: 50px;
+    animation: rotateBack 1.99s linear infinite;
+}
+@keyframes rotateBack {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
 
 /* d027p1 END */
 
