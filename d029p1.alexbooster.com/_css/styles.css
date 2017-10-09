@@ -250,14 +250,15 @@ https://github.com/tholman/github-corners */
 /* d029p1 */
 
 div#preloader {
-    position: fixed;
+    position: relative;
     width: 150px;
     height: 150px;
-    left: 50%;
-    top: 50%;
+    margin: auto;
 /*  The previous 4 lines are just for project demo.
-    So, uncomment the following 4 lines for normal use: */
+    So, for use in production, 
+    uncomment the following 5 lines: */
 /*
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
