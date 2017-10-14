@@ -1,0 +1,101 @@
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
+/* d033p1 */
+
+body { 
+    background-color: #45180a; 
+}
+
+.bgvideo {
+    background-color: #45180a;
+    margin: 40px;
+    font-size: 16px;
+    font-family: "Indie Flower", cursive;
+}
+.bgvideo video {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -10;
+}
+.bgvideo img {
+    position: absolute;
+    width: 160px;
+    top: 20px;
+    left: 50%;
+    margin-left: -80px;
+}
+.bgvideo .caption {
+    position: absolute;
+    background-color: rgba(69, 24, 10, .7);
+    width: 100%;
+    left: 1px;
+    bottom: 60px;
+}
+.bgvideo .caption p {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 2.6em;
+    text-align: center;
+    color: #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+@media screen and (max-width: 700px) {
+    .bgvideo img {
+        width: 120px;
+        top: 15px;
+        margin-left: -60px;
+    }
+    .bgvideo .caption p {
+        font-size: 1.5em;
+        line-height: 22px;
+        padding: 10px 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .bgvideo {
+        margin: 15px;
+        padding: 175px 0 40px 0;
+        border: 1px solid #fff;
+        background: url(../_images/muffins.jpg) no-repeat center bottom;
+        background-size: cover;
+    }
+    .bgvideo video {
+        display: none;
+    }
+    .bgvideo img {
+        width: 90px;
+        top: 15px;
+        margin-left: -45px;
+    }
+    .bgvideo .caption {
+        position: static;
+    }
+    .bgvideo .caption p {
+        font-size: 1.4em;
+        line-height: 22px;
+        padding: 10px 0;
+    }
+}
+
+
+
+
+
+
+
+
+/* d033p1 END */
+
+
+
+
+
+
