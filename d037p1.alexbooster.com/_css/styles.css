@@ -332,25 +332,6 @@ https://github.com/tholman/github-corners */
     visibility: hidden;
 }
 
-#filters {
-    margin-bottom: 0.5em;
-}
-
-#filters button {
-    font-family: helvetica, sans-serif;
-    color: #888;
-    background: white;
-    border: 1px solid #aaa;
-    border-radius: 6px;
-    font-size: 76%;
-    padding: 0.25em;
-}
-
-#filters button:hover {
-    cursor: pointer;
-    background: #aaa;
-    color: white;
-}
 
 @media (min-width: 440px) {
     .cart .item {
@@ -364,12 +345,6 @@ https://github.com/tholman/github-corners */
         width: 30%;
         margin: 1em 1%;
         box-sizing: border-box;
-    }
-
-    .page-contact .main-content .address {
-        display: inline-block;
-        width: 10em;
-        margin: 0 0 1em;
     }
 
     #cart-toys .items {
