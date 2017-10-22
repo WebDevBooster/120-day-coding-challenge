@@ -1,0 +1,24 @@
+.clouds{ background:url("../_images/clouds.png") top left no-repeat; }
+#cloud01{ position: absolute; width:168px; height:105px; background-position:-199px -1924px; }
+#cloud02{ position: absolute; width:200px; height:166px; background-position:-2px -425px; }
+#cloud03{ position: absolute; width:199px; height:142px; background-position:-2px -921px; }
+#cloud04{ position: absolute; width:300px; height:163px; background-position:-2px -593px; }
+#cloud05{ position: absolute; width:326px; height:136px; background-position:-2px -1065px; }
+#cloud06{ position: absolute; width:298px; height:109px; background-position:-2px -1813px; }
+#cloud07{ position: absolute; width:229px; height:102px; background-position:-2px -2139px; }
+#cloud08{ position: absolute; width:200px; height:123px; background-position:-2px -1335px; }
+#cloud09{ position: absolute; width:300px; height:205px; background-position:-2px -218px; }
+#cloud10{ position: absolute; width:400px; height:113px; background-position:-2px -1584px; }
+#cloud11{ position: absolute; width:197px; height:120px; background-position:-204px -425px; }
+#cloud12{ position: absolute; width:197px; height:104px; background-position:-2px -2033px; }
+#cloud13{ position: absolute; width:397px; height:122px; background-position:-2px -1460px; }
+#cloud14{ position: absolute; width:299px; height:130px; background-position:-2px -1203px; }
+#cloud15{ position: absolute; width:400px; height:214px; background-position:-2px -2px; }
+#cloud16{ position: absolute; width:400px; height:161px; background-position:-2px -758px; }
+#cloud17{ position: absolute; width:195px; height:107px; background-position:-2px -1924px; }
+#cloud18{ position: absolute; width:194px; height:113px; background-position:-204px -1335px; }
+#cloud19{ position: absolute; width:199px; height:114px; background-position:-203px -921px; }
+#cloud20{ position: absolute; width:200px; height:109px; background-position:-200px -1699px; }
+#cloud21{ position: absolute; width:196px; height:112px; background-position:-2px -1699px; }
+#cloud22{ position: absolute; width:198px; height:97px; background-position:-201px -2033px; }
+
