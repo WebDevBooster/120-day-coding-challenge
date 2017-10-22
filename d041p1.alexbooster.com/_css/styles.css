@@ -276,38 +276,42 @@ figure::after {
 transform: translateX(909px);
     z-index: 999;
     top: 21px;
-    animation: cloud01a 80s linear 0s infinite;
+    animation: cloud01a 69s linear 0s infinite;
 }
 @keyframes cloud01a {
     0% {
-        transform: translate(909px, -30px);
+/*        transform: translate(909px, -30px);*/
+        transform: matrix(0.7, 0, 0, 0.7, 909, -30);
     }
     100% {
-        transform: translate(-444px, 0px);
+/*        transform: translate(-444px, 0px);*/
+        transform: matrix(1.4, 0, 0, 1.4, -444, 15);
     }
 }
 
 #cloud02{ position: absolute; width:200px; height:166px; background-position:-2px -425px; 
     transform: translateX(909px);
-    z-index: 999;
+    z-index: 980;
     top: -21px;
-    animation: cloud02a 80s linear 16s infinite;
+    animation: cloud02a 73s linear 16s infinite;
 }
 @keyframes cloud02a {
     0% {
-        transform: translate(909px, -30px);
+/*        transform: translate(909px, -30px);*/
+        transform: matrix(1.1, 0, 0, 1.1, 909, -20);
     }
     100% {
-        transform: translate(-444px, 20px);
+/*        transform: translate(-444px, 20px);*/
+        transform: matrix(.6, 0, 0, .6, -444, 15);
     }
 }
 
 
 #cloud03{ position: absolute; width:199px; height:142px; background-position:-2px -921px; 
     transform: translateX(909px);
-    z-index: 999;
+    z-index: 970;
     top: -21px;
-    animation: cloud03a 81s linear 34s infinite;
+    animation: cloud03a 78s linear 34s infinite;
 }
 @keyframes cloud03a {
     0% {
@@ -320,7 +324,7 @@ transform: translateX(909px);
 
 #cloud04{ position: absolute; width:300px; height:163px; background-position:-2px -593px; 
     transform: translateX(909px);
-    z-index: 999;
+    z-index: 960;
     top: -11px;
     animation: cloud04a 83s linear 54s infinite;
 }
@@ -379,7 +383,7 @@ transform: translateX(909px);
     z-index: 7;
     top: 91px;
     transform: matrix(0.4, 0, 0, 0.4, 549, 45);
-    animation: cloud08a 104s linear 21s infinite;
+    animation: cloud08a 119s linear 21s infinite;
 }
 @keyframes cloud08a {
     0% {
@@ -395,7 +399,7 @@ transform: translateX(909px);
     z-index: 6;
     top: 91px;
     transform: matrix(0.4, 0, 0, 0.4, 649, 45);
-    animation: cloud09a 110s linear 33s infinite;
+    animation: cloud09a 121s linear 33s infinite;
 }
 @keyframes cloud09a {
     0% {
@@ -411,7 +415,7 @@ transform: translateX(909px);
     z-index: 6;
     top: 91px;
     transform: matrix(0.2, 0, 0, 0.2, 555, 115);
-    animation: cloud10a 186s linear 39s infinite;
+    animation: cloud10a 222s linear 39s infinite;
 }
 @keyframes cloud10a {
     0% {
@@ -427,7 +431,7 @@ transform: translateX(909px);
     z-index: 8;
     top: 91px;
     transform: matrix(0.4, 0, 0, 0.4, 549, 45);
-    animation: cloud11a 116s linear 43s infinite;
+    animation: cloud11a 126s linear 43s infinite;
 }
 @keyframes cloud11a {
     0% {
@@ -446,7 +450,7 @@ transform: translateX(909px);
     z-index: 9;
     top: 91px;
     transform: matrix(0.4, 0, 0, 0.4, 549, 45);
-    animation: cloud13a 114s linear 61s infinite;
+    animation: cloud13a 124s linear 61s infinite;
 }
 @keyframes cloud13a {
     0% {
@@ -496,6 +500,23 @@ transform: translateX(909px);
 /*#cloud21{ position: absolute; width:196px; height:112px; background-position:-2px -1699px; }*/
 
 /*#cloud22{ position: absolute; width:198px; height:97px; background-position:-201px -2033px; }*/
+
+figcaption {
+    display: block;
+    position: absolute;
+    margin: 0 30px;
+    z-index: 9999;
+    bottom: 20px;
+    font-size: 25px;
+    color: white;
+    text-shadow: 3px 3px 3px rgba(0,0,0,0.7);
+}
+figcaption > span {
+    display: block;
+    font-size: 22px;
+    font-weight: 300;
+}
+
 
 /* d041p1 END */
 
