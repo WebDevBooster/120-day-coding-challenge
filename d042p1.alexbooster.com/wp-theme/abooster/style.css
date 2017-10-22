@@ -1,0 +1,97 @@
+/*
+Theme Name: abooster1
+Author: Alex Booster
+Author URI: https://www.alexbooster.com
+Version: 1.0
+*/
+
+body {
+    font-family: "Arial", sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+p {
+    line-height: 1.65em;
+}
+
+/* General Layout */
+div.container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+article.post {
+    border-bottom: 2px dotted #bbb;
+}
+article.post:last-of-type {
+    border-bottom: none;
+}
+
+/* Header */
+.site-header {
+    border-bottom: 2px solid #999;
+}
+
+/* Footer */
+.site-footer {
+    margin-top: 30px;
+    border-top: 2px solid #999;
+}
+
+/* Navigarion Menus */
+.site-nav ul {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 37px;
+}
+
+.site-nav ul::before, site-nav ul::after {
+    content: "";
+    display: table;
+}
+.site-nav ul::after {
+    clear: both;
+}
+.site-nav ul {
+    *zoom: 1;
+}
+
+.site-nav ul li {
+    list-style: none;
+    float: left;
+}
+
+/* Site Header Menu */
+.site-header nav ul li {
+    margin-right: 5px;
+}
+
+.site-header nav ul li a:link, 
+.site-header nav ul li a:visited {
+    display: block;
+    padding: 10px 15px;
+    border: 1px solid #bbb;
+    border-bottom: none;
+    text-decoration: none;
+}
+.site-header nav ul li a:hover {
+    background-color: #ececec;
+}
+.site-header nav ul li.current-menu-item a:link, 
+.site-header nav ul li.current-menu-item a:visited {
+    background-color: #006ec3;
+    color: white;
+}
+
+/* Site Footer Menu */
+.site-footer nav ul li {
+    margin-right: 10px;
+    padding-right: 10px;
+    border-right: 1px dotted #bbb;
+}
+
+/* Page Layout */
+article.page h2 {
+    font-size: 200%;
+}
+
