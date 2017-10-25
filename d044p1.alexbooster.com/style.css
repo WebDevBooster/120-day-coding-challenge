@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'star jedi';
+    src: url(Starjedi.ttf);
+}
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: verdana;
+}
+h1.header {
+    position: absolute;
+    top: 20px;
+    text-align: center;
+    display: block;
+    color: #ccc;
+    z-index: 6;
+    width: 100%;
+    margin: 0;
+    text-shadow: 1px 1px #000;
+    font-size: 34px;
+}
+#magic {
+    position: relative;
+    width: 89.5vw;
+    min-height: 45vw;
+    overflow: hidden;
+    margin: auto;
+}
+.layer {
+    position: absolute;
+    width: 90vw;
+    min-height: 45vw;
+    overflow: hidden;
+}
+.content-wrap {
+    position: absolute;
+    width: 90vw;
+    min-height: 45vw;
+}
+.content-body {
+    width: 35%;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+img {
+    position: absolute;
+    width: 55%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h1 {
+    font-size: 2em;
+    font-family: 'star Jedi'
+}
+p {
+    font-size: 14px;
+    width: 51%;
+}
+.top: {
+    background: #e6e6e6;
+    z-index: 1;
+}
+.top .content-wrap {
+    background-image: url(_images/magic1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.top .content-body {
+    right: 5%;
+}
+.top h1 {
+    color: #FDAB00;
+    text-shadow: 1px 1px #000;
+}
+.top p {
+    margin-left: 30%;
+    text-shadow: 1px 1px #FFF;
+}
+.bottom {
+    background: #000;
+    z-index: 2;
+    width: 50vw;
+}
+.bottom h1 {
+    color: #c00;
+    text-shadow: 1px 1px #fff;
+}
+.bottom p {
+    margin-right: 30%;
+    text-shadow: 1px 1px #000;
+}
+.bottom .content-wrap {
+    background-image: url(_images/magic2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.bottom .content-body {
+    left: 5%;
+    color: #e6e6e6;
+}
+.handle {
+    position: absolute;
+    height: 100%;
+    display: block;
+    background-color: #000;
+    width: 11px;
+    top: 0;
+    left: 50.5%;
+    z-index: 3;
+    top: 50%;
+    transform: rotate(-31deg) translateY(-50.5%);
+    height: 50%;
+    transform-origin: top;
+    /*	box-shadow: -1px 0px 20px 8px rgba(216,109,216,0.7);*/
+}
+.handle::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    display: block;
+    background-color: #fff;
+    width: 11px;
+    left: 0%;
+    z-index: 3;
+    top: -15%;
+    height: 15%;
+    transform-origin: top;
+    box-shadow: -1px 0px 20px 8px rgba(216, 109, 216, 0.7);
+}
+.handle::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    display: block;
+    background-color: #fff;
+    width: 11px;
+    left: 0%;
+    z-index: 3;
+    top: 100%;
+    height: 15%;
+    transform-origin: top;
+    box-shadow: -1px 0px 20px 8px rgba(216, 109, 216, 0.7);
+}
+.wand .bottom {
+    transform: skew(31deg);
+    margin-left: -1000px;
+    width: calc(45.5vw + 1000px);
+}
+.wand .bottom .content-wrap {
+    transform: skew(-31deg);
+    margin-left: 1000px;
+}
+@media( max-width:768px) {
+    body {
+        font-size: 75%;
+    }
+}
