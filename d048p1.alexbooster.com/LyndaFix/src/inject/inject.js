@@ -1,105 +1,118 @@
-chrome.extension.sendMessage({}, function(response) {
-	var readyStateCheckInterval = setInterval(function() {
-	if (document.readyState === "complete") {
-		clearInterval(readyStateCheckInterval);
+chrome.extension.sendMessage({}, function (response) {
+    var readyStateCheckInterval = setInterval(function () {
+        if (document.readyState === "complete") {
+            clearInterval(readyStateCheckInterval);
 
-		// ----------------------------------------------------------
-		// This part of the script triggers when page is done loading
-		console.log("Hello. This message was sent from scripts/inject.js");
-		// ----------------------------------------------------------
-        
-        
-        var td = document.querySelectorAll(".col_coc.course");
-        var courses = document.querySelectorAll(".col_coc.course a.coursetitle");
-        
-        if ( (window.location.href === "https://www.lynda.com/home/CertificateOfCompletion/CertificationStatus.aspx") && td && courses ) {
-            
-            var intervalId1 = setInterval (function() {
-                
-                var titles = [],
-                    cIDs = [],
-                    authors = [];
+            // ----------------------------------------------------------
+            // This part of the script triggers when page is done loading
+            console.log("Lynda Fix");
+            // ----------------------------------------------------------
 
-                // The tdContents loop extracts the author name
-                // from the inner HTML of each td element.
-                // This loop makes sure that even if the author 
-                // has more than 2 names (separated by a space) 
-                // or if there is more than one author, 
-                // author name(s) will be extracted correctly.
-                for (var i = td.length - 1; i >= 0; i--) {
+            // Load IDs of completed courses and save them into local storage 
+            // The user needs to visit the following URL while being logged in: 
+            if (window.location.href === "https://www.lynda.com/home/CertificateOfCompletion/CertificationStatus.aspx") {
 
-                    //        titles[i] = $(courses[i]).html();
-                    titles[i] = courses[i].innerHTML;
-                    //        console.log(titles[i]);
+                setTimeout(function () {
 
-                    //        cIDs[i] = $(courses[i]).attr("data-cid");
-                    cIDs[i] = courses[i].getAttribute("data-cid");
-                    //        console.log("Course ID: " + cIDs[i]);
+                    // function for getting JSON data:
+                    function getJSON(url) {
+                        var resp;
+                        var xmlHttp;
 
-                    // get the text part that comes after "| "
-                    //        var tdContents = $(td[i]).html().split("| ")[1];
-                    var tdContents = td[i].innerHTML.split("| ")[1];
-                    var info = tdContents.split(" ");
-                    // the split produces an array
-                    // console.log(info);
+                        resp = "";
+                        xmlHttp = new XMLHttpRequest();
 
-                    // the following loop combines all text parts 
-                    // from the second array part onwards
-                    for (var j = 0; j < info.length; j++) {
-                        if ( j === 2 ) {
-                            authors[i] = info[j];
-                        }
-                        if ( j > 2 ) {
-                            authors[i] = authors[i] + " " + info[j];
-                        }
-                    }
-                    //        console.log("Author(s): " + authors[i]);
-                }
-
-                // localStorage only supports strings. 
-                // Arrays must be converted to a string format.
-                // Use JSON.stringify() to convert it 
-                // into a JSON array
-                // and JSON.parse() to get it back.
-                localStorage.setItem("LyndaCourses", JSON.stringify(titles));
-                localStorage.setItem("LyndaCourseIDs", JSON.stringify(cIDs));
-                localStorage.setItem("LyndaAuthors", JSON.stringify(authors));
-
-            }, 1000);
-            
-        }
-        
-        
-        
-//        var cards = $("div.card");
-        var cards = document.querySelectorAll("div.card");
-        var storedIDs = JSON.parse(localStorage.getItem("LyndaCourseIDs"));
-//        var storedIDs = ["369759", "375925", "483220"];
-        
-        
-        if (cards && storedIDs) {
-            
-            var intervalId2 = setInterval (function() {
-                
-                //        console.log(cards[0]);
-
-                for (var i = cards.length - 1; i >= 0; i--) {
-
-                    for (var j = storedIDs.length - 1; j >= 0; j--) {
-                        //                console.log("ID " + [j] + ": " + storedIDs[j]);
-
-                        if ( cards[i].getAttribute("data-course-id") === storedIDs[j] ) {
-                            cards[i].style.backgroundColor = "rgba(0,222,22, .4)";
+                        if (xmlHttp != null) {
+                            xmlHttp.open("GET", url, false);
+                            xmlHttp.send(null);
+                            resp = xmlHttp.responseText;
                         }
 
+                        return resp;
                     }
 
-                }
-                
-            }, 1000);
-            
-        }
+                    var milliseconds = Date.now();
+                    // URL for loading JSON with all of the completed course data: 
+                    var certUrl = "https://www.lynda.com/home/CertificateOfCompletion/GetCertificatesByFilter?PageNumber=1&Start=0&Limit=99999&SortBy=CompletionDate&SortByOrder=1&_=" + milliseconds.toString;
 
-	}
-	}, 10);
+                    var gjson;
+                    // Get JSON data with all courses completed by the user:
+                    gjson = getJSON(certUrl);
+
+                    // Number of certificates (the same as the number of completed courses):
+                    var certNumber = JSON.parse(gjson.valueOf()).length;
+
+                    var courseNames = [],
+                        courseIDs = [],
+                        authorNames = [];
+
+                    for (var i = certNumber - 1; i >= 0; i--) {
+
+                        // get the courseName of the last-completed course:
+                        // JSON.parse(gjson.valueOf())[0]["CourseName"];
+
+                        // get the courseId of the last-completed course:
+                        // JSON.parse(gjson.valueOf())[0]["CourseId"];
+
+                        // get the authorName of the last-completed course:
+                        // JSON.parse(gjson.valueOf())[0]["AuthorName"];
+
+                        courseNames[i] = JSON.parse(gjson.valueOf())[i]["CourseName"];
+                        console.log(courseNames[i]);
+
+                        courseIDs[i] = JSON.parse(gjson.valueOf())[i]["CourseId"];
+                        console.log("Course ID: " + courseIDs[i]);
+
+                        authorNames[i] = JSON.parse(gjson.valueOf())[i]["AuthorName"];
+                        console.log("Author: " + authorNames[i]);
+                    }
+
+                    // localStorage only supports strings. 
+                    // Arrays must be converted to a string format.
+                    // Use JSON.stringify() to convert it into a JSON array
+                    // and JSON.parse() to get it back.
+                    localStorage.setItem("myLyndaCourses", JSON.stringify(courseNames));
+                    localStorage.setItem("myLyndaCourseIDs", JSON.stringify(courseIDs));
+                    localStorage.setItem("myLyndaAuthors", JSON.stringify(authorNames));
+
+                    console.log(certNumber + " courses logged!");
+                    alert(certNumber + " courses logged!\n\nVisit the author page of\n" + JSON.parse(gjson.valueOf())[0]["AuthorName"] + " now to see\nthe completed courses highlighted there.\nEnjoy!");
+
+                }, 3000); // setTimeout
+
+            } // Load IDs of completed courses and save them into local storage END
+
+
+            // ----------------------------------------------------------
+            // Highlight the card divs with the matching IDs
+
+            // Card divs that we want to target:
+            var cards = document.querySelectorAll("div.card");
+            // IDs from local storage:
+            var storedIDs = JSON.parse(localStorage.getItem("myLyndaCourseIDs"));
+            // courseNames from local storage:
+            var storedCourses = JSON.parse(localStorage.getItem("myLyndaCourses"));
+
+            if (cards && storedIDs) {
+
+                    for (var i = cards.length - 1; i >= 0; i--) {
+
+                        for (var j = storedIDs.length - 1; j >= 0; j--) {
+                            // console.log("ID " + [j] + ": " + storedIDs[j]);
+
+                            // If the "data-course-id" attribute of a card matches a stored ID, 
+                            // then we're gonna highlight the card div with a nice background color:
+                            if (cards[i].getAttribute("data-course-id") === storedIDs[j].toString()) {
+                                cards[i].style.backgroundColor = "rgba(0,222,22, .4)";
+                                console.log("Highlighting course " + storedIDs[j] + ": " + storedCourses[j]);
+                            }
+                        }
+                    }
+
+            } // Highlight the card divs with the matching IDs END
+
+
+
+        }
+    }, 10);
 });
