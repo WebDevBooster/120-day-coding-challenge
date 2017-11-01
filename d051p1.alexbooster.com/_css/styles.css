@@ -1,0 +1,416 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+/*basic styles*/
+
+html,
+body {
+    margin: 0;
+}
+html {
+    background: #636d7d;
+}
+body {
+    font: 100% Lato, Helvetica, sans-serif;
+    background: white;
+    width: 80%;
+}
+#infohead {
+    margin: 0 auto;
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    background-color: #D4D6D9;
+}
+#infohead h1 {
+    font-family: LatoLight, Helvetica, sans-serif;
+    font-weight: normal;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+    color: #575451;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 8px;
+    text-align: center;
+    width: 70%;
+    background: #D4D6D9;
+    line-height: 27px;
+}
+@media screen and (max-width: 375px) {
+    #infohead h1 {
+        font-size: 13px;
+        padding: 5px;
+        width: 50%;
+        line-height: 15px;
+    }
+}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+    #infohead h1 {
+        font-size: 14px;
+        padding: 5px;
+        width: 60%;
+        line-height: 17px;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 668px) {
+    #infohead h1 {
+        font-size: 15px;
+        padding: 8px;
+        width: 60%;
+        line-height: 18px;
+    }
+}
+h3 {
+    font-size: 1.1rem;
+    font-weight: normal;
+    padding: 0px 30px;
+}
+#wrapper {
+    margin: 80px auto 0px;
+    position: absolute;
+    background-color: white;
+    padding: 10px 20px 60px 20px;
+    text-align: center;
+    min-height: 450px;
+    width: 82vw;
+    box-sizing: border-box;
+    margin-left: 9%;
+    margin-bottom: 40px;
+}
+#infoLink1 {
+    text-decoration: none;
+}
+#infoIcon1 {
+    background-color: #455CD5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #0224C4;
+    /*        transform: scale3d(1.05, 1.05, 1.05);*/
+    display: inline-block;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.5);
+}
+#infoIcon1 > span {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+    line-height: 38px;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(2, 36, 196, 1), -1px -1px 4px rgba(2, 36, 196, 1);
+}
+#infoLink {
+    text-decoration: none;
+    text-align: center;
+}
+#infoIcon {
+    position: absolute;
+    /*    margin: 0 auto;*/
+    background-color: #455CD5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #0224C4;
+    /*    transform: scale3d(1.5, 1.5, 0);*/
+    display: inline-block;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 15px;
+    margin-left: 5%;
+}
+.rollInFromLeft {
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-name: rollIn;
+    animation-delay: .5s;
+}
+@keyframes rollIn {
+    from {
+        opacity: 0;
+        transform: translate3d(-200%, 0, 0) rotate3d(0, 0, 1, -220deg);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+.ding {
+    position: relative;
+    z-index: 9;
+    border-radius: 50%;
+    animation: pulse 10s ease-in-out infinite;
+    animation-delay: 1s;
+}
+@keyframes pulse {
+    0%,
+    5% {
+        box-shadow: 0px 0px 0px 0px rgba(2, 36, 196, 0.5);
+    }
+    15% {
+        box-shadow: 0px 0px 0px 50px rgba(2, 36, 196, 0);
+    }
+    16%,
+    100% {
+        box-shadow: 0px 0px 0px 0px rgba(2, 36, 196, 0);
+    }
+}
+#infoIcon:hover {
+    width: 38px;
+    height: 38px;
+    margin-top: 16px;
+    box-shadow: none;
+    animation: radiate .8s ease-in-out;
+}
+@keyframes radiate {
+    0% {
+        box-shadow: 0px 0px 0px 0px rgba(2, 36, 196, 0.5);
+    }
+    100% {
+        box-shadow: 0px 0px 0px 50px rgba(2, 36, 196, 0);
+    }
+}
+#infoIcon > div > span {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+    line-height: 38px;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(2, 36, 196, 1), -1px -1px 4px rgba(2, 36, 196, 1);
+}
+
+/* GitHub corner Octocat by Tim Holman: 
+https://github.com/tholman/github-corners */
+
+.github-corner > span {
+    /*
+    fill: #151513;
+    color: #fff;
+*/
+    position: absolute;
+    font-family: Lato, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #575451;
+    top: 24px;
+    /*    border: 0;*/
+    right: 26px;
+    transform: rotate(45deg);
+}
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+}
+@keyframes octocat-wave {
+    0%,
+    100% {
+        transform: rotate(0)
+    }
+    20%,
+    60% {
+        transform: rotate(-25deg)
+    }
+    40%,
+    80% {
+        transform: rotate(10deg)
+    }
+}
+@media (max-width:500px) {
+    .github-corner:hover .octo-arm {
+        animation: none
+    }
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
+}
+
+/* GitHub Octocat END */
+
+
+/* Info Modal */
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 40px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    min-width: 520px;
+    max-width: 726px;
+}
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Info Modal END */
+
+
+/* d051p1 */
+
+section {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+}
+
+form#signup {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+    background: #5890d0 url(../_images/background.jpg) no-repeat 0 -70px;
+    text-align: left;
+}
+
+form#signup h2 {
+    margin: 0;
+    color: white;
+    font-size: 2em;
+}
+form#signup h3 {
+    margin: -5px 0 12px 0;
+    color: white;
+    font-size: 1.2em;
+    padding: 0;
+}
+form#signup h4 {
+    margin: 15px 0 3px 0;
+    color: white;
+    font-size: 1em;
+}
+form#signup p, form#signup label {
+    margin: 0 0 6px 0;
+    color: rgba(255, 255, 255, .8);
+}
+form#signup fieldset {
+    border: 1px solid rgba(255, 255, 255, .4);
+    margin: 15px 0 15px 0;
+    padding: 0 10px 10px 20px;
+}
+form#signup legend {
+    color: #254581;
+    font-size: .9em;
+}
+form#signup textarea {
+    font-size: .9em;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    color: #264581;
+    background-color: rgba(255, 255, 255, .8);
+    width: 80%;
+}
+form#signup textarea:focus {
+    background-color: white;
+}
+form#signup select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    font-size: .9em;
+    background: #588fd0 url(../_images/icons_arrows.svg) no-repeat right 8px;
+    background-size: 30px 20px;
+    color: #ffd34c;
+    padding: 7px 45px 7px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+form#signup select::-ms-expand {
+    display: none;
+}
+form#signup input[type=checkbox], form#signup input[type=radio] {
+    width: 20px;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+form#signup input[type=checkbox] + label,
+form#signup input[type=radio] + label {
+    display: inline-block;
+    margin: -20px;
+    padding: 4px 0 0 27px;
+    background: url(../_images/icons_check_radio.svg) no-repeat;
+    background-size: 20px 80px;
+    line-height: 16px;
+}
+form#signup input[type=checkbox] + label {
+    background-position: 0 0;
+}
+form#signup input[type=radio] + label {
+    background-position: 0 -40px;
+}
+form#signup input:checked + label {
+    color: #ffd34c;
+}
+form#signup input[type=checkbox]:checked + label {
+    background-position: 0 -20px;
+}
+form#signup input[type=radio]:checked + label {
+    background-position: 0 -60px;
+}
+form#signup input#email {
+    font-size: .9em;
+    background: rgba(255, 255, 255, .8) url(../_images/icon_email.svg) no-repeat 7px 6px;
+    background-size: 30px 17px;
+    padding: 5px 0 6px 47px;
+    margin: 0 0 12px 0;
+    border: none;
+    border-radius: 5px;
+    color: #264581;
+    width: 80%;
+}
+form#signup input#email:focus {
+    background-color: white;
+}
+form#signup input[type=submit] {
+    font-size: .9em;
+    color: white;
+    border: none;
+    background-color: #264581;
+    margin: 10px 0 5px 0;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+form#signup input[type=submit]:hover {
+    color: #ffd34c;
+}
+
+/* d051p1 END */
+
+
+
+
+
+
+
