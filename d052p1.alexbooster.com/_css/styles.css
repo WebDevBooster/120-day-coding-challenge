@@ -1,0 +1,412 @@
+/*basic styles*/
+
+html,
+body {
+    margin: 0;
+}
+html {
+    background: #636d7d;
+}
+body {
+    font: 100% Lato, Helvetica, sans-serif;
+    background: white;
+    width: 80%;
+}
+#infohead {
+    margin: 0 auto;
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    background-color: #D4D6D9;
+}
+#infohead h1 {
+    font-family: LatoLight, Helvetica, sans-serif;
+    font-weight: normal;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+    color: #575451;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 8px;
+    text-align: center;
+    width: 70%;
+    background: #D4D6D9;
+    line-height: 27px;
+}
+@media screen and (max-width: 375px) {
+    #infohead h1 {
+        font-size: 13px;
+        padding: 5px;
+        width: 50%;
+        line-height: 15px;
+    }
+}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+    #infohead h1 {
+        font-size: 14px;
+        padding: 5px;
+        width: 60%;
+        line-height: 17px;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 668px) {
+    #infohead h1 {
+        font-size: 15px;
+        padding: 8px;
+        width: 60%;
+        line-height: 18px;
+    }
+}
+h3 {
+    font-size: 1.1rem;
+    font-weight: normal;
+    padding: 0px 30px;
+}
+#wrapper {
+    margin: 80px auto 0px;
+    position: absolute;
+    background-color: white;
+    padding: 10px 20px 60px 20px;
+    text-align: center;
+    min-height: 450px;
+    width: 82vw;
+    box-sizing: border-box;
+    margin-left: 9%;
+    margin-bottom: 40px;
+}
+#infoLink1 {
+    text-decoration: none;
+}
+#infoIcon1 {
+    background-color: #455CD5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #0224C4;
+    /*        transform: scale3d(1.05, 1.05, 1.05);*/
+    display: inline-block;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.5);
+}
+#infoIcon1 > span {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+    line-height: 38px;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(2, 36, 196, 1), -1px -1px 4px rgba(2, 36, 196, 1);
+}
+#infoLink {
+    text-decoration: none;
+    text-align: center;
+}
+#infoIcon {
+    position: absolute;
+    /*    margin: 0 auto;*/
+    background-color: #455CD5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #0224C4;
+    /*    transform: scale3d(1.5, 1.5, 0);*/
+    display: inline-block;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 15px;
+    margin-left: 5%;
+}
+.rollInFromLeft {
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-name: rollIn;
+    animation-delay: .5s;
+}
+@keyframes rollIn {
+    from {
+        opacity: 0;
+        transform: translate3d(-200%, 0, 0) rotate3d(0, 0, 1, -220deg);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+.ding {
+    position: relative;
+    z-index: 9;
+    border-radius: 50%;
+    animation: pulse 10s ease-in-out infinite;
+    animation-delay: 1s;
+}
+@keyframes pulse {
+    0%,
+    5% {
+        box-shadow: 0px 0px 0px 0px rgba(2, 36, 196, 0.5);
+    }
+    15% {
+        box-shadow: 0px 0px 0px 50px rgba(2, 36, 196, 0);
+    }
+    16%,
+    100% {
+        box-shadow: 0px 0px 0px 0px rgba(2, 36, 196, 0);
+    }
+}
+#infoIcon:hover {
+    width: 38px;
+    height: 38px;
+    margin-top: 16px;
+    box-shadow: none;
+    animation: radiate .8s ease-in-out;
+}
+@keyframes radiate {
+    0% {
+        box-shadow: 0px 0px 0px 0px rgba(2, 36, 196, 0.5);
+    }
+    100% {
+        box-shadow: 0px 0px 0px 50px rgba(2, 36, 196, 0);
+    }
+}
+#infoIcon > div > span {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+    line-height: 38px;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(2, 36, 196, 1), -1px -1px 4px rgba(2, 36, 196, 1);
+}
+
+/* GitHub corner Octocat by Tim Holman: 
+https://github.com/tholman/github-corners */
+
+.github-corner > span {
+    /*
+    fill: #151513;
+    color: #fff;
+*/
+    position: absolute;
+    font-family: Lato, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #575451;
+    top: 24px;
+    /*    border: 0;*/
+    right: 26px;
+    transform: rotate(45deg);
+}
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+}
+@keyframes octocat-wave {
+    0%,
+    100% {
+        transform: rotate(0)
+    }
+    20%,
+    60% {
+        transform: rotate(-25deg)
+    }
+    40%,
+    80% {
+        transform: rotate(10deg)
+    }
+}
+@media (max-width:500px) {
+    .github-corner:hover .octo-arm {
+        animation: none
+    }
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
+}
+
+/* GitHub Octocat END */
+
+
+/* Info Modal */
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 40px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    min-width: 520px;
+    max-width: 726px;
+}
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Info Modal END */
+
+
+/* d052p1 */
+
+section {
+    text-align: left;
+}
+section h3 {
+    padding: 0;
+    font-weight: bold;
+}
+.sp {
+    width: 500px;
+    position: relative;
+    margin: 0 0 10px 25px;
+    float: right;
+}
+.sp .tabs {
+    position: relative;
+    z-index: 101;
+/* 
+    disabling the tabs for progressive enhancement
+    Re-enable via JS!
+*/
+    display: none;
+}
+.sp .tabs span {
+    display: inline-block;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 12px;
+    margin: 0;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+}
+.sp .tabs span:first-child {
+    padding-left: 15px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-top-left-radius: 12px;
+}
+.sp .tabs span:last-child {
+    padding-left: 15px;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-top-right-radius: 12px;
+}
+.sp .tabs span.selected {
+    color: #999;
+    border-bottom: 1px solid #fff;
+}
+.sp .panelContainer {
+    position: relative;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    overflow: hidden;
+    z-index: 100;
+    margin-top: -1px;
+}
+.sp .panelContainer .panel .panelContent {
+    padding: 15px;
+}
+/* 
+removing the following 2 rules to enable progressive enhancement
+So, re-enable them via JS!
+*/
+/*
+.sp .panelContainer .panels {
+    position: absolute;
+    top: 0;
+}
+.sp .panelContainer .panel {
+    position: absolute;
+    height: 400px;
+}
+*/
+
+.sp .tabs .video.selected {
+    color: #ffce6f;
+    background-color: #3a3563;
+    border-bottom: 1px solid #3a3563;
+}
+.sp .panels .video .panelContent {
+    background: url(../_images/video_background.jpg) no-repeat 0 0;
+}
+.sp .panels .video .panelContent h3 {
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.6);
+}
+.sp .panels .video .panelContent p {
+    color: #fff;
+}
+
+.sp .tabs .ipad.selected {
+    color: #fff;
+    background-color: #8dbc52;
+    border-bottom: 1px solid #8dbc52;
+}
+.sp .panels .ipad .panelContent {
+    background: url(../_images/ipad_background.jpg) no-repeat 0 0;
+}
+.sp .panels .ipad .panelContent h3 {
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+}
+.sp .panels .ipad .panelContent p {
+    color: #284108;
+    margin-right: 150px;
+}
+
+.sp .tabs .photo.selected {
+    color: #fff;
+    background-color: #000;
+    border-bottom: 1px solid #000;
+}
+.sp .panels .photo .panelContent {
+    background: url(../_images/photo_background.jpg) no-repeat 0 0;
+}
+.sp .panels .photo .panelContent {
+    padding-right: 120px;
+}
+.sp .panels .photo .panelContent h3 {
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+}
+.sp .panels .photo .panelContent p {
+    color: #fff;
+}
+
+
+
+
+/* d052p1 END */
+
+
+
+
+
+
+
