@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 250 250">
+    <defs>
+        <linearGradient id="linear-gradient" x1="119.794" y1="171.649" x2="129.73" y2="171.649" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#9c9ea1" />
+            <stop offset="0.07" stop-color="#b4b5b7" />
+            <stop offset="0.186" stop-color="#d4d5d6" />
+            <stop offset="0.297" stop-color="#ececed" />
+            <stop offset="0.401" stop-color="#fafafa" />
+            <stop offset="0.489" stop-color="#fff" />
+            <stop offset="0.63" stop-color="#fcfcfc" />
+            <stop offset="0.727" stop-color="#f3f3f4" />
+            <stop offset="0.809" stop-color="#e4e5e5" />
+            <stop offset="0.885" stop-color="#cecfd1" />
+            <stop offset="0.954" stop-color="#b3b4b7" />
+            <stop offset="1" stop-color="#9c9ea1" />
+        </linearGradient>
+        <linearGradient id="linear-gradient-2" x1="278.784" y1="29.635" x2="259.947" y2="45.903" gradientTransform="matrix(-0.5, 0.866, -0.866, -0.5, 245.087, -79.004)" gradientUnits="userSpaceOnUse">
+            <stop offset="0.103" stop-color="#fff" />
+            <stop offset="0.236" stop-color="#fbfbfb" />
+            <stop offset="0.364" stop-color="#f0f0f0" />
+            <stop offset="0.49" stop-color="#dcddde" />
+            <stop offset="0.614" stop-color="#c1c2c5" />
+            <stop offset="0.713" stop-color="#a6a8ab" />
+            <stop offset="1" stop-color="#fff" />
+        </linearGradient>
+        <linearGradient id="linear-gradient-3" x1="297.865" y1="251.794" x2="279.028" y2="268.062" gradientTransform="translate(-130.797 -99.133)" xlink:href="#linear-gradient-2" />
+        <linearGradient id="linear-gradient-4" x1="95.935" y1="157.226" x2="77.098" y2="173.495" gradientTransform="translate(39.712 236.453) rotate(-120)" xlink:href="#linear-gradient-2" />
+        <radialGradient id="radial-gradient" cx="125.004" cy="125.02" r="6.713" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fff" />
+            <stop offset="0.44" stop-color="#fff" />
+            <stop offset="0.613" stop-color="#f3f4f4" />
+            <stop offset="0.922" stop-color="#d5d6d7" />
+            <stop offset="1" stop-color="#cccecf" />
+        </radialGradient>
+        <style>
+            <![CDATA[ 
+#blades {
+    transform-origin: 50% 50%;
+    animation: my_anim 9s infinite linear;
+}
+@keyframes my_anim {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+            
+            ]]>
+        </style>
+    </defs>
+    <title>Wind Turbine</title>
+    <g id="base">
+        <path d="M121.712,95.26s-1.918,151.287-1.918,154.323c4.67.048,5.2.047,9.908,0,.32,0-2.237-154.642-2.237-154.642S123.949,91.9,121.712,95.26Z" style="fill: url(#linear-gradient)" />
+    </g>
+    <g id="blades_container" transform="translate(0,-25)">
+        <g id="blades">
+            <circle cx="125" cy="125" r="100" style="fill: none" />
+            <path d="M122.452,124.077c-13.209-.887-43.624,7.423-55.879,10.662-31.452,8.312-34.346,9.434-34.346,9.434s-1.6.455-1.8.909c-.394.925.7,2.229,2.592,2.342,2.817.169,64.071-8.832,67.075-8.812,2.745.018,4.423.227,7.058-1.814,3.581-2.775,17.422-10.827,17.422-10.827s.519-.491.428-.974C124.922,124.563,124.346,124.135,122.452,124.077Z" style="fill: url(#linear-gradient-2)" />
+            <path d="M125.476,127.689c5.836,11.883,28.241,34.068,37.173,43.062,22.924,23.082,25.343,25.027,25.343,25.027s1.2,1.162,1.687,1.1c1-.121,1.579-1.723.732-3.416-1.262-2.524-39.684-51.071-41.169-53.682-1.357-2.387-2.015-3.944-5.1-5.205-4.194-1.714-18.087-9.674-18.087-9.674a1.308,1.308,0,0,0-1.057.117C124.662,125.307,124.579,126.021,125.476,127.689Z" style="fill: url(#linear-gradient-3)" />
+            <path d="M127.077,123.264c7.373-11,15.383-41.491,18.706-53.724,8.527-31.394,9-34.461,9-34.461s.408-1.617.112-2.012c-.6-.8-2.282-.506-3.325,1.074-1.555,2.355-24.387,59.9-25.906,62.495-1.388,2.368-2.408,3.717-1.958,7.019.613,4.489.665,20.5.665,20.5s.166.695.63.857C125.421,125.16,126.08,124.874,127.077,123.264Z" style="fill: url(#linear-gradient-4)" />
+            <circle cx="125.004" cy="125.02" r="6.713" style="fill: url(#radial-gradient)" />
+        </g>
+    </g>
+</svg>
