@@ -110,6 +110,36 @@ chrome.extension.sendMessage({}, function (response) {
                     }
 
             } // Highlight the card divs with the matching IDs END
+            
+            // ----------------------------------------------------------
+            // Highlight Play List items with the matching IDs
+            
+            // TO DO:
+            // This code below only works on the initially loaded play list page.
+            // It doesn't work on the other playlists because they are loaded via AJAX
+            // So, I need to figure out a way to get the DOM objects that get loaded via AJAX 
+            // in order to be able to manipulate them.
+
+            // li items that we want to target:
+            var lis = document.querySelectorAll("li.qItem");
+
+            if ((window.location.href.indexOf("lynda.com/Playlist") > -1) && lis && storedIDs) {
+
+                for (var i = lis.length - 1; i >= 0; i--) {
+
+                    for (var j = storedIDs.length - 1; j >= 0; j--) {
+                        // console.log("ID " + [j] + ": " + storedIDs[j]);
+
+                        // If the "data-course-id" attribute of a li item matches a stored ID, 
+                        // then we're gonna highlight the li with a nice background color:
+                        if (lis[i].getAttribute("data-course-id") === storedIDs[j].toString()) {
+                            lis[i].style.backgroundColor = "rgba(0,222,22, .4)";
+                            lis.log("Highlighting course " + storedIDs[j] + ": " + storedCourses[j]);
+                        }
+                    }
+                }
+
+            } // Highlight Play List items with the matching IDs END
 
 
 
