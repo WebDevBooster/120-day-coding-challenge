@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Roboto Slab', Georgia, sans-serif;
+    font-size: 16px;
+    color: #2f2f2a;
+    text-align: left;
+}
+aside.wdb-infobar {
+    color: #fff;
+    font-family:'Roboto Slab', Georgia, sans-serif;
+    background-color: #000;
+    padding: 8px 15px 0px 15px;
+}
+
+/* label rules */
+aside.wdb-infobar label {
+    display: block;
+    position: relative;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    z-index: 9999;
+}
+/* hiding the checkbox */
+/* clicking on the labels will check and uncheck the checkbox */
+/* we will use the checked state as trigger 
+to show hidden content and play animation */
+aside.wdb-infobar label input {
+    display: none;
+}
+
+/* info bar message */
+.wdb-imsg {
+    display: inline-block;
+    max-width: 300px;
+    /*    padding-bottom: 10px;*/
+}
+
+/* info bar button */
+aside.wdb-infobar label span.wdb-ibtn {
+    text-decoration: none;
+    font-size: 17px;
+    color: white;
+    display: inline-block;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 5px 15px;
+    border: 1px solid;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #7d7e7d 0%,#0e0e0e 100%);
+    vertical-align: 10px;
+}
+aside.wdb-infobar label span.wdb-ibtn::before {
+    content: "i";
+    display: inline-block;
+    font-size: 19px;
+    text-align: center;
+    line-height: 19px;
+    font-weight: bold;
+    width: 23px;
+    height: 23px;
+    border: 2px solid;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+/* turn the info icon into an x icon when checked */
+aside.wdb-infobar label input:checked ~ span.wdb-ibtn::before {
+    content: "\00D7";
+    font-size: 19px;
+    text-shadow: 
+        1px 1px 5px rgba(208,23,222,0.75),
+        -1px -1px 5px rgba(208,23,222,0.75);
+    box-shadow: 
+        0px 0px 8px 2px rgba(208,23,222,0.75),
+        inset 0px 0px 3px 2px rgba(208,23,222,0.75);
+}
+
+/* hidden message */
+/* message div when collapsed = height: 0; */
+/* height property will be animated when checked */
+aside.wdb-infobar > label > div {
+    max-width: 440px;
+    margin: auto;
+    text-align: left;
+    transition: all 0.6s ease;
+    margin-top: -14px;
+    height: 0;
+    left: -9999px;
+    position: relative;
+}
+
+/* the height property will be animated when checked */
+/* to make animation possible, height cannot be set to auto */
+/* the display property cannot be animated either */
+aside.wdb-infobar label input:checked ~ div {
+/*    display: block;*/
+    height: 420px;
+    left: auto;
+}
+
+/* when message div is collapsed (i.e height: 0;) */
+/* all tags inside that div must be individually hidden */
+/* using opacity because the display property cannot be animated */
+aside.wdb-infobar label div h3,
+aside.wdb-infobar label div p,
+aside.wdb-infobar label div a {
+/*    display: none;*/
+    transition: all 0.6s ease-in-out;
+    opacity: 0;
+}
+
+aside.wdb-infobar label div h3 {
+    padding: 10px 0 0 0;
+    font-size: 24px;
+}
+aside.wdb-infobar label div p {
+    /*    margin-top: 20px;*/
+}
+aside.wdb-infobar label div a {
+    display: inline-block;
+    border: 3px solid white;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: .6em 1em;
+    margin: 0 auto;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #7d7e7d 0%,#0e0e0e 100%);
+}
+
+/* show content when input:checked */
+aside.wdb-infobar label input:checked ~ div h3,
+aside.wdb-infobar label input:checked ~ div p,
+aside.wdb-infobar label input:checked ~ div a {
+/*    display: inline-block;*/
+    opacity: 1;
+}
+
+@media screen and (max-width: 600px) {
+    .wdb-imsg {
+        padding-bottom: 10px;
+    }
+}
+
