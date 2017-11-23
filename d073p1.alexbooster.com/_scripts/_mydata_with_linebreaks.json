@@ -1,0 +1,80 @@
+[
+  {
+    "title":"Python Crash Course: A Hands-On, Project-Based Introduction to Programming",
+    "titleshort":"Python_Crash_Course",
+    "author":"Eric Matthes",
+    "description":"Python Crash Course is a fast-paced, thorough introduction to Python that will have you writing programs, solving problems, and making things that work in no time. In the first half of the book, you'll learn about basic programming concepts, such as lists, dictionaries, classes, and loops, and practice writing clean and readable code with exercises for each topic. <br><br>You'll also learn how to make your programs interactive and how to test your code safely before adding it to a project. In the second half of the book, you'll put your new knowledge into practice with three substantial projects: a Space Invaders--inspired arcade game, data visualizations with Python's super-handy libraries, and a simple web app you can deploy online."
+  },
+  {
+    "title":"The Self-Taught Programmer: The Definitive Guide to Programming Professionally",
+    "titleshort":"The_Self-Taught_Programmer",
+    "author":"Cory Althoff",
+    "description":"I am a self-taught programmer. After a year of self-study, I learned to program well enough to land a job as a software engineer II at eBay. Once I got there, I realized I was severely under-prepared. I was overwhelmed by the amount of things I needed to know but hadn't learned yet. My journey learning to program, and my experience at my first job as a software engineer were the inspiration for this book. <br><br>This book is not just about learning to program; although you will learn to code. If you want to program professionally, it is not enough to learn to code; that is why, in addition to helping you learn to program, I also cover the rest of the things you need to know to program professionally that classes and books don't teach you. \"The Self-taught Programmer\" is a roadmap, a guide to take you from writing your first Python program, to passing your first technical interview."
+  },
+  {
+    "title":"Make Your Own Neural Network",
+    "titleshort":"Neural_Network",
+    "author":"Tariq Rashid",
+    "description":"A step-by-step gentle journey through the mathematics of neural networks, and making your own using the Python computer language. <br><br>Neural networks are a key element of deep learning and artificial intelligence, which today is capable of some truly impressive feats. Yet too few really understand how neural networks actually work. <br><br>This guide will take you on a fun and unhurried journey, starting from very simple ideas, and gradually building up an understanding of how neural networks work. You won't need any mathematics beyond secondary school, and an accessible introduction to calculus is also included. <br><br>The ambition of this guide is to make neural networks as accessible as possible to as many readers as possible - there are enough texts for advanced readers already!"
+  },
+  {
+    "title":"Machine Learning With Random Forests And Decision Trees: A Visual Guide For Beginners",
+    "titleshort":"Machine_Learning",
+    "author":"Scott Hartshorn",
+    "description":"Machine Learning - Made Easy To Understand \n If you are looking for a book to help you understand how the machine learning algorithms \"Random Forest\" and \"Decision Trees\" work behind the scenes, then this is a good book for you.  Those two algorithms are commonly used in a variety of applications including big data analysis for industry and data analysis competitions like you would find on Kaggle. <br><br>This book explains how Decision Trees work and how they can be combined into a Random Forest to reduce many of the common problems with decision trees, such as overfitting the training data."
+  },
+  {
+    "title":"Python Tricks: A Buffet of Awesome Python Features",
+    "titleshort":"Python_Tricks",
+    "author":"Dan Bader",
+    "description":"With Python Tricks: The Book you'll discover Python's best practices and the power of beautiful & Pythonic code with simple examples and a step-by-step narrative. <br><br>You'll get one step closer to mastering Python, so you can write beautiful and idiomatic code that comes to you naturally. <br><br>Learning the ins and outs of Python is difficult—and with this book you'll be able to focus on the practical skills that really matter. Discover the “hidden gold” in Python's standard library and start writing clean and Pythonic code today."
+  },
+  {
+    "title":"The Joy of PHP: A Beginner's Guide to Programming Interactive Web Applications with PHP and mySQL",
+    "titleshort":"The_Joy_of_PHP",
+    "author":"Alan Forbes",
+    "description":"Third Edition now with bonus chapters. Have you ever wanted to design your own website or browser application but thought it would be too difficult or just didn't know where to start? Have you found the amount of information on the Internet either too daunting or not geared for your skill set or worse -- just plain boring? Are you interested in learning to program PHP and have some fun along the way? If so, then The Joy of PHP by Alan Forbes is the book for you!"
+  },
+  {
+    "title":"JavaScript: The Good Parts",
+    "titleshort":"JS_Good_Parts",
+    "author":"Douglas Crockford",
+    "description":"This is a book about the JavaScript programming language. It is intended for programmers who, by happenstance or curiosity, are venturing into JavaScript for the first time. It is also intended for programmers who have been working with JavaScript at a novice level and are now ready for a more sophisticated relationship with the language. JavaScript is a surprisingly powerful language. Its presents some challenges, but being a small language, it is easily mastered."
+  },
+  {
+    "title":"Two Scoops of Django 1.11: Best Practices for the Django Web Framework",
+    "titleshort":"Two_Scoops_of_Django",
+    "author":"Daniel Roy Greenfeld, Audrey Roy Greenfeld",
+    "description":"Two Scoops of Django 1.11 Will Help You Build Django Projects. /r In this book we introduce you to the various tips, tricks, patterns, code snippets, and techniques that we've picked up over the years. We have put thousands of hours into the fourth edition of the book, writing and revising its material to include significant improvements and new material based on feedback from previous editions."
+  },
+  {
+    "title":"Interactive Data Visualization for the Web: An Introduction to Designing with D3",
+    "titleshort":"Data_Visualization",
+    "author":"Scott Murray",
+    "description":"Create and publish your own interactive data visualization projects on the web—even if you have little or no experience with data visualization or web development. It's inspiring and fun with this friendly, accessible, and practical hands-on introduction. This fully updated and expanded second edition takes you through the fundamental concepts and methods of D3, the most powerful JavaScript library for expressing data visually in a web browser. /r Ideal for designers with no coding experience, reporters exploring data journalism, and anyone who wants to visualize and share data, this step-by-step guide will also help you expand your web programming skills by teaching you the basics of HTML, CSS, JavaScript, and SVG."
+  },
+  {
+    "title":"Web Scraping with Python: Collecting Data from the Modern Web",
+    "titleshort":"Web_Scraping_with_Python",
+    "author":"Ryan Mitchell",
+    "description":"Learn web scraping and crawling techniques to access unlimited data from any web source in any format. With this practical guide, you'll learn how to use Python scripts and web APIs to gather and process data from thousands—or even millions—of web pages at once. <br><br>Ideal for programmers, security professionals, and web administrators familiar with Python, this book not only teaches basic web scraping mechanics, but also delves into more advanced topics, such as analyzing raw data or using scrapers for frontend website testing. Code samples are available to help you understand the concepts in practice."
+  },
+  {
+    "title":"Learn JavaScript VISUALLY with Interactive Exercises: The Beautiful New Way to Learn a Programming Language (Learn Visually)",
+    "titleshort":"JS_Visually",
+    "author":"Ivelin Demirov",
+    "description":"This is a short book for Visual Learners. <br><br>Visual Learners retain information very differently than their left brained counter-parts, and thus benefit from different approaches. Full color illustrations help memory triggers as your brain never forgets an image, metaphor or schema. One page of this visual JavaScript guide can equal one chapter of a conventional book as illustrations can make a world of difference over strictly words on a page!"
+  },
+  {
+    "title":"Eloquent JavaScript: A Modern Introduction to Programming",
+    "titleshort":"Eloquent_JavaScript",
+    "author":"Marijn Haverbeke",
+    "description":"JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications. <br><br>Eloquent JavaScript, 2nd Edition dives deep into the JavaScript language to show you how to write beautiful, effective code. Author Marijn Haverbeke immerses you in example code from the start, while exercises and full-chapter projects give you hands-on experience with writing your own programs."
+  },
+  {
+    "title":"A Smarter Way to Learn JavaScript: The new approach that uses technology to cut your effort in half",
+    "titleshort":"JS_Smarter",
+    "author":"Mark Myers",
+    "description":"Learning JavaScript is hell because of two problems. <br><br>I remove the problems, and you start having fun. <br><br>The first problem is retention. You remember only ten or twenty percent of what you read. That spells failure. To become fluent in a computer language, you have to retain pretty much everything. <br><br>How can you retain everything? Only by constantly being asked to play everything back. That's why people use flashcards. But my system does flashcards one better. After reading a short chapter, you go to my website and complete twenty interactive exercises. Algorithms check your work to make sure you know what you think you know. When you stumble, you do the exercise again. You keep trying until you know the chapter cold. The exercises are free. <br><br>The second problem is comprehension. Many learners hit a wall when they try to understand advanced concepts like variable scope and prototypes. Unfortunately, they blame themselves. That's why the Dummies books sell so well. But the fault lies with the authors, coding virtuosos who lack teaching talent. I'm the opposite of the typical software book author. I'll never code fast enough to land a job at Google. But I can teach."
+  }
+]
