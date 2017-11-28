@@ -1,0 +1,483 @@
+/*basic styles*/
+
+html,
+body {
+    margin: 0;
+}
+html {
+    background: #636d7d;
+}
+body {
+    font: 100% Lato, Helvetica, sans-serif;
+    background: white;
+    width: 80%;
+}
+#infohead {
+    margin: 0 auto;
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    background-color: #D4D6D9;
+}
+#infohead h1 {
+    font-family: LatoLight, Helvetica, sans-serif;
+    font-weight: normal;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+    color: #575451;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 8px;
+    text-align: center;
+    width: 70%;
+    background: #D4D6D9;
+    line-height: 27px;
+}
+@media screen and (max-width: 375px) {
+    #infohead h1 {
+        font-size: 13px;
+        padding: 5px;
+        width: 50%;
+        line-height: 15px;
+    }
+}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+    #infohead h1 {
+        font-size: 14px;
+        padding: 5px;
+        width: 60%;
+        line-height: 17px;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 668px) {
+    #infohead h1 {
+        font-size: 15px;
+        padding: 8px;
+        width: 60%;
+        line-height: 18px;
+    }
+}
+h3 {
+    font-size: 1.1rem;
+    font-weight: normal;
+    padding: 0px 30px;
+}
+#wrapper {
+    margin: 80px auto 0px;
+    position: absolute;
+    background-color: white;
+    padding: 10px 20px 60px 20px;
+    text-align: center;
+    min-height: 450px;
+    width: 82vw;
+    box-sizing: border-box;
+    margin-left: 9%;
+    margin-bottom: 40px;
+}
+@media (max-width: 450px) {
+    #wrapper {
+        padding: 10px 10px 50px 10px;
+        min-height: 30px;
+        width: 100%;
+        margin: 70px auto 20px;
+    }
+}
+#infoLink1 {
+    text-decoration: none;
+}
+#infoIcon1 {
+    background-color: #455CD5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #0224C4;
+    /*        transform: scale3d(1.05, 1.05, 1.05);*/
+    display: inline-block;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.5);
+}
+#infoIcon1 > span {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+    line-height: 38px;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(2, 36, 196, 1), -1px -1px 4px rgba(2, 36, 196, 1);
+}
+#infoLink {
+    text-decoration: none;
+    text-align: center;
+}
+#infoIcon {
+    position: absolute;
+    /*    margin: 0 auto;*/
+    background-color: #455CD5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #0224C4;
+    /*    transform: scale3d(1.5, 1.5, 0);*/
+    display: inline-block;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 15px;
+    margin-left: 5%;
+}
+.rollInFromLeft {
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-name: rollIn;
+    animation-delay: .5s;
+}
+@keyframes rollIn {
+    from {
+        opacity: 0;
+        transform: translate3d(-200%, 0, 0) rotate3d(0, 0, 1, -220deg);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+.ding {
+    position: relative;
+    z-index: 9;
+    border-radius: 50%;
+    animation: pulse 10s ease-in-out infinite;
+    animation-delay: 1s;
+}
+@keyframes pulse {
+    0%,
+    5% {
+        box-shadow: 0px 0px 0px 0px rgba(2, 36, 196, 0.5);
+    }
+    15% {
+        box-shadow: 0px 0px 0px 50px rgba(2, 36, 196, 0);
+    }
+    16%,
+    100% {
+        box-shadow: 0px 0px 0px 0px rgba(2, 36, 196, 0);
+    }
+}
+#infoIcon:hover {
+    width: 38px;
+    height: 38px;
+    margin-top: 16px;
+    box-shadow: none;
+    animation: radiate .8s ease-in-out;
+}
+@keyframes radiate {
+    0% {
+        box-shadow: 0px 0px 0px 0px rgba(2, 36, 196, 0.5);
+    }
+    100% {
+        box-shadow: 0px 0px 0px 50px rgba(2, 36, 196, 0);
+    }
+}
+#infoIcon > div > span {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+    line-height: 38px;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(2, 36, 196, 1), -1px -1px 4px rgba(2, 36, 196, 1);
+}
+
+/* GitHub corner Octocat by Tim Holman: 
+https://github.com/tholman/github-corners */
+
+.github-corner > span {
+    /*
+    fill: #151513;
+    color: #fff;
+*/
+    position: absolute;
+    font-family: Lato, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #575451;
+    top: 24px;
+    /*    border: 0;*/
+    right: 26px;
+    transform: rotate(45deg);
+}
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+}
+@keyframes octocat-wave {
+    0%,
+    100% {
+        transform: rotate(0)
+    }
+    20%,
+    60% {
+        transform: rotate(-25deg)
+    }
+    40%,
+    80% {
+        transform: rotate(10deg)
+    }
+}
+@media (max-width:500px) {
+    .github-corner:hover .octo-arm {
+        animation: none
+    }
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
+}
+
+/* GitHub Octocat END */
+
+
+/* Info Modal */
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 40px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    min-width: 520px;
+    max-width: 726px;
+}
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Info Modal END */
+
+
+/* d078p1 */
+
+main  {
+    text-align: left;
+}
+
+.search-form {
+    width: 80%;
+    margin: 0 auto;
+}
+input[type="search"] {
+    box-sizing: border-box;
+    background: #E9E9E9;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0.35em 0.75em;
+    border: none;
+    font-size: 1.1em;
+    text-decoration: none;
+    line-height: normal;
+    max-height: 3em; /* to address an Opera bug */
+}
+button[type="submit"] {
+    box-sizing: border-box;
+    border-radius: 0px 2px 2px 0px;
+    background: #8B798C;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    padding: 0.35em 0.75em;
+    border: none;
+    font-size: 1.1em;
+    text-decoration: none;
+    cursor: pointer;	
+}
+button[type="submit"]:hover {
+    background: #C17CCF;
+}
+/* flex for search form */
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+input[type="search"] {
+    flex: 2 0 220px;
+}
+button[type="submit"] {
+    flex: 1 0 90px;
+}
+
+/* registration form */
+
+.register-form {
+    line-height: 1.4;
+/*  margin-right: -2em is a hack to counter-act flexbox for adding margin-right to the group sections below */
+    margin-right: -2em;
+}
+.form-group {
+    background: #f6ddce;
+    margin-bottom: 1em;
+    padding: 10px;
+/*  margin-right to give the group sections breathing room */
+    margin-right: 2em;
+}
+/* remove margin-right hack @ 450px */
+@media (max-width: 450px) {
+    .register-form {
+        margin-right: 0;
+    }
+    .form-group {
+        margin-right: 0;
+    }
+}
+
+.form-group ul {
+    list-style: none;
+    margin: 0 0 2em;
+    padding: 0;
+}
+.form-group li {
+    margin-bottom: 0.5em;
+}
+.form-group h3 {
+    margin-bottom: 1em;
+}
+.form-fields input[type="text"],
+.form-fields input[type="tel"],
+.form-fields input[type="url"],
+.form-fields input[type="email"],
+.form-fields input[type="number"],
+.form-fields select {
+    box-sizing: border-box;
+    padding: 0.6em 0.8em;
+    color: #999;
+    background: #f7f7f7;
+    border: 1px solid #e1e1e1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.9em;
+    text-decoration: none;
+    line-height: normal;
+    max-height: 3em; /* to address an Opera bug */
+}
+.form-fields input[type="text"]:focus,
+.form-fields input[type="tel"]:focus,
+.form-fields input[type="url"]:focus,
+.form-fields input[type="email"]:focus,
+.form-fields input[type="number"]:focus,
+.form-food textarea:focus,
+.form-fields select:focus {
+    color: #333;
+    border: 1px solid #C17CCF;
+    outline: none;
+    background: #f2f2f2;
+}
+.form-food textarea {
+    display: block;
+    box-sizing: border-box;
+    font: .9em sans-serif;
+    width: 90%;
+    height: 6em;
+    overflow: auto;
+    padding: .6em .8em;
+    color: #999;
+    background: #f7f7f7;
+    border: 1px solid #e1e1e1;
+    line-height: normal;
+}
+.register-btn {
+    border-radius: 0px 2px 2px 0px;
+    box-sizing: content-box;
+    background: #8B798C;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    padding: 0.35em 0.75em;
+    border: none;
+    font-size: 1.1em;
+    text-decoration: none;
+    cursor: pointer;	
+}
+.register-btn:hover, .register-btn:focus {
+    background: #C17CCF;
+}
+
+/* flex for registration form */
+
+.register-form {
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-group {
+    flex: 1 0 280px;
+}
+.form-submit {
+    flex: 0 0 100%;
+}
+.form-fields li {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-fields input[type="text"],
+.form-fields input[type="tel"],
+.form-fields input[type="url"],
+.form-fields input[type="email"],
+.form-fields input[type="number"],
+.form-fields select {
+    flex: 1 0 230px;
+}
+.form-fields label {
+    flex: 1 0 90px;
+    max-width: 200px;
+}
+.form-skills, .form-workshop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.form-skills li {
+    width: 145px;
+}
+.form-workshop li {
+    flex: 1 0 200px;
+}
+
+
+
+
+
+
+/* d078p1 END */
+
+
+
+
+
+
+
