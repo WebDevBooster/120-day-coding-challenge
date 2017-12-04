@@ -1,0 +1,468 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans:300,700|Open+Sans+Condensed:700);
+/*basic styles*/
+
+html,
+body {
+    margin: 0;
+}
+html {
+    background: #636d7d;
+}
+body {
+    font: 100% Lato, Helvetica, sans-serif;
+    background: white;
+    width: 80%;
+}
+#infohead {
+    margin: 0 auto;
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    background-color: #D4D6D9;
+}
+#infohead h1 {
+    font-family: LatoLight, Helvetica, sans-serif;
+    font-weight: normal;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+    color: #575451;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 8px;
+    text-align: center;
+    width: 70%;
+    background: #D4D6D9;
+    line-height: 27px;
+}
+@media screen and (max-width: 375px) {
+    #infohead h1 {
+        font-size: 13px;
+        padding: 5px;
+        width: 50%;
+        line-height: 15px;
+    }
+}
+@media screen and (min-width: 376px) and (max-width: 425px) {
+    #infohead h1 {
+        font-size: 14px;
+        padding: 5px;
+        width: 60%;
+        line-height: 17px;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 668px) {
+    #infohead h1 {
+        font-size: 15px;
+        padding: 8px;
+        width: 60%;
+        line-height: 18px;
+    }
+}
+h3 {
+    font-size: 1.1rem;
+    font-weight: normal;
+    padding: 0px 30px;
+}
+#wrapper {
+    margin: 80px auto 0px;
+    position: absolute;
+    background-color: white;
+    padding: 10px 20px 60px 20px;
+    text-align: center;
+    min-height: 450px;
+    width: 82vw;
+    box-sizing: border-box;
+    margin-left: 9%;
+    margin-bottom: 40px;
+}
+#infoLink1 {
+    text-decoration: none;
+}
+#infoIcon1 {
+    background-color: #455CD5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #0224C4;
+    /*        transform: scale3d(1.05, 1.05, 1.05);*/
+    display: inline-block;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.5);
+}
+#infoIcon1 > span {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+    line-height: 38px;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(2, 36, 196, 1), -1px -1px 4px rgba(2, 36, 196, 1);
+}
+#infoLink {
+    text-decoration: none;
+    text-align: center;
+}
+#infoIcon {
+    position: absolute;
+    /*    margin: 0 auto;*/
+    background-color: #455CD5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #0224C4;
+    /*    transform: scale3d(1.5, 1.5, 0);*/
+    display: inline-block;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 15px;
+    margin-left: 5%;
+}
+.rollInFromLeft {
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-name: rollIn;
+    animation-delay: .5s;
+}
+@keyframes rollIn {
+    from {
+        opacity: 0;
+        transform: translate3d(-200%, 0, 0) rotate3d(0, 0, 1, -220deg);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+.ding {
+    position: relative;
+    z-index: 9;
+    border-radius: 50%;
+    animation: pulse 10s ease-in-out infinite;
+    animation-delay: 1s;
+}
+@keyframes pulse {
+    0%,
+    5% {
+        box-shadow: 0px 0px 0px 0px rgba(2, 36, 196, 0.5);
+    }
+    15% {
+        box-shadow: 0px 0px 0px 50px rgba(2, 36, 196, 0);
+    }
+    16%,
+    100% {
+        box-shadow: 0px 0px 0px 0px rgba(2, 36, 196, 0);
+    }
+}
+#infoIcon:hover {
+    width: 38px;
+    height: 38px;
+    margin-top: 16px;
+    box-shadow: none;
+    animation: radiate .8s ease-in-out;
+}
+@keyframes radiate {
+    0% {
+        box-shadow: 0px 0px 0px 0px rgba(2, 36, 196, 0.5);
+    }
+    100% {
+        box-shadow: 0px 0px 0px 50px rgba(2, 36, 196, 0);
+    }
+}
+#infoIcon > div > span {
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+    line-height: 38px;
+    text-align: center;
+    text-shadow: 1px 1px 4px rgba(2, 36, 196, 1), -1px -1px 4px rgba(2, 36, 196, 1);
+}
+
+/* GitHub corner Octocat by Tim Holman: 
+https://github.com/tholman/github-corners */
+
+.github-corner > span {
+    /*
+    fill: #151513;
+    color: #fff;
+*/
+    position: absolute;
+    font-family: Lato, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #575451;
+    top: 24px;
+    /*    border: 0;*/
+    right: 26px;
+    transform: rotate(45deg);
+}
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+}
+@keyframes octocat-wave {
+    0%,
+    100% {
+        transform: rotate(0)
+    }
+    20%,
+    60% {
+        transform: rotate(-25deg)
+    }
+    40%,
+    80% {
+        transform: rotate(10deg)
+    }
+}
+@media (max-width:500px) {
+    .github-corner:hover .octo-arm {
+        animation: none
+    }
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
+}
+
+/* GitHub Octocat END */
+
+
+/* Info Modal */
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 40px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    min-width: 520px;
+    max-width: 726px;
+}
+
+/* The Close Button */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Info Modal END */
+
+
+/* d084p1 */
+
+#myToDo {
+    margin: 0 auto;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 24px;
+    max-width: 800px;
+    text-align: left;
+}
+#myToDo main {
+    background-color: #444;
+}
+#myToDo main section {
+    width: 25%;
+    float: left;
+    text-align: center;
+    padding-top: 110px;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    background-size: 63px 100px;
+}
+#myToDo main::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#myToDo main section.inc {
+    background-color: #ba2d2d;
+    background-image: url(../_images/bulb_inc.svg);
+}
+#myToDo main section.hal {
+    background-color: #de6615;
+    background-image: url(../_images/bulb_hal.svg);
+}
+#myToDo main section.cfl {
+    background-color: #efc20f;
+    background-image: url(../_images/bulb_cfl.svg);
+}
+#myToDo main section.led {
+    background-color: #36b23c;
+    background-image: url(../_images/bulb_led.svg);
+}
+
+#myToDo main section > div {
+    padding: 5px 0;
+    background-color: rgba(0, 0, 0, .15);
+}
+#myToDo main h4 {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: .8em;
+    letter-spacing: 1px;
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+}
+#myToDo main p {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+#myToDo main p + p {
+    font-size: 1em;
+    font-weight: 300;
+}
+#myToDo main p::after {
+    content: "w";
+}
+#myToDo main p + p::before {
+    content: "$";
+}
+#myToDo main p + p::after {
+    content: "per year";
+    color: rgba(255, 255, 255, .5);
+    padding-left: 4px;
+}
+#myToDo form {
+    background-color: #000;
+    margin: 0;
+    padding: 10px 0;
+}
+#myToDo form br {
+    display: none;
+}
+#myToDo form > div {
+    color: #fff;
+    width: 33%;
+    float: left;
+    text-align: center;
+    padding: 10px 0 5px 0;
+}
+#myToDo form::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#myToDo form h4 {
+    color: #aaa;
+    margin: 0 0 -5px 0;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+#myToDo form p {
+    color: #888;
+    margin: 0 0 6px 0;
+    font-size: .9em;
+}
+#myToDo form input[type=number] {
+    width: 50px; 
+    text-align: left;
+    font-size: 1em;
+}
+#myToDo form select {
+    font-size: 1em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    background: #fff url(../_images/icons_arrows.svg) no-repeat right 6px;
+    background-size: 30px 20px;
+    padding: 3px 30px 3px 5px;
+}
+#myToDo form select::-ms-expand {
+    display: none;
+}
+@media screen and (max-width: 500px) {
+    #myToDo {
+        font-size: 15px;
+    }
+    #myToDo main section {
+        background-size: 45px 71px;
+        padding-top: 80px;
+    }
+    #myToDo main h4 {
+        margin: 0;
+        font-size: .75em;
+        letter-spacing: 0;
+    }
+    #myToDo main p {
+        font-size: 1.1em;
+    }
+    #myToDo main p + p {
+        font-size: 1.0em;
+    }
+    #myToDo main p + p::after {
+        display: block;
+        margin-top: -10px;
+        color: #fff;
+        font-size: 1.0em;
+    }
+    #myToDo form h4 {
+        font-size: 1.1em;
+        margin: 0;
+    }
+    #myToDo form p {
+        font-size: .8em;
+        line-height: 14px;
+    }
+    #myToDo form br {
+        display: inline;
+    }
+    #myToDo form input[type=number] {
+        width: 30px;
+        font-size: .8em;
+    }
+    #myToDo form select {
+        font-size: .8em;
+        background: #fff url(../_images/icons_arrows.svg) no-repeat right 4px;
+        background-size: 20px 15px;
+    }
+    #wrapper {
+        padding: 10px 10px 60px 10px;
+        width: 100vw;
+        margin-left: 0%;
+    }
+}
+
+.done {
+    text-decoration: line-through;
+    color: green;
+}
+
+/* d084p1 END */
+
+
+
+
+
+
+
