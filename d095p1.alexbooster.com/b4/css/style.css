@@ -1,9 +1,11 @@
-html, body {
-    background:url('../img/bg.jpg') center center no-repeat;
+html {
     height: 100%;
+    background:  url('../img/bg.jpg') center center no-repeat;
     background-size:cover;
 }
-
+body {
+    background: none;
+}
 
 #logo img {
     margin:0 auto;
