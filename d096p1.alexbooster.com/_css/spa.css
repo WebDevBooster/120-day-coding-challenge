@@ -1,0 +1,23 @@
+
+
+
+.jumbotron {
+    background-image: url('../_images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+section {
+    padding-top: 4rem;
+}
+#section-newsletter {
+    padding-top: 0;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rubik', sans-serif;
+}
+
