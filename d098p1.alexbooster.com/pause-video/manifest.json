@@ -1,0 +1,26 @@
+{
+    "name": "_ Pause Video",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "Pause video on YouTube.com",
+    "browser_action": {
+        "default_icon": "images/icon-19.png",
+        "default_title": "Pause YouTube video",
+        "default_popup": "browser_action.html"
+    },
+    "permissions": [
+    "declarativeContent",
+    "activeTab"
+  ],
+    "content_scripts": [
+        {
+            "matches": ["*://*.youtube.com/*"],
+            "js": ["content.js"],
+            "run_at": "document_end"
+      }
+  ],
+    "icons": {
+        "48": "images/icon-48.png",
+        "128": "images/icon-128.png"
+    }
+}
