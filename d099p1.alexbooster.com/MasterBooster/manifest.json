@@ -1,0 +1,36 @@
+{
+    "name": "Master Booster",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "Master Booster Prototype 1",
+    "homepage_url": "http://alexbooster.com",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "default_locale": "en",
+    "background": {
+        "page": "src/bg/background.html",
+        "persistent": true
+    },
+    "browser_action": {
+        "default_icon": "icons/icon19.png",
+        "default_title": "Master Booster",
+        "default_popup": "src/browser_action/browser_action.html"
+    },
+    "permissions": [
+    "contentSettings",
+      "<all_urls>"
+  ],
+    "content_scripts": [
+        {
+            "matches": [
+        "https://www.lynda.com/*"
+      ],
+            "js": [
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}

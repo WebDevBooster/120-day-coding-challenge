@@ -1,0 +1,26 @@
+{
+    "name": "_Master Booster",
+    "version": "0.0.2",
+    "manifest_version": 2,
+    "description": "Extension to boost your mastery of Bootstrap 4 and more",
+    "browser_action": {
+        "default_icon": "images/icon-19.png",
+        "default_title": "Master Booster",
+        "default_popup": "browser_action.html"
+    },
+    "permissions": [
+    "declarativeContent",
+    "activeTab"
+  ],
+    "content_scripts": [
+        {
+            "matches": ["*://*.youtube.com/*"],
+            "js": ["content.js"],
+            "run_at": "document_end"
+      }
+  ],
+    "icons": {
+        "48": "images/icon-48.png",
+        "128": "images/icon-128.png"
+    }
+}
