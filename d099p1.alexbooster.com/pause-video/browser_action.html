@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Document</title>
+        <link rel="stylesheet" href="css/fontawesome/font-awesome.css">
         <style type="text/css">
             html {
             }
@@ -42,7 +43,7 @@
             }
             #course span {
                 font-weight: normal;
-                padding-left: 10px;
+                padding-left: 210px;
             }
             #exercises {
                 padding: 10px 10px 3px 10px;
@@ -65,12 +66,12 @@
             #exercises span#current::before {
                 content: "";
                 position: absolute;
-                width: 26px;
-                height: 26px;
-                top: -1px;
-                left: -1px;
+                width: 27px;
+                height: 27px;
+                top: -2px;
+                left: -2px;
                 background-color: #CBCBC3;
-                border-radius: 50%;
+                border-radius: 8px;
             }
             #exercises span#current i {
                 position: relative;
@@ -87,6 +88,11 @@
             .failed {
                 color: red;
             }
+            .svg-icon {
+                width: 18px;
+                height: 18px;
+                vertical-align: text-top;
+            }
         </style>
     </head>
 
@@ -95,7 +101,7 @@
             <div id="banner"><strong>Ready for a Job Boost?</strong>
                 <br> If you want to boost your web developer's career to the next level (or if you are a newly hatched web developer looking for a job), then my private network might be the best thing to help you. Send me an <em>empty</em> email with &quot;<strong>network</strong>&quot; in the subject to: email@email.com</div>
                 <img src="navbar_test.png" style="display: block;">
-            <div id="course">Master Bootstrap 4 Grid &amp; Layout <span>| You earned: 888 points</span> </div>
+            <div id="course">Master Bootstrap 4 Grid &amp; Layout <span><img src="images/trophy.svg" class="svg-icon iconAchievements"> 888 points earned &nbsp;&nbsp;<i class="fa fa-share" aria-hidden="true"></i> share</span> </div>
             <div id="exercises">Lecture33 Exercise: <span class="okey">01</span> <span class="okey">02</span> <span class="okey">03</span> <span class="okey">04</span> <span class="failed">05</span> <span class="okey">06</span> <span class="okey">07</span> <span class="failed">08</span> <span class="okey">09</span> <span class="okey">10</span> <span id="current"><i>11</i></span> 12 13 14 15 16 17 18 19 20</div>
             <p>Click this button to pause video:</p>
             <button id="pauseBtn">pause video</button>
