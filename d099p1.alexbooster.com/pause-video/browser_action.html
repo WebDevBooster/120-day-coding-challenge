@@ -39,11 +39,11 @@
                 font-size: 18px;
                 font-weight: bold;
                 color: #CBCBC3;
-/*                word-spacing: 5px;*/
+                display: flex;
+                justify-content: space-between;
             }
-            #course span {
+            #course-status {
                 font-weight: normal;
-                padding-left: 210px;
             }
             #exercises {
                 padding: 10px 10px 3px 10px;
@@ -93,6 +93,31 @@
                 height: 18px;
                 vertical-align: text-top;
             }
+            #footer {
+                padding: 10px 11px 8px 11px;
+                background-color: #575757;
+                font-size: 16px;
+                font-weight: normal;
+                color: #CBCBC3;
+                word-spacing: 3px;
+                display: flex;
+                justify-content: space-between;
+            }
+            #footer a {
+                text-decoration: none;
+                color: inherit;
+            }
+            #resumeBtn {
+                width: 43px;
+                margin-left: 10px;
+                margin-right: 5px;
+            }
+            main {
+                height: 355px;
+            }
+            #footer-left, #footer-right {
+                
+            }
         </style>
     </head>
 
@@ -101,14 +126,19 @@
             <div id="banner"><strong>Ready for a Job Boost?</strong>
                 <br> If you want to boost your web developer's career to the next level (or if you are a newly hatched web developer looking for a job), then my private network might be the best thing to help you. Send me an <em>empty</em> email with &quot;<strong>network</strong>&quot; in the subject to: email@email.com</div>
                 <img src="navbar_test.png" style="display: block;">
-            <div id="course">Master Bootstrap 4 Grid &amp; Layout <span><img src="images/trophy.svg" class="svg-icon iconAchievements"> 888 points earned &nbsp;&nbsp;<i class="fa fa-share" aria-hidden="true"></i> share</span> </div>
+            <div id="course">
+                <div>Master Bootstrap 4 Grid &amp; Layout <button id="resumeBtn" title="Close this popup and resume the video underneath"><i class="fa fa-sign-out" aria-hidden="true"></i></button> <button id="pauseBtn" title="Resume or pause the video under popup"><i class="fa fa-pause-circle-o" aria-hidden="true"></i> <i class="fa fa-play-circle-o" aria-hidden="true"></i></button>
+                </div>
+                <div id="course-status"><span title="your current level"><i class="fa fa-signal" aria-hidden="true"></i> beginner</span> &nbsp;&nbsp;<span title="points you've earned"><img src="images/trophy.svg" class="svg-icon iconAchievements"> 888 points</span> &nbsp;&nbsp;<span title="like and share!"><i class="fa fa-heart" aria-hidden="true"></i><i class="fa fa-share" aria-hidden="true"></i> share</span>
+                </div>
+            </div>
             <div id="exercises">Lecture33 Exercise: <span class="okey">01</span> <span class="okey">02</span> <span class="okey">03</span> <span class="okey">04</span> <span class="failed">05</span> <span class="okey">06</span> <span class="okey">07</span> <span class="failed">08</span> <span class="okey">09</span> <span class="okey">10</span> <span id="current"><i>11</i></span> 12 13 14 15 16 17 18 19 20</div>
-            <p>Click this button to pause video:</p>
-            <button id="pauseBtn">pause video</button>
-            
-            
-            <p>Click this button to close this popup and resume the video:</p>
-            <button id="resumeBtn">resume video</button>
+            <main>Main content area</main>
+            <div id="footer">
+                <div><a href="https://twitter.com/AlexBBooster" title="Connect with Alex on Twitter" target="_blank"><i class="fa fa-twitter"></i></a> <a href="https://www.linkedin.com/in/alexbooster/" title="Connect with Alex on Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a> <a href="https://www.youtube.com/channel/UCMNKuozHsgIgDvR8eqjML4Q" title="Subscribe to Alex on YouTube" target="_blank"><i class="fa fa-youtube"></i></a> <a href="https://github.com/WebDevBooster" title="Follow Alex on GitHub" target="_blank"><i class="fa fa-github"></i></a></div>
+                <div><a href="#" title="CyberHunt! (scavenger hunt)"><i class="fa fa-puzzle-piece"></i></a></div>
+                <div>&copy; Copyright 2018 <a href="https://www.alexbooster.com" title="visit AlexBooster.com" target="_blank">AlexBooster.com</a></div>
+            </div>
         </div>
         <script src="popup.js"></script>
     </body>
