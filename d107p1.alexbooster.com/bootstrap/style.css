@@ -1,0 +1,16 @@
+    #footer {
+        margin-bottom: 3rem;
+    }
+    
+    .jumbotron {
+        background-image: url('http://lorempixel.com/1200/500/city');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        padding: 7rem 0;
+    }
+    
+    .mastinfo {
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 2rem;
+    }
