@@ -120,7 +120,7 @@ chrome.extension.sendMessage({}, function (o) {
                     T.style.display = "inline";
                     setTimeout(function () {
                         T.style.display = U;
-                    }, 2000);
+                    }, 1000);
                 }
 //                var R = document.getElementById('avscPlayBackPanel');
 //                if (p.settings.displayOption == 'FadeInFadeOut') {
