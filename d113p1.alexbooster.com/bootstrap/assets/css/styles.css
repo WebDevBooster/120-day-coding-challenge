@@ -1,0 +1,6 @@
+#hero {
+  width:100%;
+  background:url(../../assets/img/hero.jpg) no-repeat center 40%;
+  background-size:cover;
+}
+
