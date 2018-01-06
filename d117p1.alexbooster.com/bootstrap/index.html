@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>Pricing Plans Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    <!-- Bootstrap v4.0.0-beta.3 CSS via CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+    
+    
+    <link href="css/style.min.css" rel="stylesheet">
+    
+    <!-- Your custom override -->
+    <link href="css/custom-style.css" rel="stylesheet">
+    
+    
+    
+    <!-- Optional: ICON SETS -->
+    <!-- Iconset: Font Awesome 4.7.0 via CDN -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Iconset: flag icons - http://lipis.github.io/flag-icon-css/ -->
+    <link href="assets/plugins/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <!-- Iconset: ionicons - http://ionicons.com/ -->
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <!-- Iconset: Linearicons - https://linearicons.com/free -->
+    <link href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" rel="stylesheet">
+    
+    
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Rambla:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+    
+    <!--Plugin: Retina.js (high def image replacement) - @see: http://retinajs.com/-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/retina.js/1.3.0/retina.min.js"></script>
+  </head>
+  
+  <!-- ======== @Region: body ======== -->
+  <body class="page page-customers navbar-layout-default">
+    
+    <!-- @plugin: page loading indicator, delete to remove loader -->
+    <div class="page-loader" data-toggle="page-loader"></div>
+    
+    <a href="#content" id="top" class="sr-only">Skip to content</a> 
+    
+    <!-- ======== @Region: #header ======== -->
+    <div id="header">
+      
+      <!--Header upper region-->
+      <div class="header-upper">
+        <!-- all direct children of the .header-inner element will be vertically aligned with each other you can override all the behaviours using the flexbox utilities (flexbox.htm) All elements with .header-brand & .header-block-flex wrappers will automatically be aligned inline & vertically using flexbox, this can be overridden using the flexbox utilities (flexbox.htm) Use .header-block to stack elements within on small screen & "float" on larger screens use .order-first or/and .order-last classes to make an element show first or last within .header-inner or .headr-block elements -->
+        <div class="header-inner container">
+          <!--user menu-->
+          <div class="header-block-flex order-1 mr-auto">
+            <nav class="nav nav-sm header-block-flex">
+              <a class="nav-link d-md-none" href="login.html"><i class="fa fa-user"></i></a>
+              <a class="nav-link text-xs text-uppercase d-none d-md-block" href="#signup-modal" data-toggle="modal">Sign Up</a> <a class="nav-link text-xs text-uppercase d-none d-md-block" href="#login-modal" data-toggle="modal">Login</a> 
+            </nav>
+            <div class="header-divider header-divider-sm"></div>
+            <!--language menu-->
+            <div class="dropdown dropdowns-no-carets">
+              <a href="#en" class="nav-link text-xs p-1 dropdown-toggle" data-toggle="dropdown"><i class="flag-icon flag-icon-gb"></i></a>
+              <div class="dropdown-menu dropdown-menu-mini dropdown-menu-primary">
+                <a href="#es" class="dropdown-item lang-es"><i class="flag-icon flag-icon-es"></i> Spanish</a>
+                <a href="#pt" class="dropdown-item lang-pt"><i class="flag-icon flag-icon-pt"></i> Portguese</a>
+                <a href="#cn" class="dropdown-item lang-cn"><i class="flag-icon flag-icon-cn"></i> Chinese</a>
+                <a href="#se" class="dropdown-item lang-se"><i class="flag-icon flag-icon-se"></i> Swedish</a>
+              </div>
+            </div>
+          </div>
+          <!--social media icons-->
+          <div class="nav nav-icons header-block order-12">
+            <!--@todo: replace with company social media details-->
+            <a href="#" class="nav-link"> <i class="fa fa-twitter-square icon-1x"></i> <span class="sr-only">Twitter</span> </a>
+            <a href="#" class="nav-link"> <i class="fa fa-facebook-square icon-1x"></i> <span class="sr-only">Facebook</span> </a>
+            <a href="#" class="nav-link"> <i class="fa fa-linkedin-square icon-1x"></i> <span class="sr-only">Linkedin</span> </a>
+            <a href="#" class="nav-link"> <i class="fa fa-google-plus-square icon-1x"></i> <span class="sr-only">Google plus</span> </a>
+          </div>
+        </div>
+      </div>
+      <div data-toggle="sticky">
+        
+        <!--Header search region - hidden by default -->
+        <div class="header-search collapse" id="search">
+          <form class="search-form container">
+            <input type="text" name="search" class="form-control search" value="" placeholder="Search">
+            <button type="button" class="btn btn-link"><span class="sr-only">Search </span><i class="fa fa-search fa-flip-horizontal search-icon"></i></button>
+            <button type="button" class="btn btn-link close-btn" data-toggle="search-form-close"><span class="sr-only">Close </span><i class="fa fa-times search-icon"></i></button>
+          </form>
+        </div>
+        
+        <!--Header & Branding region-->
+        <div class="header">
+          <!-- all direct children of the .header-inner element will be vertically aligned with each other you can override all the behaviours using the flexbox utilities (flexbox.htm) All elements with .header-brand & .header-block-flex wrappers will automatically be aligned inline & vertically using flexbox, this can be overridden using the flexbox utilities (flexbox.htm) Use .header-block to stack elements within on small screen & "float" on larger screens use .order-first or/and .order-last classes to make an element show first or last within .header-inner or .headr-block elements -->
+          <div class="header-inner container">
+            <!--branding/logo -->
+            <div class="header-brand">
+              <a class="header-brand-text" href="index.html" title="Home">
+                <h1 class="h2">
+                  <span class="header-brand-text-alt">Super</span>Strap<span class="header-brand-text-alt">.</span>
+                </h1>
+              </a>
+              <div class="header-divider d-none d-lg-block"></div>
+                <div class="header-slogan d-none d-lg-block">Pricing Plans Page</div>
+            </div>
+            <!-- other header content -->
+            <div class="header-block order-12">
+              
+              <!--Search trigger -->
+              <a href="#search" class="btn btn-icon btn-link header-btn float-right order-11" data-toggle="search-form" data-target=".header-search"><i class="fa fa-search fa-flip-horizontal search-icon"></i></a>
+              
+              <!-- mobile collapse menu button - data-toggle="collapse" = default BS menu - data-toggle="jpanel-menu" = jPanel Menu - data-toggle="overlay" = Overlay Menu -->
+              <a href="#top" class="btn btn-link btn-icon header-btn float-right d-lg-none" data-toggle="jpanel-menu" data-target=".navbar-main" data-direction="right"> <i class="fa fa-bars"></i> </a>
+            </div>
+            
+
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      <!-- ======== @Region: #content ======== -->
+      <div id="content">
+          <div class="container">
+              <div class="block">
+                  <!--Default Pricing Table-->
+                  <h2 class="title-divider">
+                      <span>Pricing <span class="font-weight-normal text-muted">Plans</span></span>
+                      <small>Competitive pricing for all your needs.</small>
+                  </h2>
+                  <!--Stack 1: 4 in row-->
+                  <h3>
+                      Default Pricing Plans
+                  </h3>
+                  <div class="row pricing-stack">
+                      <div class="col-md-3">
+                          <div class="card bg-shadow text-center rounded">
+                              <h3 class="card-title py-3 text-shadow">
+                                  Starter
+                              </h3>
+                              <p class="price-banner border-grey card-body-overlap"> <span class="text-fancy price-digits">Free!</span>
+                              </p>
+                              <div class="card-body">
+                                  <ul class="list-unstyled list-border-dots">
+                                      <li>3 User Accounts</li>
+                                      <li>3 Private Projects</li>
+                                      <li>Umlimited Public Projects</li>
+                                      <li>5GB of space</li>
+                                  </ul>
+                                  <a href="#" class="btn btn-primary btn-block btn-rounded">Sign Up</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="card bg-white bg-shadow text-center card-outline-primary">
+                              <h3 class="card-title py-3 text-shadow">
+                                  <span class="em">Pro</span> <span class="text-fancy">Plus</span>
+                              </h3>
+                              <p class="price-banner bg-primary text-white border-primary card-body-overlap">
+                                  <span class="price-currency">$</span> 
+                                  <span class="price-digits">49<span>.95</span></span>
+                                  <span class="price-extra">/MO</span>
+
+                              </p>
+                              <div class="card-body">
+                                  <ul class="list-unstyled list-border-dots">
+                                      <li>50 User Accounts</li>
+                                      <li>50 Private Projects</li>
+                                      <li>Umlimited Public Projects</li>
+                                      <li>Unlimited space</li>
+                                  </ul>
+                                  <a href="#" class="btn btn-primary btn-block btn-rounded mt-4">Sign Up</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="card bg-white bg-shadow text-center card-outline-primary">
+                              <div class="card-ribbon card-ribbon-top card-ribbon-left bg-primary text-white">Popular</div>
+                              <h3 class="card-title py-3 text-shadow">
+                                  <span class="em">Biz</span> <span class="text-fancy">Plus</span>
+                              </h3>
+                              <p class="price-banner bg-primary text-white border-primary card-body-overlap">
+                                  <span class="price-currency">$</span> 
+                                  <span class="price-digits">199<span>.95</span></span>
+                                  <span class="price-term">/MO</span>
+
+                              </p>
+                              <div class="card-body">
+                                  <ul class="list-unstyled list-border-dots">
+                                      <li>Umlimited User Accounts</li>
+                                      <li>Umlimited Private Projects</li>
+                                      <li>Umlimited Public Projects</li>
+                                      <li>Unlimited space</li>
+                                  </ul>
+                                  <a href="#" class="btn btn-primary btn-block btn-rounded mt-4">Sign Up</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="card bg-shadow text-center">
+                              <div class="card-ribbon card-ribbon-top card-ribbon-right bg-light text-muted">Best Buy</div>
+                              <h3 class="card-title py-3 text-shadow">
+                                  Starter <span class="text-fancy">Plus</span>
+                              </h3>
+                              <p class="price-banner border-grey card-body-overlap">
+                                  <span class="price-currency">$</span> 
+                                  <span class="price-digits">19<span>.95</span></span>
+                                  <span class="price-term">/MO</span>
+
+                              </p>
+                              <div class="card-body">
+                                  <ul class="list-unstyled list-border-dots">
+                                      <li>10 User Accounts</li>
+                                      <li>10 Private Projects</li>
+                                      <li>Umlimited Public Projects</li>
+                                      <li>15GB of space</li>
+                                  </ul>
+                                  <a href="#" class="btn btn-primary btn-block btn-rounded">Sign Up</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!--Stack 2: 3 in row-->
+                  <div class="row pricing-stack mt-4">
+                      <div class="offset-md-1 col-lg-3">
+                          <div class="card bg-shadow text-center rounded">
+                              <h3 class="card-title py-3 text-shadow">
+                                  Starter
+                              </h3>
+                              <p class="price-banner border-grey card-body-overlap"> <span class="text-fancy price-digits">Free!</span>
+                              </p>
+                              <div class="card-body">
+                                  <ul class="list-unstyled list-border-dots">
+                                      <li>3 User Accounts</li>
+                                      <li>3 Private Projects</li>
+                                      <li>Umlimited Public Projects</li>
+                                      <li>5GB of space</li>
+                                  </ul>
+                                  <a href="#" class="btn btn-primary btn-block btn-rounded">Sign Up</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-4">
+                          <div class="card bg-white bg-shadow text-center card-outline-primary">
+                              <h3 class="card-title py-3 text-shadow">
+                                  <span class="em">Pro</span> <span class="text-fancy">Plus</span>
+                              </h3>
+                              <p class="price-banner bg-primary text-white border-primary card-body-overlap">
+                                  <span class="price-currency">$</span> 
+                                  <span class="price-digits">49<span>.95</span></span>
+                                  <span class="price-extra">/MO</span>
+
+                              </p>
+                              <div class="card-body">
+                                  <ul class="list-unstyled list-border-dots">
+                                      <li>50 User Accounts</li>
+                                      <li>50 Private Projects</li>
+                                      <li>Umlimited Public Projects</li>
+                                      <li>Unlimited space</li>
+                                  </ul>
+                                  <a href="#" class="btn btn-primary btn-block btn-rounded mt-4">Sign Up</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-3">
+                          <div class="card bg-shadow text-center">
+                              <div class="card-ribbon card-ribbon-top card-ribbon-right bg-light text-muted">Best Buy</div>
+                              <h3 class="card-title py-3 text-shadow">
+                                  Starter <span class="text-fancy">Plus</span>
+                              </h3>
+                              <p class="price-banner border-grey card-body-overlap">
+                                  <span class="price-currency">$</span> 
+                                  <span class="price-digits">19<span>.95</span></span>
+                                  <span class="price-term">/MO</span>
+
+                              </p>
+                              <div class="card-body">
+                                  <ul class="list-unstyled list-border-dots">
+                                      <li>10 User Accounts</li>
+                                      <li>10 Private Projects</li>
+                                      <li>Umlimited Public Projects</li>
+                                      <li>15GB of space</li>
+                                  </ul>
+                                  <a href="#" class="btn btn-primary btn-block btn-rounded">Sign Up</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <hr class="hr-lg my-5" />
+                  <h3>
+                      Equal Height Pricing Plans
+                  </h3>
+                  <h4>
+                      Group (no gaps)
+                  </h4>
+                  <!--Eqealheight: 4 in row-->
+                  <div class="card-group bg-shadow">
+                      <div class="card card-body text-center rounded">
+                          <h3 class="card-title py-3 text-shadow">
+                              Starter
+                          </h3>
+                          <p class="price-banner border-grey"> <span class="text-fancy price-digits">Free!</span>
+                          </p>
+                          <ul class="mt-4 list-unstyled list-border-dots">
+                              <li>3 User Accounts</li>
+                              <li>3 Private Projects</li>
+                              <li>Umlimited Public Projects</li>
+                              <li>5GB of space</li>
+                          </ul>
+                          <a href="#" class="btn btn-primary btn-block btn-rounded">Sign Up</a> 
+                      </div>
+                      <div class="card card-body bg-white text-center card-outline-primary">
+                          <h3 class="card-title py-3 text-shadow">
+                              <span class="em">Pro</span> <span class="text-fancy">Plus</span>
+                          </h3>
+                          <p class="price-banner bg-primary text-white border-primary">
+                              <span class="price-currency">$</span> 
+                              <span class="price-digits">49<span>.95</span></span>
+                              <span class="price-extra">/MO</span>
+
+                          </p>
+                          <ul class="mt-4 list-unstyled list-border-dots">
+                              <li>50 User Accounts</li>
+                              <li>50 Private Projects</li>
+                              <li>Umlimited Public Projects</li>
+                              <li>Unlimited space</li>
+                          </ul>
+                          <a href="#" class="btn btn-primary btn-block btn-rounded mt-4">Sign Up</a> 
+                      </div>
+                      <div class="card card-body bg-white text-center card-outline-primary">
+                          <div class="card-ribbon card-ribbon-top card-ribbon-left bg-primary text-white">Popular</div>
+                          <h3 class="card-title py-3 text-shadow">
+                              <span class="em">Biz</span> <span class="text-fancy">Plus</span>
+                          </h3>
+                          <p class="price-banner bg-primary text-white border-primary">
+                              <span class="price-currency">$</span> 
+                              <span class="price-digits">199<span>.95</span></span>
+                              <span class="price-term">/MO</span>
+
+                          </p>
+                          <ul class="mt-4 list-unstyled list-border-dots">
+                              <li>Umlimited User Accounts</li>
+                              <li>Umlimited Private Projects</li>
+                              <li>Umlimited Public Projects</li>
+                              <li>Unlimited space</li>
+                          </ul>
+                          <a href="#" class="btn btn-primary btn-block btn-rounded mt-4">Sign Up</a> 
+                      </div>
+                      <div class="card card-body text-center">
+                          <div class="card-ribbon card-ribbon-top card-ribbon-right bg-light text-muted">Best Buy</div>
+                          <h3 class="card-title py-3 text-shadow">
+                              Starter <span class="text-fancy">Plus</span>
+                          </h3>
+                          <p class="price-banner border-grey">
+                              <span class="price-currency">$</span> 
+                              <span class="price-digits">19<span>.95</span></span>
+                              <span class="price-term">/MO</span>
+
+                          </p>
+                          <ul class="mt-4 list-unstyled list-border-dots">
+                              <li>10 User Accounts</li>
+                              <li>10 Private Projects</li>
+                              <li>Umlimited Public Projects</li>
+                              <li>15GB of space</li>
+                          </ul>
+                          <a href="#" class="btn btn-primary btn-block btn-rounded">Sign Up</a> 
+                      </div>
+                  </div>
+                  <!--Eqealheight: 3 in row-->
+                  <div class="card-group bg-shadow mt-5">
+                      <div class="card card-body text-center rounded">
+                          <h3 class="card-title py-3 text-shadow">
+                              Starter
+                          </h3>
+                          <p class="price-banner border-grey"> <span class="text-fancy price-digits">Free!</span>
+                          </p>
+                          <ul class="mt-4 list-unstyled list-border-dots">
+                              <li>3 User Accounts</li>
+                              <li>3 Private Projects</li>
+                              <li>Umlimited Public Projects</li>
+                              <li>5GB of space</li>
+                          </ul>
+                          <a href="#" class="btn btn-primary btn-block btn-rounded">Sign Up</a> 
+                      </div>
+                      <div class="card card-body bg-white text-center card-outline-primary">
+                          <h3 class="card-title py-3 text-shadow">
+                              <span class="em">Pro</span> <span class="text-fancy">Plus</span>
+                          </h3>
+                          <p class="price-banner bg-primary text-white border-primary">
+                              <span class="price-currency">$</span> 
+                              <span class="price-digits">49<span>.95</span></span>
+                              <span class="price-extra">/MO</span>
+
+                          </p>
+                          <ul class="mt-4 list-unstyled list-border-dots">
+                              <li>50 User Accounts</li>
+                              <li>50 Private Projects</li>
+                              <li>Umlimited Public Projects</li>
+                              <li>Unlimited space</li>
+                          </ul>
+                          <a href="#" class="btn btn-primary btn-block btn-rounded mt-4">Sign Up</a> 
+                      </div>
+                      <div class="card card-body text-center">
+                          <div class="card-ribbon card-ribbon-top card-ribbon-right bg-light text-muted">Best Buy</div>
+                          <h3 class="card-title py-3 text-shadow">
+                              Starter <span class="text-fancy">Plus</span>
+                          </h3>
+                          <p class="price-banner border-grey">
+                              <span class="price-currency">$</span> 
+                              <span class="price-digits">19<span>.95</span></span>
+                              <span class="price-term">/MO</span>
+
+                          </p>
+                          <ul class="mt-4 list-unstyled list-border-dots">
+                              <li>10 User Accounts</li>
+                              <li>10 Private Projects</li>
+                              <li>Umlimited Public Projects</li>
+                              <li>15GB of space</li>
+                          </ul>
+                          <a href="#" class="btn btn-primary btn-block btn-rounded">Sign Up</a> 
+                      </div>
+                  </div>
+                  <hr class="my-5" />
+                  <h4>
+                      Decks (gaps)
+                  </h4>
+                  <div class="card-deck-wrapper">
+                      <div class="card-deck">
+                          <div class="card bg-shadow text-center rounded">
+                              <h3 class="card-title py-3 text-shadow">
+                                  Starter
+                              </h3>
+                              <p class="price-banner border-grey card-body-overlap"> <span class="text-fancy price-digits">Free!</span>
+                              </p>
+                              <div class="card-body">
+                                  <ul class="list-unstyled list-border-dots">
+                                      <li>3 User Accounts</li>
+                                      <li>3 Private Projects</li>
+                                      <li>Umlimited Public Projects</li>
+                                      <li>5GB of space</li>
+                                  </ul>
+                                  <a href="#" class="btn btn-primary btn-block btn-rounded">Sign Up</a>
+                              </div>
+                          </div>
+                          <div class="card bg-white bg-shadow text-center card-outline-primary">
+                              <h3 class="card-title py-3 text-shadow">
+                                  <span class="em">Pro</span> <span class="text-fancy">Plus</span>
+                              </h3>
+                              <p class="price-banner bg-primary text-white border-primary card-body-overlap">
+                                  <span class="price-currency">$</span> 
+                                  <span class="price-digits">49<span>.95</span></span>
+                                  <span class="price-extra">/MO</span>
+
+                              </p>
+                              <div class="card-body">
+                                  <ul class="list-unstyled list-border-dots">
+                                      <li>50 User Accounts</li>
+                                      <li>50 Private Projects</li>
+                                      <li>Umlimited Public Projects</li>
+                                      <li>Unlimited space</li>
+                                  </ul>
+                                  <a href="#" class="btn btn-primary btn-block btn-rounded mt-4">Sign Up</a>
+                              </div>
+                          </div>
+                          <div class="card bg-white bg-shadow text-center card-outline-primary">
+                              <div class="card-ribbon card-ribbon-top card-ribbon-left bg-primary text-white">Popular</div>
+                              <h3 class="card-title py-3 text-shadow">
+                                  <span class="em">Biz</span> <span class="text-fancy">Plus</span>
+                              </h3>
+                              <p class="price-banner bg-primary text-white border-primary card-body-overlap">
+                                  <span class="price-currency">$</span> 
+                                  <span class="price-digits">199<span>.95</span></span>
+                                  <span class="price-term">/MO</span>
+
+                              </p>
+                              <div class="card-body">
+                                  <ul class="list-unstyled list-border-dots">
+                                      <li>Umlimited User Accounts</li>
+                                      <li>Umlimited Private Projects</li>
+                                      <li>Umlimited Public Projects</li>
+                                      <li>Unlimited space</li>
+                                  </ul>
+                                  <a href="#" class="btn btn-primary btn-block btn-rounded mt-4">Sign Up</a>
+                              </div>
+                          </div>
+                          <div class="card bg-shadow text-center">
+                              <div class="card-ribbon card-ribbon-top card-ribbon-right bg-light text-muted">Best Buy</div>
+                              <h3 class="card-title py-3 text-shadow">
+                                  Starter <span class="text-fancy">Plus</span>
+                              </h3>
+                              <p class="price-banner border-grey card-body-overlap">
+                                  <span class="price-currency">$</span> 
+                                  <span class="price-digits">19<span>.95</span></span>
+                                  <span class="price-term">/MO</span>
+
+                              </p>
+                              <div class="card-body">
+                                  <ul class="list-unstyled list-border-dots">
+                                      <li>10 User Accounts</li>
+                                      <li>10 Private Projects</li>
+                                      <li>Umlimited Public Projects</li>
+                                      <li>15GB of space</li>
+                                  </ul>
+                                  <a href="#" class="btn btn-primary btn-block btn-rounded">Sign Up</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!--Equalheight: 3 in row-->
+                  <div class="card-deck-wrapper mt-5">
+                      <div class="card-deck">
+                          <div class="card bg-shadow text-center rounded">
+                              <h3 class="card-title py-3 text-shadow">
+                                  Starter
+                              </h3>
+                              <p class="price-banner border-grey card-body-overlap"> <span class="text-fancy price-digits">Free!</span>
+                              </p>
+                              <div class="card-body">
+                                  <ul class="list-unstyled list-border-dots">
+                                      <li>3 User Accounts</li>
+                                      <li>3 Private Projects</li>
+                                      <li>Umlimited Public Projects</li>
+                                      <li>5GB of space</li>
+                                  </ul>
+                                  <a href="#" class="btn btn-primary btn-block btn-rounded">Sign Up</a>
+                              </div>
+                          </div>
+                          <div class="card bg-white bg-shadow text-center card-outline-primary">
+                              <h3 class="card-title py-3 text-shadow">
+                                  <span class="em">Pro</span> <span class="text-fancy">Plus</span>
+                              </h3>
+                              <p class="price-banner bg-primary text-white border-primary card-body-overlap">
+                                  <span class="price-currency">$</span> 
+                                  <span class="price-digits">49<span>.95</span></span>
+                                  <span class="price-extra">/MO</span>
+
+                              </p>
+                              <div class="card-body">
+                                  <ul class="list-unstyled list-border-dots">
+                                      <li>50 User Accounts</li>
+                                      <li>50 Private Projects</li>
+                                      <li>Umlimited Public Projects</li>
+                                      <li>Unlimited space</li>
+                                  </ul>
+                                  <a href="#" class="btn btn-primary btn-block btn-rounded mt-4">Sign Up</a>
+                              </div>
+                          </div>
+                          <div class="card bg-shadow text-center">
+                              <div class="card-ribbon card-ribbon-top card-ribbon-right bg-light text-muted">Best Buy</div>
+                              <h3 class="card-title py-3 text-shadow">
+                                  Starter <span class="text-fancy">Plus</span>
+                              </h3>
+                              <p class="price-banner border-grey card-body-overlap">
+                                  <span class="price-currency">$</span> 
+                                  <span class="price-digits">19<span>.95</span></span>
+                                  <span class="price-term">/MO</span>
+
+                              </p>
+                              <div class="card-body">
+                                  <ul class="list-unstyled list-border-dots">
+                                      <li>10 User Accounts</li>
+                                      <li>10 Private Projects</li>
+                                      <li>Umlimited Public Projects</li>
+                                      <li>15GB of space</li>
+                                  </ul>
+                                  <a href="#" class="btn btn-primary btn-block btn-rounded">Sign Up</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!--Stack 3: 4 overlapping-->
+                  <!-- .card-grid-overlap can be applied to the wrapper-->
+                  <hr class="my-5" />
+                  <h3>
+                      Overlapping Pricing Plans (Unequal heights)
+                  </h3>
+                  <div class="row card-grid-overlap mt-4">
+                      <div class="col-lg-3 pt-1">
+                          <div class="card card-body bg-shadow text-center rounded">
+                              <h3 class="card-title py-3 text-shadow">
+                                  Starter
+                              </h3>
+                              <p class="price-banner border-grey"> <span class="text-fancy price-digits">Free!</span>
+                              </p>
+                              <ul class="mt-4 list-unstyled list-border-dots">
+                                  <li>3 User Accounts</li>
+                                  <li>3 Private Projects</li>
+                                  <li>Umlimited Public Projects</li>
+                                  <li>5GB of space</li>
+                              </ul>
+                              <a href="#" class="btn btn-primary btn-block btn-rounded">Sign Up</a> 
+                          </div>
+                      </div>
+                      <div class="col-lg-3">
+                          <div class="card card-body bg-white bg-shadow text-center card-outline-primary">
+                              <h3 class="card-title py-3 text-shadow">
+                                  <span class="em">Pro</span> <span class="text-fancy">Plus</span>
+                              </h3>
+                              <p class="price-banner bg-primary text-white border-primary">
+                                  <span class="price-currency">$</span> 
+                                  <span class="price-digits">49<span>.95</span></span>
+                                  <span class="price-extra">/MO</span>
+
+                              </p>
+                              <ul class="mt-4 list-unstyled list-border-dots">
+                                  <li>50 User Accounts</li>
+                                  <li>50 Private Projects</li>
+                                  <li>Umlimited Public Projects</li>
+                                  <li>Unlimited space</li>
+                              </ul>
+                              <a href="#" class="btn btn-primary btn-block btn-rounded mt-4">Sign Up</a> 
+                          </div>
+                      </div>
+                      <div class="col-lg-3">
+                          <div class="card card-body bg-white bg-shadow text-center card-outline-primary">
+                              <div class="card-ribbon card-ribbon-top card-ribbon-left bg-primary text-white">Popular</div>
+                              <h3 class="card-title py-3 text-shadow">
+                                  <span class="em">Biz</span> <span class="text-fancy">Plus</span>
+                              </h3>
+                              <p class="price-banner bg-primary text-white border-primary">
+                                  <span class="price-currency">$</span> 
+                                  <span class="price-digits">199<span>.95</span></span>
+                                  <span class="price-term">/MO</span>
+
+                              </p>
+                              <ul class="mt-4 list-unstyled list-border-dots">
+                                  <li>Umlimited User Accounts</li>
+                                  <li>Umlimited Private Projects</li>
+                                  <li>Umlimited Public Projects</li>
+                                  <li>Unlimited space</li>
+                              </ul>
+                              <a href="#" class="btn btn-primary btn-block btn-rounded mt-4">Sign Up</a> 
+                          </div>
+                      </div>
+                      <div class="col-lg-3 pt-1">
+                          <div class="card card-body bg-shadow text-center">
+                              <div class="card-ribbon card-ribbon-top card-ribbon-right bg-light text-muted">Best Buy</div>
+                              <h3 class="card-title py-3 text-shadow">
+                                  Starter <span class="text-fancy">Plus</span>
+                              </h3>
+                              <p class="price-banner border-grey">
+                                  <span class="price-currency">$</span> 
+                                  <span class="price-digits">19<span>.95</span></span>
+                                  <span class="price-term">/MO</span>
+
+                              </p>
+                              <ul class="mt-4 list-unstyled list-border-dots">
+                                  <li>10 User Accounts</li>
+                                  <li>10 Private Projects</li>
+                                  <li>Umlimited Public Projects</li>
+                                  <li>15GB of space</li>
+                              </ul>
+                              <a href="#" class="btn btn-primary btn-block btn-rounded">Sign Up</a> 
+                          </div>
+                      </div>
+                  </div>
+                  <!--Overlapping-->
+                  <div class="row card-grid-overlap mt-4">
+                      <div class="col-lg-4 pt-1">
+                          <div class="card card-body bg-shadow text-center rounded">
+                              <h3 class="card-title py-3 text-shadow">
+                                  Starter
+                              </h3>
+                              <p class="price-banner border-grey"> <span class="text-fancy price-digits">Free!</span>
+                              </p>
+                              <ul class="mt-4 list-unstyled list-border-dots">
+                                  <li>3 User Accounts</li>
+                                  <li>3 Private Projects</li>
+                                  <li>Umlimited Public Projects</li>
+                                  <li>5GB of space</li>
+                              </ul>
+                              <a href="#" class="btn btn-primary btn-block btn-rounded">Sign Up</a> 
+                          </div>
+                      </div>
+                      <div class="col-lg-4">
+                          <div class="card card-body bg-white bg-shadow text-center card-outline-primary">
+                              <h3 class="card-title py-3 text-shadow">
+                                  <span class="em">Pro</span> <span class="text-fancy">Plus</span>
+                              </h3>
+                              <p class="price-banner bg-primary text-white border-primary">
+                                  <span class="price-currency">$</span> 
+                                  <span class="price-digits">49<span>.95</span></span>
+                                  <span class="price-extra">/MO</span>
+
+                              </p>
+                              <ul class="mt-4 list-unstyled list-border-dots">
+                                  <li>50 User Accounts</li>
+                                  <li>50 Private Projects</li>
+                                  <li>Umlimited Public Projects</li>
+                                  <li>Unlimited space</li>
+                              </ul>
+                              <a href="#" class="btn btn-primary btn-block btn-rounded mt-4">Sign Up</a> 
+                          </div>
+                      </div>
+                      <div class="col-lg-4 pt-1">
+                          <div class="card card-body bg-shadow text-center">
+                              <div class="card-ribbon card-ribbon-top card-ribbon-right bg-light text-muted">Best Buy</div>
+                              <h3 class="card-title py-3 text-shadow">
+                                  Starter <span class="text-fancy">Plus</span>
+                              </h3>
+                              <p class="price-banner border-grey">
+                                  <span class="price-currency">$</span> 
+                                  <span class="price-digits">19<span>.95</span></span>
+                                  <span class="price-term">/MO</span>
+
+                              </p>
+                              <ul class="mt-4 list-unstyled list-border-dots">
+                                  <li>10 User Accounts</li>
+                                  <li>10 Private Projects</li>
+                                  <li>Umlimited Public Projects</li>
+                                  <li>15GB of space</li>
+                              </ul>
+                              <a href="#" class="btn btn-primary btn-block btn-rounded">Sign Up</a> 
+                          </div>
+                      </div>
+                  </div>
+                  <hr class="my-5" />
+                  <h3>
+                      Mini Pricing Plans
+                  </h3>
+                  <!--Mini -->
+                  <div class="row">
+                      <div class="col-lg-4 pt-3">
+                          <div class="card card-body bg-shadow text-center rounded">
+                              <h3 class="card-title mb-3 text-shadow">
+                                  Starter
+                              </h3>
+                              <p class="price-banner price-banner-smf border-grey card-body-overlap"> <span class="text-fancy price-digits">Free!</span>
+                              </p>
+                              <div class="card-text py-2"> 3 User Accounts, 3 Private Projects, Umlimited Public Projects, 5GB of space, </div>
+                              <a href="#" class="btn btn-primary btn-rounded">Sign Up</a> 
+                          </div>
+                      </div>
+                      <div class="col-lg-4">
+                          <div class="card card-body bg-white bg-shadow text-center card-outline-primary">
+                              <h3 class="card-title mb-3 text-shadow">
+                                  <span class="em">Pro</span> <span class="text-fancy">Plus</span>
+                              </h3>
+                              <p class="price-banner price-banner-smf bg-primary text-white border-primary card-body-overlap">
+                                  <span class="price-currency">$</span> 
+                                  <span class="price-digits">49<span>.95</span></span>
+                                  <span class="price-extra">/MO</span>
+
+                              </p>
+                              <div class="card-text py-2"> 50 User Accounts, 50 Private Projects, Umlimited Public Projects, Unlimited space, </div>
+                              <a href="#" class="btn btn-primary btn-rounded mt-4">Sign Up</a> 
+                          </div>
+                      </div>
+                      <div class="col-lg-4 pt-3">
+                          <div class="card card-body bg-shadow text-center">
+                              <div class="card-ribbon card-ribbon-top card-ribbon-right bg-light text-muted">Best Buy</div>
+                              <h3 class="card-title mb-3 text-shadow">
+                                  Starter <span class="text-fancy">Plus</span>
+                              </h3>
+                              <p class="price-banner price-banner-smf border-grey card-body-overlap">
+                                  <span class="price-currency">$</span> 
+                                  <span class="price-digits">19<span>.95</span></span>
+                                  <span class="price-term">/MO</span>
+
+                              </p>
+                              <div class="card-text py-2"> 10 User Accounts, 10 Private Projects, Umlimited Public Projects, 15GB of space, </div>
+                              <a href="#" class="btn btn-primary btn-rounded">Sign Up</a> 
+                          </div>
+                      </div>
+                  </div>
+                  <!--Mini overlapping-->
+                  <div class="row card-grid-overlap mt-5">
+                      <div class="col-lg-4 pt-3">
+                          <div class="card card-body bg-shadow text-center rounded">
+                              <h3 class="card-title mb-3 text-shadow">
+                                  Starter
+                              </h3>
+                              <p class="price-banner price-banner-smf border-grey card-body-overlap"> <span class="text-fancy price-digits">Free!</span>
+                              </p>
+                              <div class="card-text py-2"> 3 User Accounts, 3 Private Projects, Umlimited Public Projects, 5GB of space, </div>
+                              <a href="#" class="btn btn-primary btn-rounded">Sign Up</a> 
+                          </div>
+                      </div>
+                      <div class="col-lg-4">
+                          <div class="card card-body bg-white bg-shadow text-center card-outline-primary">
+                              <h3 class="card-title mb-3 text-shadow">
+                                  <span class="em">Pro</span> <span class="text-fancy">Plus</span>
+                              </h3>
+                              <p class="price-banner price-banner-smf bg-primary text-white border-primary card-body-overlap">
+                                  <span class="price-currency">$</span> 
+                                  <span class="price-digits">49<span>.95</span></span>
+                                  <span class="price-extra">/MO</span>
+
+                              </p>
+                              <div class="card-text py-2"> 50 User Accounts, 50 Private Projects, Umlimited Public Projects, Unlimited space, </div>
+                              <a href="#" class="btn btn-primary btn-rounded mt-4">Sign Up</a> 
+                          </div>
+                      </div>
+                      <div class="col-lg-4 pt-3">
+                          <div class="card card-body bg-shadow text-center">
+                              <div class="card-ribbon card-ribbon-top card-ribbon-right bg-light text-muted">Best Buy</div>
+                              <h3 class="card-title mb-3 text-shadow">
+                                  Starter <span class="text-fancy">Plus</span>
+                              </h3>
+                              <p class="price-banner price-banner-smf border-grey card-body-overlap">
+                                  <span class="price-currency">$</span> 
+                                  <span class="price-digits">19<span>.95</span></span>
+                                  <span class="price-term">/MO</span>
+
+                              </p>
+                              <div class="card-text py-2"> 10 User Accounts, 10 Private Projects, Umlimited Public Projects, 15GB of space, </div>
+                              <a href="#" class="btn btn-primary btn-rounded">Sign Up</a> 
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Plan features -->
+                  <div class="bg-grey py-3 mt-4 text-center">
+                      <h4 class="d-inline-block pr-1 my-0">
+                          <span>All Plans <span class="font-weight-normal text-muted">Include</span>:</span>
+                      </h4>
+                      <p class="d-inline-block text-muted my-0">90 day money back guarantee <span class="text-primary font-weight-bold">//</span> 24/7 telephone support <span class="text-primary font-weight-bold">//</span> FREE Setup <span class="text-primary font-weight-bold">//</span> Migration Help <span class="text-primary font-weight-bold">//</span> Developer API</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+    <!-- ======== @Region: #footer ======== -->
+    <footer id="footer" class="p-0">
+      <div class="container pt-6 pb-0">
+        <div class="row">
+          <div class="col-md-4">
+            <!--@todo: replace with company contact details-->
+            <h4 class="text-uppercase text-white">
+              Contact Us
+            </h4>
+            <address>
+              <ul class="list-unstyled">
+                <li>
+                  <abbr title="Phone"><i class="fa fa-phone fa-fw"></i></abbr>
+                  0888 555 8888
+                </li>
+                <li>
+                  <abbr title="Email"><i class="fa fa-envelope fa-fw"></i></abbr>
+                  info@superstrap.com
+                </li>
+                <li>
+                  <abbr title="Address"><i class="fa fa-home fa-fw"></i></abbr>
+                  Sunshine House, Sunville. SUN12 8LU.
+                </li>
+              </ul>
+            </address>
+          </div>
+          
+          <div class="col-md-4">
+            <h4 class="text-uppercase text-white">
+              About Us
+            </h4>
+            <p>Making the web a prettier place! We make beautiful, quality, responsive web sites!</p>
+          </div>
+          
+          <div class="col-md-4">
+            <h4 class="text-uppercase text-white">
+              Newsletter
+            </h4>
+            <p>Stay up to date with our latest news and product releases by signing up to our newsletter.</p>
+            <!--@todo: replace with mailchimp code-->
+            <form>
+              <div class="input-group">
+                <label class="sr-only" for="email-field">Email</label>
+                <input type="text" class="form-control" id="email-field" placeholder="Email">
+                <span class="input-group-btn">
+                  <button class="btn btn-primary" type="button">Go!</button>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+      </div>
+      <hr class="my-0 hr-blank op-2" />
+      <!-- company copyright details-->
+      <div class="bg-inverse-dark text-sm py-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+                <p class="mb-0"><a href="#" class="footer-link">SuperStrap</a> | Copyright 2018 &copy; SuperStrap</p>
+            </div>
+            <div class="col-md-6">
+              <ul class="list-inline footer-links float-md-right mb-0">
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy</a></li>
+                <li class="list-inline-item"><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <a href="#top" class="btn btn-icon btn-dark pos-fixed pos-b pos-r mr-3 mb-3 scroll-state-hidden" title="Back to top" data-scroll="scroll-state"><i class="fa fa-chevron-up"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    
+    <!--jQuery 3.2.1 via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Popper 1.12.3 via CDN, needed for Bootstrap Tooltips & Popovers -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    
+    <!-- Bootstrap v4.0.0-beta.3 JS via CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+
+    
+    <!--Custom scripts & API integration -->
+    <script src="assets/js/custom-script.js"></script>
+    <script src="assets/js/script.min.js"></script>
+  </body>
+</html>
