@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Online Shop Products List</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+    <!-- Bootstrap v4.0.0-beta.3 CSS via CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+
+
+    <link href="css/style.min.css" rel="stylesheet">
+
+    <!-- Your custom override -->
+    <link href="css/custom-style.css" rel="stylesheet">
+
+
+
+    <!-- Optional: ICON SETS -->
+    <!-- Iconset: Font Awesome 4.7.0 via CDN -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Iconset: flag icons - http://lipis.github.io/flag-icon-css/ -->
+    <link href="assets/plugins/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <!-- Iconset: ionicons - http://ionicons.com/ -->
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+    <!-- Iconset: Linearicons - https://linearicons.com/free -->
+    <link href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" rel="stylesheet">
+
+
+    <!-- Google fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Rambla:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+
+    <!--Plugin: Retina.js (high def image replacement) - @see: http://retinajs.com/-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/retina.js/1.3.0/retina.min.js"></script>
+</head>
+
+<!-- ======== @Region: body ======== -->
+
+<body class="page page-customers navbar-layout-default">
+
+    <!-- @plugin: page loading indicator, delete to remove loader -->
+    <div class="page-loader" data-toggle="page-loader"></div>
+
+    <a href="#content" id="top" class="sr-only">Skip to content</a>
+
+    <!-- ======== @Region: #header ======== -->
+    <div id="header">
+
+        <!--Header upper region-->
+        <div class="header-upper">
+            <!-- all direct children of the .header-inner element will be vertically aligned with each other you can override all the behaviours using the flexbox utilities (flexbox.htm) All elements with .header-brand & .header-block-flex wrappers will automatically be aligned inline & vertically using flexbox, this can be overridden using the flexbox utilities (flexbox.htm) Use .header-block to stack elements within on small screen & "float" on larger screens use .order-first or/and .order-last classes to make an element show first or last within .header-inner or .headr-block elements -->
+            <div class="header-inner container">
+                <!--user menu-->
+                <div class="header-block-flex order-1 mr-auto">
+                    <nav class="nav nav-sm header-block-flex">
+                        <a class="nav-link d-md-none" href="login.html"><i class="fa fa-user"></i></a>
+                        <a class="nav-link text-xs text-uppercase d-none d-md-block" href="#signup-modal" data-toggle="modal">Sign Up</a> <a class="nav-link text-xs text-uppercase d-none d-md-block" href="#login-modal" data-toggle="modal">Login</a>
+                    </nav>
+                    <div class="header-divider header-divider-sm"></div>
+                    <!--language menu-->
+                    <div class="dropdown dropdowns-no-carets">
+                        <a href="#en" class="nav-link text-xs p-1 dropdown-toggle" data-toggle="dropdown"><i class="flag-icon flag-icon-gb"></i></a>
+                        <div class="dropdown-menu dropdown-menu-mini dropdown-menu-primary">
+                            <a href="#es" class="dropdown-item lang-es"><i class="flag-icon flag-icon-es"></i> Spanish</a>
+                            <a href="#pt" class="dropdown-item lang-pt"><i class="flag-icon flag-icon-pt"></i> Portguese</a>
+                            <a href="#cn" class="dropdown-item lang-cn"><i class="flag-icon flag-icon-cn"></i> Chinese</a>
+                            <a href="#se" class="dropdown-item lang-se"><i class="flag-icon flag-icon-se"></i> Swedish</a>
+                        </div>
+                    </div>
+                </div>
+                <!--social media icons-->
+                <div class="nav nav-icons header-block order-12">
+                    <!--@todo: replace with company social media details-->
+                    <a href="#" class="nav-link"> <i class="fa fa-twitter-square icon-1x"></i> <span class="sr-only">Twitter</span> </a>
+                    <a href="#" class="nav-link"> <i class="fa fa-facebook-square icon-1x"></i> <span class="sr-only">Facebook</span> </a>
+                    <a href="#" class="nav-link"> <i class="fa fa-linkedin-square icon-1x"></i> <span class="sr-only">Linkedin</span> </a>
+                    <a href="#" class="nav-link"> <i class="fa fa-google-plus-square icon-1x"></i> <span class="sr-only">Google plus</span> </a>
+                </div>
+            </div>
+        </div>
+        <div data-toggle="sticky">
+
+            <!--Header search region - hidden by default -->
+            <div class="header-search collapse" id="search">
+                <form class="search-form container">
+                    <input type="text" name="search" class="form-control search" value="" placeholder="Search">
+                    <button type="button" class="btn btn-link"><span class="sr-only">Search </span><i class="fa fa-search fa-flip-horizontal search-icon"></i></button>
+                    <button type="button" class="btn btn-link close-btn" data-toggle="search-form-close"><span class="sr-only">Close </span><i class="fa fa-times search-icon"></i></button>
+                </form>
+            </div>
+
+            <!--Header & Branding region-->
+            <div class="header">
+                <!-- all direct children of the .header-inner element will be vertically aligned with each other you can override all the behaviours using the flexbox utilities (flexbox.htm) All elements with .header-brand & .header-block-flex wrappers will automatically be aligned inline & vertically using flexbox, this can be overridden using the flexbox utilities (flexbox.htm) Use .header-block to stack elements within on small screen & "float" on larger screens use .order-first or/and .order-last classes to make an element show first or last within .header-inner or .headr-block elements -->
+                <div class="header-inner container">
+                    <!--branding/logo -->
+                    <div class="header-brand">
+                        <a class="header-brand-text" href="index.html" title="Home">
+                            <h1 class="h2">
+                  <span class="header-brand-text-alt">Super</span>Strap<span class="header-brand-text-alt">.</span>
+                </h1>
+                        </a>
+                        <div class="header-divider d-none d-lg-block"></div>
+                        <div class="header-slogan d-none d-lg-block">Online Shop Products List</div>
+                    </div>
+                    <!-- other header content -->
+                    <div class="header-block order-12">
+
+                        <!--Search trigger -->
+                        <a href="#search" class="btn btn-icon btn-link header-btn float-right order-11" data-toggle="search-form" data-target=".header-search"><i class="fa fa-search fa-flip-horizontal search-icon"></i></a>
+
+                        <!-- mobile collapse menu button - data-toggle="collapse" = default BS menu - data-toggle="jpanel-menu" = jPanel Menu - data-toggle="overlay" = Overlay Menu -->
+                        <a href="#top" class="btn btn-link btn-icon header-btn float-right d-lg-none" data-toggle="jpanel-menu" data-target=".navbar-main" data-direction="right"> <i class="fa fa-bars"></i> </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======== @Region: #content ======== -->
+    <div id="content" class="py-3 py-lg-6">
+        <div class="container">
+            <div class="row">
+                <!-- Products grid -->
+                <div class="col-lg-9 order-lg-2">
+                    <!-- Products filters -->
+                    <div class="row">
+                        <div class="col-lg-6 mb-3 mb-lg-0">
+                            <form class="form-inline justify-content-lg-start text-sm">
+                                <label class="control-label mr-2">Keyword:</label>
+                                <input type="text" class="form-control form-control-sm mr-lg-2" placeholder="ie. Calvin Klein">
+                                <a href="#adv-search" data-toggle="collapse" class="text-sm">advanced search</a> 
+                            </form>
+                        </div>
+                        <div class="col-lg-6">
+                            <form class="form-inline justify-content-lg-end text-sm">
+                                <label class="control-label mr-2">Sort By:</label>
+                                <select class="form-control form-control-sm">
+                                    <option value="#">Name (A - Z)</option>
+                                    <option value="#">Name (Z - A)</option>
+                                    <option value="#">Price (Low &gt; High)</option>
+                                    <option value="#" selected="">Price (High &gt; Low)</option>
+                                    <option value="#">Rating (Highest)</option>
+                                    <option value="#">Rating (Lowest)</option>
+                                </select>
+                                <label class="control-label mr-2 ml-lg-3">Show:</label>
+                                <select class="form-control form-control-sm">
+                                    <option value="#">15</option>
+                                    <option value="#">20</option>
+                                    <option value="#">25</option>
+                                    <option value="#">30</option>
+                                    <option value="#">35</option>
+                                    <option value="#">40</option>
+                                    <option value="#">45</option>
+                                    <option value="#">50</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="col-lg-12 collapse" id="adv-search">
+                            <!-- Advanced search form -->
+                            <form class="mt-3 bg-light p-3 rounded mb-4 text-sm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label>Category</label>
+                                        <select class="form-control">
+                                            <option value="#">Mens</option>
+                                            <option value="#">Womens</option>
+                                            <option value="#">Childrens</option>
+                                            <option value="#">Baby</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label>Brand</label>
+                                        <select class="form-control">
+                                            <option value="#">Brand 1</option>
+                                            <option value="#">Brand 2</option>
+                                            <option value="#">Brand 3</option>
+                                            <option value="#">Brand 4</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label>Price</label>
+                                        <div class="row">
+                                            <div class="input-group col-md-6">
+                                                <span class="input-group-addon">$</span> 
+                                                <input type="text" class="form-control" placeholder="from">
+                                            </div>
+                                            <div class="input-group col-md-6">
+                                                <span class="input-group-addon">$</span> 
+                                                <input type="text" class="form-control" placeholder="to">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label>Size</label>
+                                        <select class="form-control">
+                                            <option value="#">Small</option>
+                                            <option value="#">Medium</option>
+                                            <option value="#">Large</option>
+                                            <option value="#">Extra Large</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-primary"> <i class="fa fa-search"></i> Search </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <hr class="my-4" />
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- Product 2 -->
+                            <div class="card product-card mb-4">
+                                <!-- Content -->
+                                <div class="card-body p-3 pos-relative row">
+                                    <!-- Image content -->
+                                    <div class="col-md-4 mb-2 mb-md-0">
+                                        <img class="rounded img-fluid" src="assets/img/shop/shoes-2.jpg" alt="Card image cap">
+                                    </div>
+                                    <!-- Product details -->
+                                    <div class="col-md-8 d-flex flex-column align-items-start">
+                                        <p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">Womens</span> / shoes</p>
+                                        <h4 class="card-title mb-2">
+                                            <a href="shop-product.html" class="text-grey-dark">Shoes</a> 
+                                        </h4>
+                                        <p class="font-weight-bold">$49.99</p>
+                                        <p class="pos-md-absolute pos-t pos-r mr-3 text-md-right"> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star-o text-primary"></i> </p>
+                                        <p class="text-muted text-xs">Abbas autem distineo exerci fere iusto jumentum lucidus quae. At haero immitto olim populus praemitto ut.</p>
+                                        <div class="mt-auto">
+                                            <a href="shop-cart.html" class="btn btn-primary btn-sm"><i class="fa fa-cart-plus mr-2"></i> Add to Cart</a>
+                                            <a href="#" class="btn btn-link btn-sm"><i class="fa fa-heart"></i> Add to Wishlist</a>
+                                            <p class="text-muted text-xs d-none d-lg-inline">129 in stock</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <!-- Product 3 -->
+                            <div class="card product-card mb-4">
+                                <!-- Content -->
+                                <div class="card-body p-3 pos-relative row">
+                                    <!-- Image content -->
+                                    <div class="col-md-4 mb-2 mb-md-0">
+                                        <img class="rounded img-fluid" src="assets/img/shop/mens-sports-2.jpg" alt="Card image cap">
+                                    </div>
+                                    <!-- Product details -->
+                                    <div class="col-md-8 d-flex flex-column align-items-start">
+                                        <p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">Mens</span> / Sports</p>
+                                        <h4 class="card-title mb-2">
+                                            <a href="shop-product.html" class="text-grey-dark">Nike Training Top </a> 
+                                        </h4>
+                                        <p class="font-weight-bold">$49.99</p>
+                                        <p class="pos-md-absolute pos-t pos-r mr-3 text-md-right"> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star-o text-primary"></i> <i class="fa fa-star-o text-primary"></i> </p>
+                                        <p class="text-muted text-xs">Erat gravis illum metuo nostrud pagus pertineo quia. Abdo fere ibidem ludus pertineo uxor vicis.</p>
+                                        <div class="mt-auto">
+                                            <a href="shop-cart.html" class="btn btn-primary btn-sm"><i class="fa fa-cart-plus mr-2"></i> Add to Cart</a>
+                                            <a href="#" class="btn btn-link btn-sm"><i class="fa fa-heart"></i> Add to Wishlist</a>
+                                            <p class="text-muted text-xs d-none d-lg-inline">18345 in stock</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <!-- Product 4 -->
+                            <div class="card product-card mb-4">
+                                <!-- Content -->
+                                <div class="card-body p-3 pos-relative row">
+                                    <!-- Image content -->
+                                    <div class="col-md-4 mb-2 mb-md-0">
+                                        <img class="rounded img-fluid" src="assets/img/shop/promo-kids.jpg" alt="Card image cap">
+                                    </div>
+                                    <!-- Product details -->
+                                    <div class="col-md-8 d-flex flex-column align-items-start">
+                                        <p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">Kids</span> / Jumpers</p>
+                                        <h4 class="card-title mb-2">
+                                            <a href="shop-product.html" class="text-grey-dark">Kids Wolly Jumper </a> 
+                                        </h4>
+                                        <p class="font-weight-bold">
+                                            <del class="op-5">$24.99</del>
+                                            / $19.99
+                                        </p>
+                                        <p class="pos-md-absolute pos-t pos-r mr-3 text-md-right"> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> </p>
+                                        <p class="text-muted text-xs">Autem commodo gemino ibidem imputo luctus magna uxor valetudo. Natu paratus pneum.</p>
+                                        <div class="mt-auto">
+                                            <a href="shop-cart.html" class="btn btn-primary btn-sm"><i class="fa fa-cart-plus mr-2"></i> Add to Cart</a>
+                                            <a href="#" class="btn btn-link btn-sm"><i class="fa fa-heart"></i> Add to Wishlist</a>
+                                            <p class="text-muted text-xs d-none d-lg-inline">12 in stock</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <!-- Product 5 -->
+                            <div class="card product-card mb-4 card-outline-danger">
+                                <!-- Ribbon -->
+                                <div class="card-ribbon card-ribbon-bottom card-ribbon-right bg-danger text-white">Low Stock</div>
+                                <!-- Content -->
+                                <div class="card-body p-3 pos-relative row">
+                                    <!-- Image content -->
+                                    <div class="col-md-4 mb-2 mb-md-0">
+                                        <img class="rounded img-fluid" src="assets/img/shop/promo-kids-hoodies.jpg" alt="Card image cap">
+                                    </div>
+                                    <!-- Product details -->
+                                    <div class="col-md-8 d-flex flex-column align-items-start">
+                                        <p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">Kids</span> / Jumpers</p>
+                                        <h4 class="card-title mb-2">
+                                            <a href="shop-product.html" class="text-grey-dark">Kids Hoodies</a> 
+                                        </h4>
+                                        <p class="font-weight-bold">$19.99</p>
+                                        <p class="pos-md-absolute pos-t pos-r mr-3 text-md-right"> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star-o text-primary"></i> </p>
+                                        <p class="text-muted text-xs">Camur in iriure lucidus nutus scisco venio. Dignissim gemino hendrerit pala pertineo velit.</p>
+                                        <div class="mt-auto">
+                                            <a href="shop-cart.html" class="btn btn-primary btn-sm"><i class="fa fa-cart-plus mr-2"></i> Add to Cart</a>
+                                            <a href="#" class="btn btn-link btn-sm"><i class="fa fa-heart"></i> Add to Wishlist</a>
+                                            <p class="text-muted text-xs d-none d-lg-inline"><span class="text-danger">2 in stock</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <!-- Product 6 -->
+                            <div class="card product-card mb-4">
+                                <!-- Content -->
+                                <div class="card-body p-3 pos-relative row">
+                                    <!-- Image content -->
+                                    <div class="col-md-4 mb-2 mb-md-0">
+                                        <img class="rounded img-fluid" src="assets/img/shop/mens-sports.jpg" alt="Card image cap">
+                                    </div>
+                                    <!-- Product details -->
+                                    <div class="col-md-8 d-flex flex-column align-items-start">
+                                        <p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">Mens</span> / Sports</p>
+                                        <h4 class="card-title mb-2">
+                                            <a href="shop-product.html" class="text-grey-dark">Nike Training Top</a> 
+                                        </h4>
+                                        <p class="font-weight-bold">$49.99</p>
+                                        <p class="pos-md-absolute pos-t pos-r mr-3 text-md-right"> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star-o text-primary"></i> <i class="fa fa-star-o text-primary"></i> <i class="fa fa-star-o text-primary"></i> </p>
+                                        <p class="text-muted text-xs">Antehabeo nibh pala patria. Caecus distineo ea quidem. Abluo commodo consequat defui erat exputo immitto.</p>
+                                        <div class="mt-auto">
+                                            <a href="shop-cart.html" class="btn btn-primary btn-sm"><i class="fa fa-cart-plus mr-2"></i> Add to Cart</a>
+                                            <a href="#" class="btn btn-link btn-sm"><i class="fa fa-heart"></i> Add to Wishlist</a>
+                                            <p class="text-muted text-xs d-none d-lg-inline">12988 in stock</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <!-- Product 7 -->
+                            <div class="card product-card mb-4 card-outline-primary">
+                                <!-- Ribbon -->
+                                <div class="card-ribbon card-ribbon-bottom card-ribbon-right bg-primary text-white">Top Rated</div>
+                                <!-- Content -->
+                                <div class="card-body p-3 pos-relative row">
+                                    <!-- Image content -->
+                                    <div class="col-md-4 mb-2 mb-md-0">
+                                        <img class="rounded img-fluid" src="assets/img/shop/promo-mens-2.jpg" alt="Card image cap">
+                                    </div>
+                                    <!-- Product details -->
+                                    <div class="col-md-8 d-flex flex-column align-items-start">
+                                        <p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">Mens</span> / Jackets</p>
+                                        <h4 class="card-title mb-2">
+                                            <a href="shop-product.html" class="text-grey-dark">Leather Jacket</a> 
+                                        </h4>
+                                        <p class="font-weight-bold">$149.99</p>
+                                        <p class="pos-md-absolute pos-t pos-r mr-3 text-md-right"> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> </p>
+                                        <p class="text-muted text-xs">Ad diam eros fere huic metuo minim sudo vulputate. Appellatio dignissim illum immitto typicus uxor.</p>
+                                        <div class="mt-auto">
+                                            <a href="shop-cart.html" class="btn btn-primary btn-sm"><i class="fa fa-cart-plus mr-2"></i> Add to Cart</a>
+                                            <a href="#" class="btn btn-link btn-sm"><i class="fa fa-heart"></i> Add to Wishlist</a>
+                                            <p class="text-muted text-xs d-none d-lg-inline">12769 in stock</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <!-- Product 8 -->
+                            <div class="card product-card mb-4">
+                                <!-- Content -->
+                                <div class="card-body p-3 pos-relative row">
+                                    <!-- Image content -->
+                                    <div class="col-md-4 mb-2 mb-md-0">
+                                        <img class="rounded img-fluid" src="assets/img/shop/promo-womens-sports.jpg" alt="Card image cap">
+                                    </div>
+                                    <!-- Product details -->
+                                    <div class="col-md-8 d-flex flex-column align-items-start">
+                                        <p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">Womens</span> / Sports</p>
+                                        <h4 class="card-title mb-2">
+                                            <a href="shop-product.html" class="text-grey-dark">Shoes</a> 
+                                        </h4>
+                                        <p class="font-weight-bold">$29.99</p>
+                                        <p class="pos-md-absolute pos-t pos-r mr-3 text-md-right"> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star-o text-primary"></i> <i class="fa fa-star-o text-primary"></i> </p>
+                                        <p class="text-muted text-xs">Dolore feugiat gemino humo neo nisl secundum singularis. Abluo damnum esca exputo gilvus quidem veniam vicis vulpes.</p>
+                                        <div class="mt-auto">
+                                            <a href="shop-cart.html" class="btn btn-primary btn-sm"><i class="fa fa-cart-plus mr-2"></i> Add to Cart</a>
+                                            <a href="#" class="btn btn-link btn-sm"><i class="fa fa-heart"></i> Add to Wishlist</a>
+                                            <p class="text-muted text-xs d-none d-lg-inline">129 in stock</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <!-- Product 9 -->
+                            <div class="card product-card mb-4">
+                                <!-- Content -->
+                                <div class="card-body p-3 pos-relative row">
+                                    <!-- Image content -->
+                                    <div class="col-md-4 mb-2 mb-md-0">
+                                        <img class="rounded img-fluid" src="assets/img/shop/promo-womens-top.jpg" alt="Card image cap">
+                                    </div>
+                                    <!-- Product details -->
+                                    <div class="col-md-8 d-flex flex-column align-items-start">
+                                        <p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">Womens</span> / Tops</p>
+                                        <h4 class="card-title mb-2">
+                                            <a href="shop-product.html" class="text-grey-dark">Summer Top</a> 
+                                        </h4>
+                                        <p class="font-weight-bold">$49.99</p>
+                                        <p class="pos-md-absolute pos-t pos-r mr-3 text-md-right"> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star-o text-primary"></i> </p>
+                                        <p class="text-muted text-xs">Gravis iriure loquor qui tincidunt wisi. Camur enim erat feugiat illum modo suscipit.</p>
+                                        <div class="mt-auto">
+                                            <a href="shop-cart.html" class="btn btn-primary btn-sm"><i class="fa fa-cart-plus mr-2"></i> Add to Cart</a>
+                                            <a href="#" class="btn btn-link btn-sm"><i class="fa fa-heart"></i> Add to Wishlist</a>
+                                            <p class="text-muted text-xs d-none d-lg-inline">129543 in stock</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <!-- Product 10 -->
+                            <div class="card product-card mb-4">
+                                <!-- Content -->
+                                <div class="card-body p-3 pos-relative row">
+                                    <!-- Image content -->
+                                    <div class="col-md-4 mb-2 mb-md-0">
+                                        <img class="rounded img-fluid" src="assets/img/shop/promo-mens-shoes.jpg" alt="Card image cap">
+                                    </div>
+                                    <!-- Product details -->
+                                    <div class="col-md-8 d-flex flex-column align-items-start">
+                                        <p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">Mens</span> / Shoes</p>
+                                        <h4 class="card-title mb-2">
+                                            <a href="shop-product.html" class="text-grey-dark">Addidas Trainers</a> 
+                                        </h4>
+                                        <p class="font-weight-bold">$49.99</p>
+                                        <p class="pos-md-absolute pos-t pos-r mr-3 text-md-right"> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star-o text-primary"></i> <i class="fa fa-star-o text-primary"></i> <i class="fa fa-star-o text-primary"></i> </p>
+                                        <p class="text-muted text-xs">Abluo hos illum loquor volutpat. Abigo bene ulciscor. Amet antehabeo causa exputo gravis imputo letalis modo plaga.</p>
+                                        <div class="mt-auto">
+                                            <a href="shop-cart.html" class="btn btn-primary btn-sm"><i class="fa fa-cart-plus mr-2"></i> Add to Cart</a>
+                                            <a href="#" class="btn btn-link btn-sm"><i class="fa fa-heart"></i> Add to Wishlist</a>
+                                            <p class="text-muted text-xs d-none d-lg-inline">129 in stock</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <!-- Product 11 -->
+                            <div class="card product-card mb-4">
+                                <!-- Ribbon -->
+                                <div class="card-ribbon card-ribbon-bottom card-ribbon-right bg-danger text-white">Sold out</div>
+                                <!-- Content -->
+                                <div class="card-body p-3 pos-relative row op-3">
+                                    <!-- Image content -->
+                                    <div class="col-md-4 mb-2 mb-md-0 op-3">
+                                        <img class="rounded img-fluid" src="assets/img/shop/promo-mens-watches.jpg" alt="Card image cap">
+                                    </div>
+                                    <!-- Product details -->
+                                    <div class="col-md-8 d-flex flex-column align-items-start">
+                                        <p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">Mens</span> / Watches</p>
+                                        <h4 class="card-title mb-2">
+                                            <a href="shop-product.html" class="text-grey-dark">Watch</a> 
+                                        </h4>
+                                        <p class="font-weight-bold">$499.99</p>
+                                        <p class="pos-md-absolute pos-t pos-r mr-3 text-md-right"> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star-o text-primary"></i> </p>
+                                        <p class="text-muted text-xs">Abico similis valetudo. Ad at mos praesent secundum. Acsi aliquam at distineo haero huic probo similis volutpat.</p>
+                                        <div class="mt-auto">
+                                            <a href="shop-cart.html" class="btn btn-primary btn-sm"><i class="fa fa-cart-plus mr-2"></i> Add to Cart</a>
+                                            <a href="#" class="btn btn-link btn-sm"><i class="fa fa-heart"></i> Add to Wishlist</a>
+                                            <p class="text-muted text-xs d-none d-lg-inline"><span class="text-danger font-weight-bold">Sold Out</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <!-- Product 12 -->
+                            <div class="card product-card mb-4">
+                                <!-- Content -->
+                                <div class="card-body p-3 pos-relative row">
+                                    <!-- Image content -->
+                                    <div class="col-md-4 mb-2 mb-md-0">
+                                        <img class="rounded img-fluid" src="assets/img/shop/promo-mens-shirts.jpg" alt="Card image cap">
+                                    </div>
+                                    <!-- Product details -->
+                                    <div class="col-md-8 d-flex flex-column align-items-start">
+                                        <p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">Mens</span> / Shirts</p>
+                                        <h4 class="card-title mb-2">
+                                            <a href="shop-product.html" class="text-grey-dark">Shirts</a> 
+                                        </h4>
+                                        <p class="font-weight-bold">$49.99</p>
+                                        <p class="pos-md-absolute pos-t pos-r mr-3 text-md-right"> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star-o text-primary"></i> <i class="fa fa-star-o text-primary"></i> </p>
+                                        <p class="text-muted text-xs">Bene distineo elit eum immitto macto populus sino typicus. Caecus qui utinam.</p>
+                                        <div class="mt-auto">
+                                            <a href="shop-cart.html" class="btn btn-primary btn-sm"><i class="fa fa-cart-plus mr-2"></i> Add to Cart</a>
+                                            <a href="#" class="btn btn-link btn-sm"><i class="fa fa-heart"></i> Add to Wishlist</a>
+                                            <p class="text-muted text-xs d-none d-lg-inline">12779 in stock</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <!-- Product 13 -->
+                            <div class="card product-card mb-4">
+                                <!-- Content -->
+                                <div class="card-body p-3 pos-relative row">
+                                    <!-- Image content -->
+                                    <div class="col-md-4 mb-2 mb-md-0">
+                                        <img class="rounded img-fluid" src="assets/img/shop/promo-womens-hat.jpg" alt="Card image cap">
+                                    </div>
+                                    <!-- Product details -->
+                                    <div class="col-md-8 d-flex flex-column align-items-start">
+                                        <p class="text-muted text-uppercase text-xs mb-0"><span class="text-primary">Womens</span> / Extras</p>
+                                        <h4 class="card-title mb-2">
+                                            <a href="shop-product.html" class="text-grey-dark">Hat</a> 
+                                        </h4>
+                                        <p class="font-weight-bold">$49.99</p>
+                                        <p class="pos-md-absolute pos-t pos-r mr-3 text-md-right"> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star text-primary"></i> <i class="fa fa-star-o text-primary"></i> </p>
+                                        <p class="text-muted text-xs">Eum iaceo nutus paratus patria proprius tego velit. Abdo commoveo hendrerit illum olim praesent quia tum vulputate ymo.</p>
+                                        <div class="mt-auto">
+                                            <a href="shop-cart.html" class="btn btn-primary btn-sm"><i class="fa fa-cart-plus mr-2"></i> Add to Cart</a>
+                                            <a href="#" class="btn btn-link btn-sm"><i class="fa fa-heart"></i> Add to Wishlist</a>
+                                            <p class="text-muted text-xs d-none d-lg-inline">129 in stock</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Call to action -->
+                    <div class="my-3" data-url="#">
+                        <hr class="hr-lg mt-0 mb-1 w-100 mx-auto hr-danger" />
+                        <div class="pos-relative">
+                            <i class="fa fa-bullseye icon-bg op-1 icon-bg-l-ol icon-25x text-white"></i> <i class="fa fa-bullseye icon-bg op-1 icon-bg-r-ol icon-bg-b icon-25x text-white"></i> 
+                            <div class="p-4 text-center bg-danger">
+                                <h2 class="display-4 font-weight-normal text-uppercase text-white my-0 text-slab">
+                                    Clearance Sale
+                                </h2>
+                                <h4 class="text-white mb-0 text-slab">
+                                    Price reductions on 1000s of items!
+                                </h4>
+                            </div>
+                        </div>
+                        <hr class="hr-lg mt-1 w-100 mx-auto hr-danger" />
+                    </div>
+                    <!-- Pagination -->
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination pagination-lg justify-content-center">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">&laquo;</span> <span class="sr-only">Previous</span> </a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> <span class="sr-only">Next</span> </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Products sidebar -->
+                <div class="col-lg-3 order-lg-1">
+
+                    <!-- Sections Menu-->
+                    <ul class="nav nav-section-menu mb-4 py-3">
+                        <li class="nav-header">Collections</li>
+                        <li>
+                            <a href="#mens" data-toggle="collapse" class="nav-link text-uppercase text-slab first active">
+                                Mens 
+                                <small class="d-inline-block text-xs text-lowercase">(active)</small>
+                                <i class="fa fa-angle-right"></i> 
+                            </a>
+                            <ul class="nav nav-section-menu collapse show" id="mens">
+                                <li><a href="#" class="nav-link">Shoes</a></li>
+                                <li><a href="#" class="nav-link">Shirts</a></li>
+                                <li><a href="#" class="nav-link">Trousers</a></li>
+                                <li><a href="#" class="nav-link">Suits</a></li>
+                                <li><a href="#" class="nav-link">Jackets</a></li>
+                                <li><a href="#" class="nav-link">Sportswear</a></li>
+                                <li><a href="#" class="nav-link">Shorts</a></li>
+                                <li><a href="#" class="nav-link">Swimwear</a></li>
+                                <li><a href="#" class="nav-link">T-shirts</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#womens" data-toggle="collapse" class="nav-link text-uppercase text-slab"> Womens <i class="fa fa-angle-right"></i> </a>
+                            <ul class="nav nav-section-menu collapse" id="womens">
+                                <li><a href="#" class="nav-link">Dresses</a></li>
+                                <li><a href="#" class="nav-link">Jeans</a></li>
+                                <li><a href="#" class="nav-link">Skirts</a></li>
+                                <li><a href="#" class="nav-link">Suits</a></li>
+                                <li><a href="#" class="nav-link">Jackets</a></li>
+                                <li><a href="#" class="nav-link">Sportswear</a></li>
+                                <li><a href="#" class="nav-link">Shorts</a></li>
+                                <li><a href="#" class="nav-link">Swimwear</a></li>
+                                <li><a href="#" class="nav-link">T-shirts</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#childrens" data-toggle="collapse" class="nav-link text-uppercase text-slab"> Childrens <i class="fa fa-angle-right"></i> </a>
+                            <ul class="nav nav-section-menu collapse" id="childrens">
+                                <li><a href="#" class="nav-link">Shoes</a></li>
+                                <li><a href="#" class="nav-link">Sports Wear</a></li>
+                                <li><a href="#" class="nav-link">School Clothes</a></li>
+                                <li><a href="#" class="nav-link">Trousers</a></li>
+                                <li><a href="#" class="nav-link">Suits</a></li>
+                                <li><a href="#" class="nav-link">Jackets</a></li>
+                                <li><a href="#" class="nav-link">Sportswear</a></li>
+                                <li><a href="#" class="nav-link">Swimwear</a></li>
+                                <li><a href="#" class="nav-link">T-shirts</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#baby" data-toggle="collapse" class="nav-link text-uppercase text-slab"> Baby <i class="fa fa-angle-right"></i> </a>
+                            <ul class="nav nav-section-menu collapse" id="baby">
+                                <li><a href="#" class="nav-link">Newborn</a></li>
+                                <li><a href="#" class="nav-link">Toddler</a></li>
+                                <li><a href="#" class="nav-link">Preschool</a></li>
+                                <li><a href="#" class="nav-link">Winter Suits</a></li>
+                                <li><a href="#" class="nav-link">Jackets</a></li>
+                                <li><a href="#" class="nav-link">Sportswear</a></li>
+                                <li><a href="#" class="nav-link">Swimwear</a></li>
+                                <li><a href="#" class="nav-link">T-shirts</a></li>
+                                <li><a href="#" class="nav-link">Trousers</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="p-3 overlay overlay-op-5 rounded flex-valign mb-4" data-bg-img="assets/img/shop/promo-truck.jpg" data-css='{"background-position":"center bottom"}' data-url="shop-product.html">
+                        <h4 class="text-white mb-0">
+                            Free Shipping
+                        </h4>
+                        <p class="text-white mb-0">On all orders over $100</p>
+                        <hr class="hr-lg my-2 w-20 mx-auto hr-primary" />
+                    </div>
+
+                    <!-- Follow Widget -->
+                    <div class="mb-4">
+                        <hr class="hr-lg mt-0 mb-2 w-10 ml-0 hr-primary" />
+                        <h4 class="text-uppercase font-weight-bold mt-0">
+                            Follow us on
+                        </h4>
+                        <!--@todo: replace with company social media details-->
+                        <a href="#" class="btn btn-icon btn-dark btn-rounded"> <i class="fa fa-twitter"></i> <span class="sr-only">Twitter</span> </a>
+                        <a href="#" class="btn btn-icon btn-dark btn-rounded"> <i class="fa fa-facebook"></i> <span class="sr-only">Facebook</span> </a>
+                        <a href="#" class="btn btn-icon btn-dark btn-rounded"> <i class="fa fa-linkedin"></i> <span class="sr-only">Linkedin</span> </a>
+                        <a href="#" class="btn btn-icon btn-dark btn-rounded"> <i class="fa fa-google-plus"></i> <span class="sr-only">Google plus</span> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======== @Region: #content-below ======== -->
+    <div id="content-below">
+        <!-- Awesome features call to action -->
+        <div class="bg-primary text-white">
+            <div class="container py-3 pos-relative">
+                <div class="row">
+                    <div class="col-lg-7 text-center text-lg-left">
+                        <i class="fa fa-envelope-o icon-4x op-4 float-left mr-3 d-none d-xl-block"></i> 
+                        <h2 class="text-uppercase font-weight-bold mt-2 mb-1 text-slab">
+                            Get Deals & Discounts
+                        </h2>
+                        <h5 class="text-faded">
+                            Direct to your inbox with our newsletter
+                        </h5>
+                    </div>
+                    <div class="col-lg-5 text-center text-lg-right flex-valign">
+                        <form>
+                            <div class="input-group input-group-rounded">
+                                <input type="text" class="form-control" id="email-field" placeholder="Email">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary btn-invert  btn-lg" type="button">Sign Up</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======== @Region: #footer ======== -->
+    <footer id="footer" class="p-0">
+        <div class="container pt-6 pb-0">
+            <div class="row">
+                <div class="col-md-4">
+                    <!--@todo: replace with company contact details-->
+                    <h4 class="text-uppercase text-white">
+              Contact Us
+            </h4>
+                    <address>
+              <ul class="list-unstyled">
+                <li>
+                  <abbr title="Phone"><i class="fa fa-phone fa-fw"></i></abbr>
+                  0888 555 8888
+                </li>
+                <li>
+                  <abbr title="Email"><i class="fa fa-envelope fa-fw"></i></abbr>
+                  info@superstrap.com
+                </li>
+                <li>
+                  <abbr title="Address"><i class="fa fa-home fa-fw"></i></abbr>
+                  Sunshine House, Sunville. SUN12 8LU.
+                </li>
+              </ul>
+            </address>
+                </div>
+
+                <div class="col-md-4">
+                    <h4 class="text-uppercase text-white">
+              About Us
+            </h4>
+                    <p>Making the web a prettier place! We make beautiful, quality, responsive web sites!</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h4 class="text-uppercase text-white">
+              Newsletter
+            </h4>
+                    <p>Stay up to date with our latest news and product releases by signing up to our newsletter.</p>
+                    <!--@todo: replace with mailchimp code-->
+                    <form>
+                        <div class="input-group">
+                            <label class="sr-only" for="email-field">Email</label>
+                            <input type="text" class="form-control" id="email-field" placeholder="Email">
+                            <span class="input-group-btn">
+                                <button class="btn btn-primary btn-lg" type="button">Go!</button>
+                </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <hr class="my-0 hr-blank op-2" />
+        <!-- company copyright details-->
+        <div class="bg-inverse-dark text-sm py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="mb-0"><a href="#" class="footer-link">SuperStrap</a> | Copyright 2018 &copy; SuperStrap</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-inline footer-links float-md-right mb-0">
+                            <li class="list-inline-item"><a href="#">Terms</a></li>
+                            <li class="list-inline-item"><a href="#">Privacy</a></li>
+                            <li class="list-inline-item"><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#top" class="btn btn-icon btn-dark pos-fixed pos-b pos-r mr-3 mb-3 scroll-state-hidden" title="Back to top" data-scroll="scroll-state"><i class="fa fa-chevron-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--jQuery 3.2.1 via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Popper 1.12.3 via CDN, needed for Bootstrap Tooltips & Popovers -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+
+    <!-- Bootstrap v4.0.0-beta.3 JS via CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+
+
+    <!--Custom scripts & API integration -->
+    <script src="assets/js/custom-script.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>
